@@ -19,7 +19,7 @@
     <link rel="alternative" href="/atom.xml" title="sys.linux.d::blog" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/favicon.ico">
   
   <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/css/style.css" type="text/css">
@@ -27,6 +27,7 @@
   
 
 </head>
+
 <body>
   <div id="container">
     <div id="wrap">
@@ -54,7 +55,10 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-github-link" class="nav-icon" href="https://github.com/howiefh" title="Github" target="_blank"></a>
+        
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" target="_blank"></a>
         
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
@@ -64,14 +68,18 @@
     </div>
   </div>
 </header>
+
       <div class="outer">
         <section id="main">
   
     <article id="post-locale_change" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2013/09/11/locale_change/" class="article-date">
+    
+<a href="/2013/09/11/locale_change/" class="article-date">
   <time datetime="2013-09-11T12:21:58.000Z" itemprop="datePublished">9月 11 2013</time>
 </a>
+
+
     
   <div class="article-category">
     <a class="article-category-link" href="/categories/linux/">linux</a>
@@ -93,6 +101,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+		
+		<div id="toc" class="toc-article">
+			<h2 class="toc-title"><span>Contents</span></h2>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#将语言环境变量改成中文"><span class="toc-number">1.</span> <span class="toc-text">将语言环境变量改成中文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装输入法"><span class="toc-number">2.</span> <span class="toc-text">安装输入法</span></a></li></ol>
+		
+		</div>
+		
         <p>每次重装ubuntu之后，有意见非常头痛的事情便是输入法的配置。这次备份一下，方便未来。  </p>
 <h2 id="将语言环境变量改成中文">将语言环境变量改成中文</h2>
 <ul>
@@ -134,10 +150,20 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dby.github.io/2013/09/11/locale_change/" data-id="t8o4d7y0rbmg9amd" class="article-share-link">Share</a>
+	  
+	  <a data-url="http://dby.github.io/2013/09/11/locale_change/" data-id="t8o4d7y0rbmg9amd" data_title="locale_change" data_summary="每次重装ubuntu之后，有意见非常头痛的事情便是输入..." class="article-share-link">Share</a>
       
+
+      
+	  
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/locale/">locale</a></li></ul>
+
+	  
+<span>
+Updated:<time datetime="2013-09-15T14:55:54.000Z" itemprop="dateModified">9月 15 2013</time>
+</span>
+
 
     </footer>
   </div>
@@ -145,12 +171,20 @@
 </article>
 
 
+
+<!-- 多说评论框 start -->
+
+<!-- 多说评论框 end -->
+
   
     <article id="post-vim_coding" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2013/09/10/vim_coding/" class="article-date">
+    
+<a href="/2013/09/10/vim_coding/" class="article-date">
   <time datetime="2013-09-10T09:15:32.000Z" itemprop="datePublished">9月 10 2013</time>
 </a>
+
+
     
   <div class="article-category">
     <a class="article-category-link" href="/categories/linux/">linux</a>
@@ -172,6 +206,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+		
+		<div id="toc" class="toc-article">
+			<h2 class="toc-title"><span>Contents</span></h2>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#encoding"><span class="toc-number">1.</span> <span class="toc-text">encoding</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#termencoding"><span class="toc-number">2.</span> <span class="toc-text">termencoding</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fileencoding"><span class="toc-number">3.</span> <span class="toc-text">fileencoding</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fileencodings"><span class="toc-number">4.</span> <span class="toc-text">fileencodings</span></a></li></ol>
+		
+		</div>
+		
         <p>在 Vim 中，有四个与编码有关的选项，它们是：<strong>fileencodings</strong>、<strong>fileencoding</strong>、<strong>encoding</strong> 和 <strong>ter<br>mencoding</strong>。在实际使用中，任何一个选项出现错误，都会导致出现乱码。因此，每一个 Vim 用户都应该明确这<br>四个选项的含义。下面，我们详细介绍一下这四个选项的含义和作用。  </p>
 <h2 id="encoding">encoding</h2>
 <p>encoding 是 Vim 内部使用的字符编码方式。当我们设置了 encoding 之后，Vim 内部所有的 buffer、寄存器、脚<br>本中的字符串等，全都使用这个编码。Vim 在工作的时候，如果编码方式与它的内部编码不一致，它会先把编码转<br>换成内部编码。如果工作用的编码中含有无法转换为内部编码的字符，在这些字符就会丢失。因此，在选择 Vim 的<br>内部编码的时候，一定要使用一种表现能力足够强的编码，以免影响正常工作。  </p>
@@ -191,10 +233,20 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dby.github.io/2013/09/10/vim_coding/" data-id="9lofu9fy9hkhim1v" class="article-share-link">Share</a>
+	  
+	  <a data-url="http://dby.github.io/2013/09/10/vim_coding/" data-id="9lofu9fy9hkhim1v" data_title="vim_coding" data_summary="在 Vim 中，有四个与编码有关的选项，它们是：fil..." class="article-share-link">Share</a>
       
+
+      
+	  
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coding/">coding</a></li></ul>
+
+	  
+<span>
+Updated:<time datetime="2013-09-10T09:25:40.000Z" itemprop="dateModified">9月 10 2013</time>
+</span>
+
 
     </footer>
   </div>
@@ -202,12 +254,20 @@
 </article>
 
 
+
+<!-- 多说评论框 start -->
+
+<!-- 多说评论框 end -->
+
   
     <article id="post-qt_problems" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2013/09/10/qt_problems/" class="article-date">
+    
+<a href="/2013/09/10/qt_problems/" class="article-date">
   <time datetime="2013-09-10T08:54:59.000Z" itemprop="datePublished">9月 10 2013</time>
 </a>
+
+
     
   <div class="article-category">
     <a class="article-category-link" href="/categories/qt/">qt</a>
@@ -229,6 +289,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+		
+		<div id="toc" class="toc-article">
+			<h2 class="toc-title"><span>Contents</span></h2>
+		
+			
+		
+		</div>
+		
         <p>由于作业的缘故，在linux下使用qt开发界面有几天时间了，发生众多的问题，特在这梳理一下。  </p>
 <ul>
 <li><p>QT Creator使用design修改ui界面编译后界面为更新</p>
@@ -250,10 +318,20 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dby.github.io/2013/09/10/qt_problems/" data-id="jivsy7386re53fo3" class="article-share-link">Share</a>
+	  
+	  <a data-url="http://dby.github.io/2013/09/10/qt_problems/" data-id="jivsy7386re53fo3" data_title="qt_problems" data_summary="由于作业的缘故，在linux下使用qt开发界面有几天时..." class="article-share-link">Share</a>
       
+
+      
+	  
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/problems/">problems</a></li></ul>
+
+	  
+<span>
+Updated:<time datetime="2013-09-10T09:11:28.000Z" itemprop="dateModified">9月 10 2013</time>
+</span>
+
 
     </footer>
   </div>
@@ -261,12 +339,20 @@
 </article>
 
 
+
+<!-- 多说评论框 start -->
+
+<!-- 多说评论框 end -->
+
   
     <article id="post-qt_thread与gui线程连通" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2013/09/10/qt_thread与gui线程连通/" class="article-date">
+    
+<a href="/2013/09/10/qt_thread与gui线程连通/" class="article-date">
   <time datetime="2013-09-10T08:42:52.000Z" itemprop="datePublished">9月 10 2013</time>
 </a>
+
+
     
   <div class="article-category">
     <a class="article-category-link" href="/categories/qt/">qt</a>
@@ -288,6 +374,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+		
+		<div id="toc" class="toc-article">
+			<h2 class="toc-title"><span>Contents</span></h2>
+		
+			
+		
+		</div>
+		
         <p>qt中thread与GUI线程互通的一种方法，采用信号槽的机制。<br>通常的情况下，信号和槽机制是可以同步操作的，这就意味着在发射信号的时候，可以使用直接函数，立即调用链接在同一信号的多个槽。然而，当连接位于不同线程中的对象时，这一机制就会变得不同步起来，可以通过修改QObject::connect()的第5个可选参数而改变。  </p>
 <p>connect的第五个参数Qt::QueuedConnection表示槽函数由接受信号的线程所执行，如果不加表示槽函数由发出信号的次线程执行。当传递信号的参数类型不是QT的元类型时要先注册，关于QT的元类型可以参看QT文档。  </p>
 <p><em>示例代码</em>： </p>
@@ -310,10 +404,20 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dby.github.io/2013/09/10/qt_thread与gui线程连通/" data-id="m00ezk11jyhn6jrg" class="article-share-link">Share</a>
+	  
+	  <a data-url="http://dby.github.io/2013/09/10/qt_thread与gui线程连通/" data-id="m00ezk11jyhn6jrg" data_title="qt_thread与GUI线程连通" data_summary="qt中thread与GUI线程互通的一种方法，采用信号..." class="article-share-link">Share</a>
       
+
+      
+	  
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/线程/">线程</a></li></ul>
+
+	  
+<span>
+Updated:<time datetime="2013-09-10T08:54:24.000Z" itemprop="dateModified">9月 10 2013</time>
+</span>
+
 
     </footer>
   </div>
@@ -321,12 +425,20 @@
 </article>
 
 
+
+<!-- 多说评论框 start -->
+
+<!-- 多说评论框 end -->
+
   
     <article id="post-qt_线程一" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2013/09/10/qt_线程一/" class="article-date">
+    
+<a href="/2013/09/10/qt_线程一/" class="article-date">
   <time datetime="2013-09-10T08:19:03.000Z" itemprop="datePublished">9月 10 2013</time>
 </a>
+
+
     
   <div class="article-category">
     <a class="article-category-link" href="/categories/qt/">qt</a>
@@ -348,6 +460,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+		
+		<div id="toc" class="toc-article">
+			<h2 class="toc-title"><span>Contents</span></h2>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#QT_线程的基础知识"><span class="toc-number">1.</span> <span class="toc-text">QT 线程的基础知识</span></a></li></ol>
+		
+		</div>
+		
         <h2 id="QT_线程的基础知识"><strong>QT 线程的基础知识</strong></h2>
 <ul>
 <li><p><em>线程类</em>  </p>
@@ -377,10 +497,24 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dby.github.io/2013/09/10/qt_线程一/" data-id="fzqdhgmudq7lhn7z" class="article-share-link">Share</a>
+	  
+	  <a data-url="http://dby.github.io/2013/09/10/qt_线程一/" data-id="fzqdhgmudq7lhn7z" data_title="qt_线程一" data_summary="QT 线程的基础知识
+
+线程类  
+
+QThtrad ..." class="article-share-link">Share</a>
       
+
+      
+	  
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/线程/">线程</a></li></ul>
+
+	  
+<span>
+Updated:<time datetime="2013-09-10T08:37:32.000Z" itemprop="dateModified">9月 10 2013</time>
+</span>
+
 
     </footer>
   </div>
@@ -388,12 +522,20 @@
 </article>
 
 
+
+<!-- 多说评论框 start -->
+
+<!-- 多说评论框 end -->
+
   
     <article id="post-qt_初探" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2013/09/10/qt_初探/" class="article-date">
+    
+<a href="/2013/09/10/qt_初探/" class="article-date">
   <time datetime="2013-09-10T07:23:18.000Z" itemprop="datePublished">9月 10 2013</time>
 </a>
+
+
     
   <div class="article-category">
     <a class="article-category-link" href="/categories/qt/">qt</a>
@@ -415,6 +557,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+		
+		<div id="toc" class="toc-article">
+			<h2 class="toc-title"><span>Contents</span></h2>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#QT_简介"><span class="toc-number">1.</span> <span class="toc-text">QT 简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ubuntu下安装"><span class="toc-number">2.</span> <span class="toc-text">Ubuntu下安装</span></a></li></ol>
+		
+		</div>
+		
         <h2 id="QT_简介"><strong>QT 简介</strong></h2>
 <p>Qt 是一个跨平台的 C++ 图形用户界面库，由挪威 TrollTech 公司出品，目前包括Qt， 基于 Framebuffer 的 Qt Embedded，快速开发工具 Qt Designer，国际化工具 Qt Linguist 等部分 Qt 支持所有 Unix 系统，当然也包括 Linux，还支持 WinNT/Win2k，Win95/98 平台。  </p>
 <p>这里有着更详细的<a href="http://blog.csdn.net/apple1985507/article/details/5340235" target="_blank" rel="external">资料</a>  </p>
@@ -440,10 +590,21 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dby.github.io/2013/09/10/qt_初探/" data-id="fynsh59siyw401qb" class="article-share-link">Share</a>
+	  
+	  <a data-url="http://dby.github.io/2013/09/10/qt_初探/" data-id="fynsh59siyw401qb" data_title="qt_初探" data_summary="QT 简介
+Qt 是一个跨平台的 C++ 图形用户界面..." class="article-share-link">Share</a>
       
+
+      
+	  
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/qt/">qt</a></li></ul>
+
+	  
+<span>
+Updated:<time datetime="2013-09-10T08:39:19.000Z" itemprop="dateModified">9月 10 2013</time>
+</span>
+
 
     </footer>
   </div>
@@ -451,12 +612,20 @@
 </article>
 
 
+
+<!-- 多说评论框 start -->
+
+<!-- 多说评论框 end -->
+
   
     <article id="post-markdown_tips" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2013/09/07/markdown_tips/" class="article-date">
+    
+<a href="/2013/09/07/markdown_tips/" class="article-date">
   <time datetime="2013-09-07T12:47:04.000Z" itemprop="datePublished">9月 7 2013</time>
 </a>
+
+
     
   <div class="article-category">
     <a class="article-category-link" href="/categories/hexo/">hexo</a>
@@ -478,6 +647,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+		
+		<div id="toc" class="toc-article">
+			<h2 class="toc-title"><span>Contents</span></h2>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#下面是上述代码的效果"><span class="toc-number">1.</span> <span class="toc-text">下面是上述代码的效果</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#这是一级标题"><span class="toc-number">2.</span> <span class="toc-text">这是一级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#这是三级标题"><span class="toc-number">2.1.</span> <span class="toc-text">这是三级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#这是六级标题，也是最小的，没有七级标题"><span class="toc-number">2.1.0.0.0.1.</span> <span class="toc-text">这是六级标题，也是最小的，没有七级标题</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol>
+		
+		</div>
+		
         <p>前前后后使用hexo创建blog也是有一段的时间了，对blog也有了一定的了解，确实是蛮好用的。<br><strong>该怎么开始呢</strong>  打开这个<a href="http://ghosertblog.github.io/mdeditor/" target="_blank" rel="external">网址</a>，你可以实时的看到写完代码之后的结果，nice…</p>
 <p>从<strong>实践</strong>中来，到<em>实践</em>中去就好了..  </p>
 <p>以下是比较常用的一些Markdown代码:  </p>
@@ -529,10 +706,20 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dby.github.io/2013/09/07/markdown_tips/" data-id="gsv6ioqnohmlppwi" class="article-share-link">Share</a>
+	  
+	  <a data-url="http://dby.github.io/2013/09/07/markdown_tips/" data-id="gsv6ioqnohmlppwi" data_title="Markdown_tips" data_summary="前前后后使用hexo创建blog也是有一段的时间了，对..." class="article-share-link">Share</a>
       
+
+      
+	  
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li></ul>
+
+	  
+<span>
+Updated:<time datetime="2013-09-10T07:35:44.000Z" itemprop="dateModified">9月 10 2013</time>
+</span>
+
 
     </footer>
   </div>
@@ -540,12 +727,20 @@
 </article>
 
 
+
+<!-- 多说评论框 start -->
+
+<!-- 多说评论框 end -->
+
   
     <article id="post-hexo挣扎记" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2013/09/07/hexo挣扎记/" class="article-date">
+    
+<a href="/2013/09/07/hexo挣扎记/" class="article-date">
   <time datetime="2013-09-07T11:55:42.000Z" itemprop="datePublished">9月 7 2013</time>
 </a>
+
+
     
   <div class="article-category">
     <a class="article-category-link" href="/categories/hexo/">hexo</a>
@@ -567,6 +762,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+		
+		<div id="toc" class="toc-article">
+			<h2 class="toc-title"><span>Contents</span></h2>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo介绍"><span class="toc-number">1.</span> <span class="toc-text">hexo介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo教程"><span class="toc-number">1.1.</span> <span class="toc-text">hexo教程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置过程中我所遇到的一些问题"><span class="toc-number">1.2.</span> <span class="toc-text">配置过程中我所遇到的一些问题</span></a></li></ol></li></ol>
+		
+		</div>
+		
         <h1 id="hexo介绍">hexo介绍</h1>
 <blockquote>
 <p>快速、简单且功能强大的 Node.js 博客框架。<br>A fast, simple &amp; powerful blog framework, powered by Node.js.  </p>
@@ -587,10 +790,22 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dby.github.io/2013/09/07/hexo挣扎记/" data-id="6w86huy8p3gbl74c" class="article-share-link">Share</a>
+	  
+	  <a data-url="http://dby.github.io/2013/09/07/hexo挣扎记/" data-id="6w86huy8p3gbl74c" data_title="hexo挣扎记" data_summary="hexo介绍
+
+快速、简单且功能强大的 Node.js..." class="article-share-link">Share</a>
       
+
+      
+	  
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo-blog/">hexo, blog</a></li></ul>
+
+	  
+<span>
+Updated:<time datetime="2013-09-07T12:38:05.000Z" itemprop="dateModified">9月 7 2013</time>
+</span>
+
 
     </footer>
   </div>
@@ -598,12 +813,20 @@
 </article>
 
 
+
+<!-- 多说评论框 start -->
+
+<!-- 多说评论框 end -->
+
   
     <article id="post-vimrc" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2013/09/07/vimrc/" class="article-date">
+    
+<a href="/2013/09/07/vimrc/" class="article-date">
   <time datetime="2013-09-07T06:09:53.000Z" itemprop="datePublished">9月 7 2013</time>
 </a>
+
+
     
   <div class="article-category">
     <a class="article-category-link" href="/categories/linux/">linux</a>
@@ -625,6 +848,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+		
+		<div id="toc" class="toc-article">
+			<h2 class="toc-title"><span>Contents</span></h2>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#插件问题"><span class="toc-number">1.</span> <span class="toc-text">插件问题</span></a></li></ol>
+		
+		</div>
+		
         <p>一直以来，管理vim插件对我来说都是一个很大的困扰，更新和卸载，一个一个都是很麻烦，尝试了很多的插件<br>的管理软件，知道遇到了Vundle。<br>Vundle利用git, 插件的git repo以及vim-scripts维护的GitHub repo, 自动安装, 更新和卸载插件. 它把这些<br>繁杂的工作变得简单, 甚至, 成为一种享受。  </p>
 <p>Vundle的安装很简单，只需执行</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone <span class="symbol">http:</span>/<span class="regexp">/github.com/gmarik</span><span class="regexp">/vundle.git ~/</span>.vim/bundle/vundle</div></pre></td></tr></table></figure>
@@ -651,10 +882,20 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dby.github.io/2013/09/07/vimrc/" data-id="l1xnkonf5x5a1ggx" class="article-share-link">Share</a>
+	  
+	  <a data-url="http://dby.github.io/2013/09/07/vimrc/" data-id="l1xnkonf5x5a1ggx" data_title="vimrc" data_summary="一直以来，管理vim插件对我来说都是一个很大的困扰，更..." class="article-share-link">Share</a>
       
+
+      
+	  
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vimrc/">vimrc</a></li></ul>
+
+	  
+<span>
+Updated:<time datetime="2013-09-07T06:42:48.000Z" itemprop="dateModified">9月 7 2013</time>
+</span>
+
 
     </footer>
   </div>
@@ -662,12 +903,20 @@
 </article>
 
 
+
+<!-- 多说评论框 start -->
+
+<!-- 多说评论框 end -->
+
   
     <article id="post-python爬虫_点点美女照片" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2013/09/07/python爬虫_点点美女照片/" class="article-date">
+    
+<a href="/2013/09/07/python爬虫_点点美女照片/" class="article-date">
   <time datetime="2013-09-07T04:52:19.000Z" itemprop="datePublished">9月 7 2013</time>
 </a>
+
+
     
   <div class="article-category">
     <a class="article-category-link" href="/categories/python/">python</a>
@@ -689,6 +938,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+		
+		<div id="toc" class="toc-article">
+			<h2 class="toc-title"><span>Contents</span></h2>
+		
+			
+		
+		</div>
+		
         <p>继续鼓捣爬虫，今天贴出一个代码，爬取点点网「美女」标签下的照片。  </p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding: utf-8 -*- </span></div><div class="line"> </div><div class="line"> </div><div class="line"><span class="comment">#---------------------------------------  </span></div><div class="line"><span class="comment">#   程序：点点美女图片爬虫  </span></div><div class="line"><span class="comment">#   版本：0.2  </span></div><div class="line"><span class="comment">#   作者：sys.linux.d  </span></div><div class="line"><span class="comment">#   日期：2013-09-07 </span></div><div class="line"><span class="comment">#   语言：Python 2.7  </span></div><div class="line"><span class="comment">#   说明：能设置下载的页数 </span></div><div class="line"><span class="comment">#--------------------------------------- </span></div><div class="line"> </div><div class="line"><span class="keyword">import</span> urllib2</div><div class="line"><span class="keyword">import</span> urllib</div><div class="line"><span class="keyword">import</span> re</div><div class="line"> </div><div class="line">pat = re.compile(<span class="string">'&lt;div class="feed-big-img"&gt;\n.*?imgsrc="(ht.*?)\".*?'</span>)</div><div class="line">nexturl1 = <span class="string">"http://www.diandian.com/tag/%E7%BE%8E%E5%A5%B3?page="</span></div><div class="line"> </div><div class="line">count = <span class="number">1</span></div><div class="line"> </div><div class="line"><span class="keyword">while</span> count &lt; <span class="number">2</span>:</div><div class="line"> </div><div class="line">    <span class="keyword">print</span> <span class="string">"Page "</span> + str(count) + <span class="string">"\n"</span></div><div class="line">    myurl = nexturl1 + str(count)</div><div class="line">    myres = urllib2.urlopen(myurl)</div><div class="line">    mypage = myres.read()</div><div class="line">    ucpage = mypage.decode(<span class="string">"utf-8"</span>) <span class="comment">#转码</span></div><div class="line"> </div><div class="line">    mat = pat.findall(ucpage)</div><div class="line">    </div><div class="line">    </div><div class="line">    <span class="keyword">if</span> len(mat):</div><div class="line">        cnt = <span class="number">1</span></div><div class="line">        <span class="keyword">for</span> item <span class="keyword">in</span> mat:</div><div class="line">            <span class="keyword">print</span> <span class="string">"Page"</span> + str(count) + <span class="string">" No."</span> + str(cnt) + <span class="string">" url: "</span> + item + <span class="string">"\n"</span></div><div class="line">            cnt += <span class="number">1</span></div><div class="line">            fnp = re.compile(<span class="string">'(\w{10}\.\w+)$'</span>)</div><div class="line">            fnr = fnp.findall(item)</div><div class="line">            <span class="keyword">if</span> fnr:</div><div class="line">                fname = fnr[<span class="number">0</span>]</div><div class="line">                urllib.urlretrieve(item, fname)</div><div class="line">      	</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">print</span> <span class="string">"no data"</span></div><div class="line">        </div><div class="line">    count += <span class="number">1</span></div></pre></td></tr></table></figure>
 
@@ -697,16 +954,31 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dby.github.io/2013/09/07/python爬虫_点点美女照片/" data-id="ekog6j9k9vhd0vvw" class="article-share-link">Share</a>
+	  
+	  <a data-url="http://dby.github.io/2013/09/07/python爬虫_点点美女照片/" data-id="ekog6j9k9vhd0vvw" data_title="python爬虫_点点美女照片" data_summary="继续鼓捣爬虫，今天贴出一个代码，爬取点点网「美女」标签..." class="article-share-link">Share</a>
       
+
+      
+	  
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python爬虫/">python爬虫</a></li></ul>
+
+	  
+<span>
+Updated:<time datetime="2013-09-07T04:58:28.000Z" itemprop="dateModified">9月 7 2013</time>
+</span>
+
 
     </footer>
   </div>
   
 </article>
 
+
+
+<!-- 多说评论框 start -->
+
+<!-- 多说评论框 end -->
 
   
   
@@ -716,7 +988,24 @@
   
 </section>
         
-          <aside id="sidebar">
+          
+<aside id="sidebar">
+
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">ABOUT ME</h3>
+  <ul class="widget about-me">
+    
+    <li><img class="author" title="About me" src="http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=180" /></li>
+    
+    
+    <li>Hi,I'm howiefh.</li>
+    
+  </ul>
+</div>
+
+
   
     
   <div class="widget-wrap">
@@ -725,6 +1014,7 @@
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/acm/">acm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/c/">c++</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/flask/">flask</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/libpcap/">libpcap</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/mac/">mac</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/qt/">qt</a><span class="category-list-count">4</span></li></ul>
     </div>
   </div>
+
 
   
     
@@ -735,28 +1025,31 @@
     </div>
   </div>
 
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Markdown/" style="font-size: 10.00px;">Markdown</a><a href="/tags/aria2a/" style="font-size: 10.00px;">aria2a</a><a href="/tags/cin-scanf/" style="font-size: 10.00px;">cin/scanf</a><a href="/tags/coding/" style="font-size: 10.00px;">coding</a><a href="/tags/const/" style="font-size: 20.00px;">const</a><a href="/tags/copy构造函数/" style="font-size: 10.00px;">copy构造函数</a><a href="/tags/flask-mysql/" style="font-size: 10.00px;">flask mysql</a><a href="/tags/gcc-g/" style="font-size: 10.00px;">gcc/g++</a><a href="/tags/hexo-blog/" style="font-size: 10.00px;">hexo, blog</a><a href="/tags/libpcap/" style="font-size: 10.00px;">libpcap</a><a href="/tags/locale/" style="font-size: 10.00px;">locale</a><a href="/tags/mac/" style="font-size: 10.00px;">mac</a><a href="/tags/problems/" style="font-size: 10.00px;">problems</a><a href="/tags/python爬虫/" style="font-size: 20.00px;">python爬虫</a><a href="/tags/qt/" style="font-size: 10.00px;">qt</a><a href="/tags/shell/" style="font-size: 10.00px;">shell</a><a href="/tags/static/" style="font-size: 10.00px;">static</a><a href="/tags/surround-vim/" style="font-size: 10.00px;">surround.vim</a><a href="/tags/vimrc/" style="font-size: 10.00px;">vimrc</a><a href="/tags/线程/" style="font-size: 20.00px;">线程</a>
+      <a href="/tags/Markdown/" style="font-size: 13.00px; color: #7dc3de;">Markdown</a><a href="/tags/aria2a/" style="font-size: 13.00px; color: #7dc3de;">aria2a</a><a href="/tags/cin-scanf/" style="font-size: 13.00px; color: #7dc3de;">cin/scanf</a><a href="/tags/coding/" style="font-size: 13.00px; color: #7dc3de;">coding</a><a href="/tags/const/" style="font-size: 20.00px; color: #1db400;">const</a><a href="/tags/copy构造函数/" style="font-size: 13.00px; color: #7dc3de;">copy构造函数</a><a href="/tags/flask-mysql/" style="font-size: 13.00px; color: #7dc3de;">flask mysql</a><a href="/tags/gcc-g/" style="font-size: 13.00px; color: #7dc3de;">gcc/g++</a><a href="/tags/hexo-blog/" style="font-size: 13.00px; color: #7dc3de;">hexo, blog</a><a href="/tags/libpcap/" style="font-size: 13.00px; color: #7dc3de;">libpcap</a><a href="/tags/locale/" style="font-size: 13.00px; color: #7dc3de;">locale</a><a href="/tags/mac/" style="font-size: 13.00px; color: #7dc3de;">mac</a><a href="/tags/problems/" style="font-size: 13.00px; color: #7dc3de;">problems</a><a href="/tags/python爬虫/" style="font-size: 20.00px; color: #1db400;">python爬虫</a><a href="/tags/qt/" style="font-size: 13.00px; color: #7dc3de;">qt</a><a href="/tags/shell/" style="font-size: 13.00px; color: #7dc3de;">shell</a><a href="/tags/static/" style="font-size: 13.00px; color: #7dc3de;">static</a><a href="/tags/surround-vim/" style="font-size: 13.00px; color: #7dc3de;">surround.vim</a><a href="/tags/vimrc/" style="font-size: 13.00px; color: #7dc3de;">vimrc</a><a href="/tags/线程/" style="font-size: 20.00px; color: #1db400;">线程</a>
     </div>
   </div>
+
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">archive</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">18</span></li></ul>
     </div>
   </div>
 
+
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -784,8 +1077,26 @@
     </div>
   </div>
 
+
   
+    
+
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">Links</h3>
+  <ul class="widget">
+    
+    <li><a href="http://yibo.iyiyun.com/js/yibo404/key/1" target="_BLANK">404 page</a></li>
+    
+  </ul>
+</div>
+
+
+  
+
 </aside>
+
         
       </div>
       <footer id="footer">
@@ -793,10 +1104,11 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2014 sys.linux.d<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/howiefh/hexo-theme-landscape-f" target="_blank" title="Landscape-F">Landscape-F</a>
     </div>
   </div>
 </footer>
+
     </div>
     <nav id="mobile-nav">
   
@@ -807,12 +1119,40 @@
 </nav>
     
 
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+
+<!-- 多说公共JS代码 end -->
+
+<!-- 百度分享 start -->
+
+<!-- 百度分享 end -->
+
+<!--
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+-->
+<script src="/js/jquery.min.js" type="text/javascript"></script>
+
 
 
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
 
   <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<div class="bottom-btn">
+
+	<a class="icon-gotop" href="javascript:void(0)" title="返回顶部"></a>
+	<script src="/js/gotop.js" type="text/javascript"></script>
+
+	<!--
+	<script src="/js/gotop.js"></script>
+	-->
+
+
+</div>
+<script src="/js/toc_aside_toggle.js" type="text/javascript"></script>
 
 
 
