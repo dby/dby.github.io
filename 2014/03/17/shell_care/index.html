@@ -3,17 +3,53 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2014 | sys.linux.d::blog</title>
+  <title>shell_care | sys.linux.d::blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Walk steps step by step">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sys.linux.d::blog">
-<meta property="og:url" content="http://dby.github.io/archives/2014/">
+  <meta name="description" content="linux shell(容易出错的几个地方)
+
+赋值语句”=”左右没有空格。num=5 =&gt;将num赋值为5  
+
+比较操作”[]”  
+
+在”[“和”]”符号的左右都有空格  
+为了区分与赋值语句中”=”,比较操作的”=”符号的左右都要空格  
+if [ $a = $b ] =&gt;如果a，b的值相等。  
+if条件中，”=”用于比较字符串，”-eq”用于比较整型数  
+
+
+for循环">
+<meta property="og:type" content="article">
+<meta property="og:title" content="shell_care">
+<meta property="og:url" content="http://dby.github.io/2014/03/17/shell_care/">
 <meta property="og:site_name" content="sys.linux.d::blog">
-<meta property="og:description" content="Walk steps step by step">
+<meta property="og:description" content="linux shell(容易出错的几个地方)
+
+赋值语句”=”左右没有空格。num=5 =&gt;将num赋值为5  
+
+比较操作”[]”  
+
+在”[“和”]”符号的左右都有空格  
+为了区分与赋值语句中”=”,比较操作的”=”符号的左右都要空格  
+if [ $a = $b ] =&gt;如果a，b的值相等。  
+if条件中，”=”用于比较字符串，”-eq”用于比较整型数  
+
+
+for循环">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sys.linux.d::blog">
-<meta name="twitter:description" content="Walk steps step by step">
+<meta name="twitter:title" content="shell_care">
+<meta name="twitter:description" content="linux shell(容易出错的几个地方)
+
+赋值语句”=”左右没有空格。num=5 =&gt;将num赋值为5  
+
+比较操作”[]”  
+
+在”[“和”]”符号的左右都有空格  
+为了区分与赋值语句中”=”,比较操作的”=”符号的左右都要空格  
+if [ $a = $b ] =&gt;如果a，b的值相等。  
+if条件中，”=”用于比较字符串，”-eq”用于比较整型数  
+
+
+for循环">
 
   
     <link rel="alternative" href="/atom.xml" title="sys.linux.d::blog" type="application/atom+xml">
@@ -65,58 +101,98 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/03/17/shell_care/" class="archive-article-date">
-  <time datetime="2014-03-17T07:31:23.000Z" itemprop="datePublished">3月 17</time>
+        <section id="main"><article id="post-shell_care" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/03/17/shell_care/" class="article-date">
+  <time datetime="2014-03-17T07:31:23.000Z" itemprop="datePublished">3月 17 2014</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/03/17/shell_care/">shell_care</a>
+    <h1 class="article-title" itemprop="name">
+      shell_care
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/03/15/gccg++/" class="archive-article-date">
-  <time datetime="2014-03-15T08:17:57.000Z" itemprop="datePublished">3月 15</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/03/15/gccg++/">gcc/g++</a>
-    </h1>
-  
+        <h2 id="linux_shell(容易出错的几个地方)">linux shell(容易出错的几个地方)</h2>
+<ul>
+<li><p>赋值语句”=”左右没有空格。<br><code>num=5</code> =&gt;将num赋值为5  </p>
+</li>
+<li><p>比较操作”[]”  </p>
+<ul>
+<li>在”[“和”]”符号的左右都有空格  </li>
+<li>为了区分与赋值语句中”=”,比较操作的”=”符号的左右都要空格  </li>
+<li><code>if [ $a = $b ]</code> =&gt;如果a，b的值相等。  </li>
+<li>if条件中，”=”用于比较<strong>字符串</strong>，”-eq”用于比较<strong>整型数</strong>  </li>
+</ul>
+</li>
+<li><p>for循环</p>
+<ul>
+<li>如果列表中的元素包含在一对双引号中，则被认为是一个元素。  </li>
+<li><code>for i in 1 2 3 4 5</code>  </li>
+<li><code>for i in &quot;1 2 3 4 5&quot;</code>  </li>
+</ul>
+</li>
+<li><p>expr计算整数变量值</p>
+<ul>
+<li>格式：expr arg</li>
+</ul>
+</li>
+<li><p>let命令  </p>
+<ul>
+<li>格式：let arg1[arg2…]</li>
+</ul>
+</li>
+<li><p>shell中实现整型变量自加1的方法  </p>
+<ul>
+<li>a=$(($a+1))  </li>
+<li>a=$[$a+1]</li>
+<li>a=<code>expr $a + 1</code></li>
+<li>let a++</li>
+<li>let a+=1</li>
+<li>((a+1))</li>
+</ul>
+</li>
+</ul>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dby.github.io/2014/03/17/shell_care/" data-id="xr2lbpvky5lodu96" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2014/03/15/gccg++/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">gcc/g++</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
         
           <aside id="sidebar">

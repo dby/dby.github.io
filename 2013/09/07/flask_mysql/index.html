@@ -3,17 +3,32 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2014 | sys.linux.d::blog</title>
+  <title>flask_mysql | sys.linux.d::blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Walk steps step by step">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sys.linux.d::blog">
-<meta property="og:url" content="http://dby.github.io/archives/2014/">
+  <meta name="description" content="Firstly install python-setuptools
+| sudo apt-get install python-setuptools  
+then install mysql-python
+| easy_install mysql-python  
+EnvironmentError: mysql_config not found
+这是因为缺少libmysqlclient-dev,如">
+<meta property="og:type" content="article">
+<meta property="og:title" content="flask_mysql">
+<meta property="og:url" content="http://dby.github.io/2013/09/07/flask_mysql/">
 <meta property="og:site_name" content="sys.linux.d::blog">
-<meta property="og:description" content="Walk steps step by step">
+<meta property="og:description" content="Firstly install python-setuptools
+| sudo apt-get install python-setuptools  
+then install mysql-python
+| easy_install mysql-python  
+EnvironmentError: mysql_config not found
+这是因为缺少libmysqlclient-dev,如">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sys.linux.d::blog">
-<meta name="twitter:description" content="Walk steps step by step">
+<meta name="twitter:title" content="flask_mysql">
+<meta name="twitter:description" content="Firstly install python-setuptools
+| sudo apt-get install python-setuptools  
+then install mysql-python
+| easy_install mysql-python  
+EnvironmentError: mysql_config not found
+这是因为缺少libmysqlclient-dev,如">
 
   
     <link rel="alternative" href="/atom.xml" title="sys.linux.d::blog" type="application/atom+xml">
@@ -65,58 +80,76 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/03/17/shell_care/" class="archive-article-date">
-  <time datetime="2014-03-17T07:31:23.000Z" itemprop="datePublished">3月 17</time>
+        <section id="main"><article id="post-flask_mysql" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/09/07/flask_mysql/" class="article-date">
+  <time datetime="2013-09-07T02:11:40.000Z" itemprop="datePublished">9月 7 2013</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flask/">flask</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/03/17/shell_care/">shell_care</a>
+    <h1 class="article-title" itemprop="name">
+      flask_mysql
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/03/15/gccg++/" class="archive-article-date">
-  <time datetime="2014-03-15T08:17:57.000Z" itemprop="datePublished">3月 15</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/03/15/gccg++/">gcc/g++</a>
-    </h1>
-  
+        <h2 id="Firstly_install_python-setuptools">Firstly install python-setuptools</h2>
+<p>| <code>sudo apt-get install python-setuptools</code>  </p>
+<h2 id="then_install_mysql-python">then install mysql-python</h2>
+<p>| <code>easy_install mysql-python</code>  </p>
+<h2 id="EnvironmentError:_mysql_config_not_found"><strong>EnvironmentError: mysql_config not found</strong></h2>
+<p>这是因为缺少<em>libmysqlclient-dev</em>,如果你安装debian/ubuntu，只需要执行命令:<br>| <code>sudo apt-get install mysql</code><br>| <code>sudo apt-get install libmysqlclient-dev</code>  </p>
+<h2 id="mysql-c:29:20:_致命错误:_Python-h：没有那个文件或目录"><strong>mysql.c:29:20: 致命错误: Python.h：没有那个文件或目录</strong></h2>
+<p>| <code>sudo apt-get install python-dev</code>  </p>
+<p>借鉴的一些网站：<br><a href="https://flask-mysql.readthedocs.org/en/latest/" target="_blank" rel="external">https://flask-mysql.readthedocs.org/en/latest/</a><br><a href="http://docs.torriacg.org/docs/flask-sqlalchemy/config.html" target="_blank" rel="external">http://docs.torriacg.org/docs/flask-sqlalchemy/config.html</a><br><a href="http://blog.csdn.net/a657941877/article/details/8944683" target="_blank" rel="external">http://blog.csdn.net/a657941877/article/details/8944683</a></p>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dby.github.io/2013/09/07/flask_mysql/" data-id="ki45mzrat30pw65c" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flask-mysql/">flask mysql</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2013/09/07/python爬虫_糗百照片/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          python爬虫_糗百照片
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/09/07/aria2a/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">aria2a</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
         
           <aside id="sidebar">

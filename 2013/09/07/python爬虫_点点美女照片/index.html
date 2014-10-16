@@ -3,17 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2014 | sys.linux.d::blog</title>
+  <title>python爬虫_点点美女照片 | sys.linux.d::blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Walk steps step by step">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sys.linux.d::blog">
-<meta property="og:url" content="http://dby.github.io/archives/2014/">
+  <meta name="description" content="继续鼓捣爬虫，今天贴出一个代码，爬取点点网「美女」标签下的照片。  
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647# -*- coding: utf-8 -*-   #---------------------------------------  #   程序：点点美女图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python爬虫_点点美女照片">
+<meta property="og:url" content="http://dby.github.io/2013/09/07/python爬虫_点点美女照片/">
 <meta property="og:site_name" content="sys.linux.d::blog">
-<meta property="og:description" content="Walk steps step by step">
+<meta property="og:description" content="继续鼓捣爬虫，今天贴出一个代码，爬取点点网「美女」标签下的照片。  
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647# -*- coding: utf-8 -*-   #---------------------------------------  #   程序：点点美女图">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sys.linux.d::blog">
-<meta name="twitter:description" content="Walk steps step by step">
+<meta name="twitter:title" content="python爬虫_点点美女照片">
+<meta name="twitter:description" content="继续鼓捣爬虫，今天贴出一个代码，爬取点点网「美女」标签下的照片。  
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647# -*- coding: utf-8 -*-   #---------------------------------------  #   程序：点点美女图">
 
   
     <link rel="alternative" href="/atom.xml" title="sys.linux.d::blog" type="application/atom+xml">
@@ -65,58 +68,71 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/03/17/shell_care/" class="archive-article-date">
-  <time datetime="2014-03-17T07:31:23.000Z" itemprop="datePublished">3月 17</time>
+        <section id="main"><article id="post-python爬虫_点点美女照片" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/09/07/python爬虫_点点美女照片/" class="article-date">
+  <time datetime="2013-09-07T04:52:19.000Z" itemprop="datePublished">9月 7 2013</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/python/">python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/03/17/shell_care/">shell_care</a>
+    <h1 class="article-title" itemprop="name">
+      python爬虫_点点美女照片
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/03/15/gccg++/" class="archive-article-date">
-  <time datetime="2014-03-15T08:17:57.000Z" itemprop="datePublished">3月 15</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/03/15/gccg++/">gcc/g++</a>
-    </h1>
-  
+        <p>继续鼓捣爬虫，今天贴出一个代码，爬取点点网「美女」标签下的照片。  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding: utf-8 -*- </span></div><div class="line"> </div><div class="line"> </div><div class="line"><span class="comment">#---------------------------------------  </span></div><div class="line"><span class="comment">#   程序：点点美女图片爬虫  </span></div><div class="line"><span class="comment">#   版本：0.2  </span></div><div class="line"><span class="comment">#   作者：sys.linux.d  </span></div><div class="line"><span class="comment">#   日期：2013-09-07 </span></div><div class="line"><span class="comment">#   语言：Python 2.7  </span></div><div class="line"><span class="comment">#   说明：能设置下载的页数 </span></div><div class="line"><span class="comment">#--------------------------------------- </span></div><div class="line"> </div><div class="line"><span class="keyword">import</span> urllib2</div><div class="line"><span class="keyword">import</span> urllib</div><div class="line"><span class="keyword">import</span> re</div><div class="line"> </div><div class="line">pat = re.compile(<span class="string">'&lt;div class="feed-big-img"&gt;\n.*?imgsrc="(ht.*?)\".*?'</span>)</div><div class="line">nexturl1 = <span class="string">"http://www.diandian.com/tag/%E7%BE%8E%E5%A5%B3?page="</span></div><div class="line"> </div><div class="line">count = <span class="number">1</span></div><div class="line"> </div><div class="line"><span class="keyword">while</span> count &lt; <span class="number">2</span>:</div><div class="line"> </div><div class="line">    <span class="keyword">print</span> <span class="string">"Page "</span> + str(count) + <span class="string">"\n"</span></div><div class="line">    myurl = nexturl1 + str(count)</div><div class="line">    myres = urllib2.urlopen(myurl)</div><div class="line">    mypage = myres.read()</div><div class="line">    ucpage = mypage.decode(<span class="string">"utf-8"</span>) <span class="comment">#转码</span></div><div class="line"> </div><div class="line">    mat = pat.findall(ucpage)</div><div class="line">    </div><div class="line">    </div><div class="line">    <span class="keyword">if</span> len(mat):</div><div class="line">        cnt = <span class="number">1</span></div><div class="line">        <span class="keyword">for</span> item <span class="keyword">in</span> mat:</div><div class="line">            <span class="keyword">print</span> <span class="string">"Page"</span> + str(count) + <span class="string">" No."</span> + str(cnt) + <span class="string">" url: "</span> + item + <span class="string">"\n"</span></div><div class="line">            cnt += <span class="number">1</span></div><div class="line">            fnp = re.compile(<span class="string">'(\w{10}\.\w+)$'</span>)</div><div class="line">            fnr = fnp.findall(item)</div><div class="line">            <span class="keyword">if</span> fnr:</div><div class="line">                fname = fnr[<span class="number">0</span>]</div><div class="line">                urllib.urlretrieve(item, fname)</div><div class="line">      	</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">print</span> <span class="string">"no data"</span></div><div class="line">        </div><div class="line">    count += <span class="number">1</span></div></pre></td></tr></table></figure>
 
-    </header>
+<p>使用方法是类似的。  </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dby.github.io/2013/09/07/python爬虫_点点美女照片/" data-id="ekog6j9k9vhd0vvw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python爬虫/">python爬虫</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2013/09/07/vimrc/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          vimrc
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/09/07/python爬虫_糗百照片/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">python爬虫_糗百照片</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
         
           <aside id="sidebar">

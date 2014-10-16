@@ -3,17 +3,35 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2014 | sys.linux.d::blog</title>
+  <title>qt_problems | sys.linux.d::blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Walk steps step by step">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sys.linux.d::blog">
-<meta property="og:url" content="http://dby.github.io/archives/2014/">
+  <meta name="description" content="由于作业的缘故，在linux下使用qt开发界面有几天时间了，发生众多的问题，特在这梳理一下。  
+
+QT Creator使用design修改ui界面编译后界面为更新
+
+原因：简单的说就是先要从.ui生成ui_.h文件，然后在进行编译，所以界面未更新的实际上是因为ui_*.h未更新导致的。  
+根治方法：项目设置文件.pro内增加 UIDIR=./UI，同时删除掉源代码目录中ui*.h
+详细的资料">
+<meta property="og:type" content="article">
+<meta property="og:title" content="qt_problems">
+<meta property="og:url" content="http://dby.github.io/2013/09/10/qt_problems/">
 <meta property="og:site_name" content="sys.linux.d::blog">
-<meta property="og:description" content="Walk steps step by step">
+<meta property="og:description" content="由于作业的缘故，在linux下使用qt开发界面有几天时间了，发生众多的问题，特在这梳理一下。  
+
+QT Creator使用design修改ui界面编译后界面为更新
+
+原因：简单的说就是先要从.ui生成ui_.h文件，然后在进行编译，所以界面未更新的实际上是因为ui_*.h未更新导致的。  
+根治方法：项目设置文件.pro内增加 UIDIR=./UI，同时删除掉源代码目录中ui*.h
+详细的资料">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sys.linux.d::blog">
-<meta name="twitter:description" content="Walk steps step by step">
+<meta name="twitter:title" content="qt_problems">
+<meta name="twitter:description" content="由于作业的缘故，在linux下使用qt开发界面有几天时间了，发生众多的问题，特在这梳理一下。  
+
+QT Creator使用design修改ui界面编译后界面为更新
+
+原因：简单的说就是先要从.ui生成ui_.h文件，然后在进行编译，所以界面未更新的实际上是因为ui_*.h未更新导致的。  
+根治方法：项目设置文件.pro内增加 UIDIR=./UI，同时删除掉源代码目录中ui*.h
+详细的资料">
 
   
     <link rel="alternative" href="/atom.xml" title="sys.linux.d::blog" type="application/atom+xml">
@@ -65,58 +83,84 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/03/17/shell_care/" class="archive-article-date">
-  <time datetime="2014-03-17T07:31:23.000Z" itemprop="datePublished">3月 17</time>
+        <section id="main"><article id="post-qt_problems" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/09/10/qt_problems/" class="article-date">
+  <time datetime="2013-09-10T08:54:59.000Z" itemprop="datePublished">9月 10 2013</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/qt/">qt</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/03/17/shell_care/">shell_care</a>
+    <h1 class="article-title" itemprop="name">
+      qt_problems
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/03/15/gccg++/" class="archive-article-date">
-  <time datetime="2014-03-15T08:17:57.000Z" itemprop="datePublished">3月 15</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/03/15/gccg++/">gcc/g++</a>
-    </h1>
-  
+        <p>由于作业的缘故，在linux下使用qt开发界面有几天时间了，发生众多的问题，特在这梳理一下。  </p>
+<ul>
+<li><p>QT Creator使用design修改ui界面编译后界面为更新</p>
+<ul>
+<li>原因：简单的说就是先要从<em>.ui生成ui_</em>.h文件，然后在进行编译，所以界面未更新的实际上是因为ui_*.h未更<br>新导致的。  </li>
+<li>根治方法：项目设置文件.pro内增加 UI<em>DIR=./UI，同时删除掉源代码目录中ui</em>*.h</li>
+<li><a href="http://blog.csdn.net/cokewei/article/details/6639960" target="_blank" rel="external">详细的资料</a>  </li>
+</ul>
+</li>
+<li><p>使用root用户启动程序的方法</p>
+<ul>
+<li>由于在程序中可能使用了底层函数，需要获得root权限才能使程序正常的运行  </li>
+<li>方法：在命令行 sudo qtcreator</li>
+<li>遗留：仍会报qbus的错误(未找到原因)，但是不影响使用  </li>
+</ul>
+</li>
+</ul>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dby.github.io/2013/09/10/qt_problems/" data-id="jivsy7386re53fo3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/problems/">problems</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2013/09/10/vim_coding/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          vim_coding
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/09/10/qt_thread与gui线程连通/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">qt_thread与GUI线程连通</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
         
           <aside id="sidebar">

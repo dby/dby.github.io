@@ -3,17 +3,44 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2014 | sys.linux.d::blog</title>
+  <title>qt_线程一 | sys.linux.d::blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Walk steps step by step">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sys.linux.d::blog">
-<meta property="og:url" content="http://dby.github.io/archives/2014/">
+  <meta name="description" content="QT 线程的基础知识
+
+线程类  
+
+QThtrad 提供了开始一个新线程的方法  
+QThreadStorage 提供逐线程数据的存储  
+QMutex 提供互斥的锁  
+QMutexLocker 是一个便利类，它可以自动对QMutex加锁与解锁  
+QReadWriterLock 提供了一个可以同时读操作的锁  
+QReadLocker与QWriteLocker 是便利类，它自动对QReadW">
+<meta property="og:type" content="article">
+<meta property="og:title" content="qt_线程一">
+<meta property="og:url" content="http://dby.github.io/2013/09/10/qt_线程一/">
 <meta property="og:site_name" content="sys.linux.d::blog">
-<meta property="og:description" content="Walk steps step by step">
+<meta property="og:description" content="QT 线程的基础知识
+
+线程类  
+
+QThtrad 提供了开始一个新线程的方法  
+QThreadStorage 提供逐线程数据的存储  
+QMutex 提供互斥的锁  
+QMutexLocker 是一个便利类，它可以自动对QMutex加锁与解锁  
+QReadWriterLock 提供了一个可以同时读操作的锁  
+QReadLocker与QWriteLocker 是便利类，它自动对QReadW">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sys.linux.d::blog">
-<meta name="twitter:description" content="Walk steps step by step">
+<meta name="twitter:title" content="qt_线程一">
+<meta name="twitter:description" content="QT 线程的基础知识
+
+线程类  
+
+QThtrad 提供了开始一个新线程的方法  
+QThreadStorage 提供逐线程数据的存储  
+QMutex 提供互斥的锁  
+QMutexLocker 是一个便利类，它可以自动对QMutex加锁与解锁  
+QReadWriterLock 提供了一个可以同时读操作的锁  
+QReadLocker与QWriteLocker 是便利类，它自动对QReadW">
 
   
     <link rel="alternative" href="/atom.xml" title="sys.linux.d::blog" type="application/atom+xml">
@@ -65,58 +92,92 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/03/17/shell_care/" class="archive-article-date">
-  <time datetime="2014-03-17T07:31:23.000Z" itemprop="datePublished">3月 17</time>
+        <section id="main"><article id="post-qt_线程一" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/09/10/qt_线程一/" class="article-date">
+  <time datetime="2013-09-10T08:19:03.000Z" itemprop="datePublished">9月 10 2013</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/qt/">qt</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/03/17/shell_care/">shell_care</a>
+    <h1 class="article-title" itemprop="name">
+      qt_线程一
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/03/15/gccg++/" class="archive-article-date">
-  <time datetime="2014-03-15T08:17:57.000Z" itemprop="datePublished">3月 15</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/03/15/gccg++/">gcc/g++</a>
-    </h1>
-  
+        <h2 id="QT_线程的基础知识"><strong>QT 线程的基础知识</strong></h2>
+<ul>
+<li><p><em>线程类</em>  </p>
+<ul>
+<li>QThtrad 提供了开始一个新线程的方法  </li>
+<li>QThreadStorage 提供逐线程数据的存储  </li>
+<li>QMutex 提供互斥的锁  </li>
+<li>QMutexLocker 是一个便利类，它可以自动对QMutex加锁与解锁  </li>
+<li>QReadWriterLock 提供了一个可以同时读操作的锁  </li>
+<li>QReadLocker与QWriteLocker 是便利类，它自动对QReadWriteLock加锁与解锁  </li>
+<li>QSemaphore 提供了一个整型信号量，是互斥量的泛化  </li>
+<li>QWaitCondition 提供了一种方法，使得线程可以在被另外线程唤醒之前一直休眠  </li>
+</ul>
+</li>
+<li><p><em>创建一个线程</em><br>创建一个线程，必须<strong>子类化QThread</strong>，并且<strong>重写</strong>它的<strong>run</strong>方法</p>
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">class MyThread : public QThread</div><div class="line">{</div><div class="line">   Q_OBJECT</div><div class="line">protected:</div><div class="line">   void run();</div><div class="line">};</div><div class="line"></div><div class="line">void MyThread::run()</div><div class="line">{</div><div class="line">    <span class="keyword">...</span></div><div class="line">}</div></pre></td></tr></table></figure>
 
-    </header>
+<p> 之后创建这个线程对象的实例，调用QThread::start()。run()里面的代码在另外的线程中进行。<br> <strong>注意</strong>：QCoreApplication::exec()必须总是在主线程(执行main()的那个线程)中被调用，不能从一个QThread中调用。在GUI程序中，主线程也被称为GUI线程，因为它是唯一一个允许执行GUI相关操作的线程。另外，你必须在创建一个QThread之前创建QApplication(or QCoreApplication)对象。  </p>
+<p>线程的同步，可重入与线程安全稍后在分析。<br>推荐资料：  </p>
+<ol>
+<li><a href="http://blog.csdn.net/dbzhang800/article/details/6554104" target="_blank" rel="external">http://blog.csdn.net/dbzhang800/article/details/6554104</a>  </li>
+<li><a href="http://blog.csdn.net/yiyaaixuexi/article/details/6692077" target="_blank" rel="external">http://blog.csdn.net/yiyaaixuexi/article/details/6692077</a>  </li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dby.github.io/2013/09/10/qt_线程一/" data-id="fzqdhgmudq7lhn7z" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/线程/">线程</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2013/09/10/qt_thread与gui线程连通/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          qt_thread与GUI线程连通
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/09/10/qt_初探/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">qt_初探</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
         
           <aside id="sidebar">

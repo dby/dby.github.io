@@ -3,17 +3,53 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2014 | sys.linux.d::blog</title>
+  <title>libpcap_初探 | sys.linux.d::blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Walk steps step by step">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sys.linux.d::blog">
-<meta property="og:url" content="http://dby.github.io/archives/2014/">
+  <meta name="description" content="最近一直忙于保研，找工作的事情，总结写blog的事情有点耽搁了。今天，初步了解了解libpcap—初探libpcap。  
+
+安装libpcap 
+
+安装的方法  
+
+
+问题集锦
+
+problem1:error while loading shared libraries: libpcap.so.1  
+
+
+执行 locate libpcap.so.1,查看libpcap.so.1在系统中的路径,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="libpcap_初探">
+<meta property="og:url" content="http://dby.github.io/2013/09/15/libpcap_初探/">
 <meta property="og:site_name" content="sys.linux.d::blog">
-<meta property="og:description" content="Walk steps step by step">
+<meta property="og:description" content="最近一直忙于保研，找工作的事情，总结写blog的事情有点耽搁了。今天，初步了解了解libpcap—初探libpcap。  
+
+安装libpcap 
+
+安装的方法  
+
+
+问题集锦
+
+problem1:error while loading shared libraries: libpcap.so.1  
+
+
+执行 locate libpcap.so.1,查看libpcap.so.1在系统中的路径,">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sys.linux.d::blog">
-<meta name="twitter:description" content="Walk steps step by step">
+<meta name="twitter:title" content="libpcap_初探">
+<meta name="twitter:description" content="最近一直忙于保研，找工作的事情，总结写blog的事情有点耽搁了。今天，初步了解了解libpcap—初探libpcap。  
+
+安装libpcap 
+
+安装的方法  
+
+
+问题集锦
+
+problem1:error while loading shared libraries: libpcap.so.1  
+
+
+执行 locate libpcap.so.1,查看libpcap.so.1在系统中的路径,">
 
   
     <link rel="alternative" href="/atom.xml" title="sys.linux.d::blog" type="application/atom+xml">
@@ -65,58 +101,88 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/03/17/shell_care/" class="archive-article-date">
-  <time datetime="2014-03-17T07:31:23.000Z" itemprop="datePublished">3月 17</time>
+        <section id="main"><article id="post-libpcap_初探" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/09/15/libpcap_初探/" class="article-date">
+  <time datetime="2013-09-15T14:39:20.000Z" itemprop="datePublished">9月 15 2013</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/libpcap/">libpcap</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/03/17/shell_care/">shell_care</a>
+    <h1 class="article-title" itemprop="name">
+      libpcap_初探
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/03/15/gccg++/" class="archive-article-date">
-  <time datetime="2014-03-15T08:17:57.000Z" itemprop="datePublished">3月 15</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/03/15/gccg++/">gcc/g++</a>
-    </h1>
-  
+        <p>最近一直忙于保研，找工作的事情，总结写blog的事情有点耽搁了。今天，初步了解了解libpcap—初探<br>libpcap。  </p>
+<ul>
+<li><p>安装libpcap </p>
+<ul>
+<li><a href="http://aofengblog.blog.163.com/blog/static/6317021201111294533801/" target="_blank" rel="external">安装的方法</a>  </li>
+</ul>
+</li>
+<li><p>问题集锦</p>
+<ul>
+<li>problem1:error while loading shared libraries: libpcap.so.1  </li>
+</ul>
+<ol>
+<li>执行 locate libpcap.so.1,查看libpcap.so.1在系统中的路径,显示为：/usr/lib/libpcap.so.1.1.1    </li>
+<li>以管理员权限打开编辑 /etc/ld.so.conf 文件,末尾新一行追尾/usr/lib,/usr/lib为libpcap.so.1.1.1 所在目录, 保存退出  </li>
+<li>以管理员权限执行ldconfig命令  </li>
+<li>成功  </li>
+</ol>
+</li>
+</ul>
+<hr>
+<p>100days—第四天—004</p>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dby.github.io/2013/09/15/libpcap_初探/" data-id="a0hv0d00n5g1trj8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/libpcap/">libpcap</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2013/09/17/learn_cin_scanf_gets/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          learn_cin/scanf/gets...
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/09/11/locale_change/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">locale_change</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
         
           <aside id="sidebar">

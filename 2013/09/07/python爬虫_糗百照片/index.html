@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>python爬虫_糗百照片 | sys.linux.d::blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="学习python少不了写爬虫，不仅能以点带面地学习、练习使用python，爬虫本身也是有用且有趣的，大量重复性的下载、统计工作完全可以写一个爬虫程序完成。用python写爬虫需要python的基础知识、涉及网络的几个模块、正则表达式、文件操作等知识。昨天在网上学习了一下，写了一个爬虫自动下载「糗事百科」里面的图片。源代码如下：  
+123456789101112131415161718192021">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python爬虫_糗百照片">
+<meta property="og:url" content="http://dby.github.io/2013/09/07/python爬虫_糗百照片/">
+<meta property="og:site_name" content="sys.linux.d::blog">
+<meta property="og:description" content="学习python少不了写爬虫，不仅能以点带面地学习、练习使用python，爬虫本身也是有用且有趣的，大量重复性的下载、统计工作完全可以写一个爬虫程序完成。用python写爬虫需要python的基础知识、涉及网络的几个模块、正则表达式、文件操作等知识。昨天在网上学习了一下，写了一个爬虫自动下载「糗事百科」里面的图片。源代码如下：  
+123456789101112131415161718192021">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python爬虫_糗百照片">
+<meta name="twitter:description" content="学习python少不了写爬虫，不仅能以点带面地学习、练习使用python，爬虫本身也是有用且有趣的，大量重复性的下载、统计工作完全可以写一个爬虫程序完成。用python写爬虫需要python的基础知识、涉及网络的几个模块、正则表达式、文件操作等知识。昨天在网上学习了一下，写了一个爬虫自动下载「糗事百科」里面的图片。源代码如下：  
+123456789101112131415161718192021">
+
+  
+    <link rel="alternative" href="/atom.xml" title="sys.linux.d::blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">sys.linux.d::blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Walk steps step by step</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://dby.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-python爬虫_糗百照片" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/09/07/python爬虫_糗百照片/" class="article-date">
+  <time datetime="2013-09-07T04:44:24.000Z" itemprop="datePublished">9月 7 2013</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/python/">python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python爬虫_糗百照片
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>学习python少不了写爬虫，不仅能以点带面地学习、练习使用python，爬虫本身也是有用且有趣的，大量重复性<br>的下载、统计工作完全可以写一个爬虫程序完成。<br>用python写爬虫需要python的基础知识、涉及网络的几个模块、正则表达式、文件操作等知识。昨天在网上学习<br>了一下，写了一个爬虫自动下载「糗事百科」里面的图片。源代码如下：  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># -*- coding: utf-8 -*- </span></div><div class="line"><span class="comment"># 上面那句让代码里支持中文</span></div><div class="line"></div><div class="line"><span class="comment">#---------------------------------------  </span></div><div class="line"><span class="comment">#   程序：糗百图片爬虫  </span></div><div class="line"><span class="comment">#   版本：0.1  </span></div><div class="line"><span class="comment">#   作者：sys.linux.d  </span></div><div class="line"><span class="comment">#   日期：2013-09-07  </span></div><div class="line"><span class="comment">#   语言：Python 2.7  </span></div><div class="line"><span class="comment">#   说明：能设置下载的页数。没有做更多抽象和交互方面的优化。  </span></div><div class="line"><span class="comment">#--------------------------------------- </span></div><div class="line"></div><div class="line"><span class="keyword">import</span> urllib2</div><div class="line"><span class="keyword">import</span> urllib</div><div class="line"><span class="keyword">import</span> re</div><div class="line"></div><div class="line"><span class="comment">#正则表达式，用来抓取图片的地址</span></div><div class="line">pat = re.compile(<span class="string">'&lt;div class="thumb"&gt;\\n&lt;img src=\"(ht.*?)\".*?&gt;'</span>)</div><div class="line"></div><div class="line"><span class="comment">#用来合成网页的URL</span></div><div class="line">nexturl1 = <span class="string">"http://m.qiushibaike.com/imgrank/page/"</span></div><div class="line">nexturl2 = <span class="string">"?s=4582487&slow"</span></div><div class="line"></div><div class="line"><span class="comment">#页数计数</span></div><div class="line">count = <span class="number">1</span></div><div class="line"></div><div class="line"><span class="comment">#设置抓取的页数</span></div><div class="line"><span class="keyword">while</span> count &lt; <span class="number">3</span>:</div><div class="line"></div><div class="line">    <span class="keyword">print</span> <span class="string">"Page "</span> + str(count) + <span class="string">"\n"</span></div><div class="line">    myurl = nexturl1 + str(count) + nexturl2</div><div class="line">    myres = urllib2.urlopen(myurl)<span class="comment">#抓取网页</span></div><div class="line">    mypage = myres.read()<span class="comment">#读取网页内容</span></div><div class="line">    ucpage = mypage.decode(<span class="string">"utf-8"</span>) <span class="comment">#转码</span></div><div class="line"></div><div class="line">    mat = pat.findall(ucpage)<span class="comment">#用正则表达式抓取图片地址</span></div><div class="line">        </div><div class="line">    count += <span class="number">1</span>;</div><div class="line">    </div><div class="line">    <span class="keyword">if</span> len(mat):</div><div class="line">        <span class="keyword">for</span> item <span class="keyword">in</span> mat:</div><div class="line">            <span class="keyword">print</span> <span class="string">"url: "</span> + item + <span class="string">"\n"</span></div><div class="line">            fnp = re.compile(<span class="string">'/(\w+\.\w+)$'</span>)<span class="comment">#下面三行分离出图片文件的名称</span></div><div class="line">            fnr = fnp.findall(item)</div><div class="line">            fname = fnr[<span class="number">0</span>]</div><div class="line">            urllib.urlretrieve(item, fname)<span class="comment">#下载图片</span></div><div class="line">	    	</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">print</span> <span class="string">"no data"</span></div></pre></td></tr></table></figure>
+
+<p>使用方法：使用方法：新建一个practice文件夹，将源代码保存为qb.py文件，并放在practice文件夹中，在命<br>令行里执行python qb.py，即开始下载图片。可以修改源代码里面的while语句设置下载的页数。<br>资料推荐:<a href="http://blog.csdn.net/wxg694175346/article/category/1418998" target="_blank" rel="external">http://blog.csdn.net/wxg694175346/article/category/1418998</a>  </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dby.github.io/2013/09/07/python爬虫_糗百照片/" data-id="xsan1md3t61u5uqb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python爬虫/">python爬虫</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2013/09/07/python爬虫_点点美女照片/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          python爬虫_点点美女照片
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/09/07/flask_mysql/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">flask_mysql</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/acm/">acm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/c/">c++</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/flask/">flask</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/libpcap/">libpcap</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/qt/">qt</a><span class="category-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aria2a/">aria2a</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cin-scanf/">cin/scanf</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coding/">coding</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/const/">const</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/copy构造函数/">copy构造函数</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flask-mysql/">flask mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gcc-g/">gcc/g++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-blog/">hexo, blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/libpcap/">libpcap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/locale/">locale</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/problems/">problems</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python爬虫/">python爬虫</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/qt/">qt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/static/">static</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/surround-vim/">surround.vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vimrc/">vimrc</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/线程/">线程</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Markdown/" style="font-size: 10.00px;">Markdown</a><a href="/tags/aria2a/" style="font-size: 10.00px;">aria2a</a><a href="/tags/cin-scanf/" style="font-size: 10.00px;">cin/scanf</a><a href="/tags/coding/" style="font-size: 10.00px;">coding</a><a href="/tags/const/" style="font-size: 20.00px;">const</a><a href="/tags/copy构造函数/" style="font-size: 10.00px;">copy构造函数</a><a href="/tags/flask-mysql/" style="font-size: 10.00px;">flask mysql</a><a href="/tags/gcc-g/" style="font-size: 10.00px;">gcc/g++</a><a href="/tags/hexo-blog/" style="font-size: 10.00px;">hexo, blog</a><a href="/tags/libpcap/" style="font-size: 10.00px;">libpcap</a><a href="/tags/locale/" style="font-size: 10.00px;">locale</a><a href="/tags/problems/" style="font-size: 10.00px;">problems</a><a href="/tags/python爬虫/" style="font-size: 20.00px;">python爬虫</a><a href="/tags/qt/" style="font-size: 10.00px;">qt</a><a href="/tags/shell/" style="font-size: 10.00px;">shell</a><a href="/tags/static/" style="font-size: 10.00px;">static</a><a href="/tags/surround-vim/" style="font-size: 10.00px;">surround.vim</a><a href="/tags/vimrc/" style="font-size: 10.00px;">vimrc</a><a href="/tags/线程/" style="font-size: 20.00px;">线程</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">18</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/03/17/shell_care/">shell_care</a>
+          </li>
+        
+          <li>
+            <a href="/2014/03/15/gccg++/">gcc/g++</a>
+          </li>
+        
+          <li>
+            <a href="/2013/12/10/vim--surroundvim/">vim--surround.vim</a>
+          </li>
+        
+          <li>
+            <a href="/2013/10/03/const_learning2/">const_learning2</a>
+          </li>
+        
+          <li>
+            <a href="/2013/10/02/const_learning/">const_learning</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 sys.linux.d<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>

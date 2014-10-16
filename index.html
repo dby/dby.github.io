@@ -67,12 +67,16 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-shell_care" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/10/16/hello-world/" class="article-date">
-  <time datetime="2014-10-16T02:41:33.000Z" itemprop="datePublished">10月 16 2014</time>
+    <a href="/2014/03/17/shell_care/" class="article-date">
+  <time datetime="2014-03-17T07:31:23.000Z" itemprop="datePublished">3月 17 2014</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -81,7 +85,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/16/hello-world/">Hello World</a>
+      <a class="article-title" href="/2014/03/17/shell_care/">shell_care</a>
     </h1>
   
 
@@ -89,31 +93,888 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="linux_shell(容易出错的几个地方)">linux shell(容易出错的几个地方)</h2>
+<ul>
+<li><p>赋值语句”=”左右没有空格。<br><code>num=5</code> =&gt;将num赋值为5  </p>
+</li>
+<li><p>比较操作”[]”  </p>
+<ul>
+<li>在”[“和”]”符号的左右都有空格  </li>
+<li>为了区分与赋值语句中”=”,比较操作的”=”符号的左右都要空格  </li>
+<li><code>if [ $a = $b ]</code> =&gt;如果a，b的值相等。  </li>
+<li>if条件中，”=”用于比较<strong>字符串</strong>，”-eq”用于比较<strong>整型数</strong>  </li>
+</ul>
+</li>
+<li><p>for循环</p>
+<ul>
+<li>如果列表中的元素包含在一对双引号中，则被认为是一个元素。  </li>
+<li><code>for i in 1 2 3 4 5</code>  </li>
+<li><code>for i in &quot;1 2 3 4 5&quot;</code>  </li>
+</ul>
+</li>
+<li><p>expr计算整数变量值</p>
+<ul>
+<li>格式：expr arg</li>
+</ul>
+</li>
+<li><p>let命令  </p>
+<ul>
+<li>格式：let arg1[arg2…]</li>
+</ul>
+</li>
+<li><p>shell中实现整型变量自加1的方法  </p>
+<ul>
+<li>a=$(($a+1))  </li>
+<li>a=$[$a+1]</li>
+<li>a=<code>expr $a + 1</code></li>
+<li>let a++</li>
+<li>let a+=1</li>
+<li>((a+1))</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://dby.github.io/2014/10/16/hello-world/" data-id="8i4vlqbgtwfwchsg" class="article-share-link">Share</a>
+      <a data-url="http://dby.github.io/2014/03/17/shell_care/" data-id="xr2lbpvky5lodu96" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-gccg++" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/03/15/gccg++/" class="article-date">
+  <time datetime="2014-03-15T08:17:57.000Z" itemprop="datePublished">3月 15 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/03/15/gccg++/">gcc/g++</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Linux_GCC_常用命令">Linux GCC 常用命令</h2>
+<p>GCC的意思是GNU Compiler Collection，是GNU编译器家族的意思。  </p>
+<ul>
+<li>简单编译  </li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;stdio.h&gt;</span></div><div class="line"><span class="keyword">int</span> main(<span class="keyword">void</span>)</div><div class="line">{</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"hello world\n"</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+
+<p>  这个程序，一步到位的编译指令为：<br>  <code>gcc test.c -o test</code></p>
+<ul>
+<li><p>实质上，上述的编译的过程是分四个阶段进行的，即预处理(也称预编译,Preprocessing)，编译(Compilation)，汇编(Assembly)，链接(Linking)。  </p>
+<ul>
+<li>预处理(Preprocessing)<br><code>gcc -E test.c -o test.i 或 gcc -E test.c</code></li>
+<li>编译为汇编代码(Compilation)<br><code>gcc -S test.i -o test.s</code><br>gcc的-S选项，表示程序编译期间，生成汇编代码后停止。  </li>
+<li>汇编(Assembly)<br><code>gcc -c test.s -o test.o</code><br>对于上一节生成的汇编代码test.s,gas汇编器负责将其编译成目标文件。  </li>
+<li>链接(Linking)<br><code>gcc test.o -o test</code><br>gcc连接器是gas提供的，负责将程序的目标文件与所需的所有附加的目标文件连接起来，最终生成可执行文件。附加的目标文件包括静态连接库和动态连接库。  </li>
+</ul>
+</li>
+<li><p>库文件连接<br>例如我们的程序test.c是在linux上使用c连接mysql，这个时候我们需要去mysql官网下载MySQL Connectors的C库，下载下来解压之后，有一个include文件夹，里面包含mysql connectors的头文件，还有一个lib文件夹，里面包含二进制so文件libmysqlclient.so</p>
+<p>其中inclulde文件夹的路径是/usr/dev/mysql/include,lib文件夹是/usr/dev/mysql/lib  </p>
+<ul>
+<li><p>编译可执行文件<br>首先我们要进行test.c为目标文件，这个时候需要<br>`gcc -I /usr/dev/mysql/include test.c -o test.o</p>
+</li>
+<li><p>链接<br><code>gcc -L /usr/dev/mysql/lib -lmysqlclient test.o -o test</code></p>
+</li>
+<li><p><strong>-static</strong>强制链接的时候使用静态库</p>
+</li>
+</ul>
+</li>
+<li><p>检错</p>
+<ul>
+<li><strong>-Wall</strong> 可以是gcc产生尽可能多的警告信息<br><code>gcc -Wall illcode.c -o illcode</code>  </li>
+<li><strong>-Werror</strong> 在编译程序时带上-Werror选项，那么GCC会在所有产生警告的地方停止编译，迫使程序员对自己的代码进行修改.<br><code>gcc -Werror test.c -o test</code>  </li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dby.github.io/2014/03/15/gccg++/" data-id="qum3lgtvicy4xrn3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gcc-g/">gcc/g++</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-vim--surroundvim" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/12/10/vim--surroundvim/" class="article-date">
+  <time datetime="2013-12-10T12:37:49.000Z" itemprop="datePublished">12月 10 2013</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/12/10/vim--surroundvim/">vim--surround.vim</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>写代码的时候我们就会知道这个插件是多么的有用！！<br>~强烈的推荐~  </p>
+<p><strong>0x01.change</strong>   </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cs<span class="string">"'</span></div><div class="line">cs"&lt;q&gt;</div><div class="line">cs)]</div><div class="line">csw<span class="string">'</span></div><div class="line">csW'</div></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">文本                命令          结果  </div><div class="line">------------------  ------------- ---------------  </div><div class="line"><span class="string">"Hello |world!"</span>     cs<span class="string">"'          'Hello world'  </span></div><div class="line"><span class="string">"Hello |world!"</span>     cs<span class="string">"&lt;q&gt;        &lt;q&gt;Hello world&lt;q&gt;</span></div><div class="line">(<span class="number">123</span>+<span class="number">4</span><span class="string">|56)/2        cs)]          [123+456]/2</span></div><div class="line">(<span class="number">123</span>+<span class="number">4</span><span class="string">|56)/2        cs)]          [ 123+456 ]/2</span></div><div class="line">&lt;div&gt;foo<span class="string">|&lt;/div&gt;     cst&lt;p&gt;        &lt;p&gt;foo&lt;/p&gt;</span></div><div class="line">fo<span class="string">|o!               csw'          'foo'!</span></div><div class="line">fo<span class="string">|o!               csW'          'foo!'</span></div></pre></td></tr></table></figure>
+
+<p><strong>0x02.adding</strong><br>比如，我要把这个小标题用strong包括起来，再也不用想以前那么敲了,只需要：<br><code>yss&lt;strong&gt;</code>   </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Text                Command       New Text</div><div class="line">------------------  ------------- ----------------</div><div class="line">Hello w<span class="string">|orld!       ysiw)         Hello (world)!</span></div><div class="line">Hello w<span class="string">|orld!       csw)          Hello (world)! </span></div><div class="line">fo<span class="string">|o                ysiwt&lt;html&gt;   &lt;html&gt;foo&lt;/html&gt;</span></div><div class="line">foo quu<span class="string">|x baz       yss"</span>          <span class="string">"foo quux baz"</span></div><div class="line">foo quu<span class="string">|x baz       ySS"</span>          <span class="string">"</span></div><div class="line">                                        foo quux baz</div><div class="line">                                  <span class="string">"</span></div><div class="line">(<span class="string">| is the position of cursor in these examples)</span></div></pre></td></tr></table></figure>
+
+<p><strong>0x03.delete</strong><br><code>ds</code></p>
+<p>全部的命令和快捷键参考：  </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">Normal mode</div><div class="line"><span class="comment">-----------</span></div><div class="line">ds  - <span class="built_in">delete</span> <span class="operator">a</span> surrounding</div><div class="line">cs  - change <span class="operator">a</span> surrounding</div><div class="line">ys  - <span class="built_in">add</span> <span class="operator">a</span> surrounding</div><div class="line">yS  - <span class="built_in">add</span> <span class="operator">a</span> surrounding <span class="operator">and</span> place <span class="operator">the</span> surrounded <span class="keyword">text</span> <span class="command"><span class="keyword">on</span> <span class="title">a</span> <span class="title">new</span> <span class="title">line</span> + <span class="title">indent</span> <span class="title">it</span></span></div><div class="line">yss - <span class="built_in">add</span> <span class="operator">a</span> surrounding <span class="built_in">to</span> <span class="operator">the</span> <span class="keyword">whole</span> <span class="built_in">line</span></div><div class="line">ySs - <span class="built_in">add</span> <span class="operator">a</span> surrounding <span class="built_in">to</span> <span class="operator">the</span> <span class="keyword">whole</span> <span class="built_in">line</span>, place <span class="keyword">it</span> <span class="command"><span class="keyword">on</span> <span class="title">a</span> <span class="title">new</span> <span class="title">line</span> + <span class="title">indent</span> <span class="title">it</span></span></div><div class="line">ySS - same <span class="keyword">as</span> ySs</div><div class="line"></div><div class="line">Visual mode</div><div class="line"><span class="comment">-----------</span></div><div class="line">s   - <span class="operator">in</span> visual mode, <span class="built_in">add</span> <span class="operator">a</span> surrounding</div><div class="line">S   - <span class="operator">in</span> visual mode, <span class="built_in">add</span> <span class="operator">a</span> surrounding but place <span class="keyword">text</span> <span class="command"><span class="keyword">on</span> <span class="title">new</span> <span class="title">line</span> + <span class="title">indent</span> <span class="title">it</span></span></div><div class="line"></div><div class="line">Insert mode</div><div class="line"><span class="comment">-----------</span></div><div class="line">&lt;CTRL-s&gt; - <span class="operator">in</span> insert mode, <span class="built_in">add</span> <span class="operator">a</span> surrounding</div><div class="line">&lt;CTRL-s&gt;&lt;CTRL-s&gt; - <span class="operator">in</span> insert mode, <span class="built_in">add</span> <span class="operator">a</span> <span class="built_in">new</span> <span class="built_in">line</span> + surrounding + indent</div><div class="line">&lt;CTRL-g&gt;s - same <span class="keyword">as</span> &lt;CTRL-s&gt;</div><div class="line">&lt;CTRL-g&gt;S - same <span class="keyword">as</span> &lt;CTRL-s&gt;&lt;CTRL-s&gt;</div></pre></td></tr></table></figure>
+
+<hr>
+<p>vim插件—surround.vim</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dby.github.io/2013/12/10/vim--surroundvim/" data-id="ohirop6e5etev9zw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/surround-vim/">surround.vim</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-const_learning2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/10/03/const_learning2/" class="article-date">
+  <time datetime="2013-10-03T14:29:21.000Z" itemprop="datePublished">10月 3 2013</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/c/">c++</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/10/03/const_learning2/">const_learning2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>采用符号常量写出的代码更容易维护；const最常见的用途是作为数组的界和switch分组标号。分类如下：  </p>
+<ul>
+<li><strong>常变量：</strong>const 类型说明符 变量名  </li>
+<li><strong>常引用：</strong>const 类型说明符 &amp;引用名</li>
+<li><strong>常对象：</strong>类名 const 对象名  </li>
+<li><strong>常成员函数：</strong>类名::func(形参) const</li>
+<li><strong>常数组：</strong>类型说明符 const 数组名[大小]   </li>
+<li><strong>常指针：</strong>const 类型说明符 <em>指针名，类型说明符 </em>const 指针名   </li>
+</ul>
+<h3 id="常量"><strong>常量</strong></h3>
+<p>取代了C语言中的宏定义，<strong>声明时必须进行初始化</strong>(C++中则不然)。const限制了常量的使用方式，并没有描述常量应该如何分配。<br>用const声明的变量虽然增加了内存，但是可以保证类型的安全。   </p>
+<h3 id="指针与常量"><strong>指针与常量</strong></h3>
+<p>使用指针涉及到两个对象：该指针和它所指的对象，<br><code>const char *p = greeting;</code>  //指针可以改变，但是指针指向的数据不能改变。<br><code>char* const p = greeting;</code>  //指针不能改变，但是指针指向的数据可以改变。   </p>
+<h3 id="const修饰函数的传入的参数"><strong>const修饰函数的传入的参数</strong></h3>
+<p>将函数传入的参数声明为const，以指明这种参数仅仅是为了效率的原因，同理，将指针参数声明为const，函数将不能修改这个参数所指向的对象。   </p>
+<h3 id="修饰函数返回值"><strong>修饰函数返回值</strong></h3>
+<p>可以修改用户修改返回值。返回值也要相应的付给一个常量和常指针。   </p>
+<h3 id="const修饰成员函数"><strong>const修饰成员函数</strong></h3>
+<p>const_learning中已经讲述过。   </p>
+<p>展开来讲：  </p>
+<h3 id="常量与指针"><strong>常量与指针</strong></h3>
+<ol>
+<li>对于常量指针，不能通过该指针改变它所指的内容。   </li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">int <span class="built_in">i</span> = <span class="number">10</span>;</div><div class="line">const int *<span class="built_in">pi</span> = &<span class="built_in">i</span>;</div><div class="line">*<span class="built_in">pi</span> = <span class="number">100</span>;</div></pre></td></tr></table></figure>
+
+<p> 这样是会报错的。  </p>
+<ol>
+<li>但是，可以使用另外一个指针来修改。  </li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">int <span class="keyword">*</span>p = (int <span class="keyword">*</span>)pi;</div><div class="line"><span class="keyword">*</span>p = 100;</div></pre></td></tr></table></figure>
+
+<p> 实际上，在将程序载入内存的时候，会有专门的一块内存区域来存放常量。但是，上面的i 本身不是常量，是存放在栈或者堆中的。我们仍然可以修改它的值。而pi 不能修改指向的值应该说是编译器的一个限制。   </p>
+<h3 id="常量与引用"><strong>常量与引用</strong></h3>
+<p>常量与引用的关系稍微简单一点。因为引用就是另一个变量的别名，它本身就是一个常量。也就是说不能再让一个引用成为另外一个变量的别名, 那么他们只剩下代表的内存区域是否可变。<br><code>int i = 10;</code><br>//正确：表示不能通过引用修改对应的内存的内容<br><code>const int&amp; ri = i;</code><br>//错误！不能这么写<br><code>int&amp; const rci = i</code>   </p>
+<p>有必要深入的说明以下,在系统加载程序的时候，系统会将内存分为4 个区域：<code>堆区 栈区全局区（静态）和代码区</code>。从这里可以看出，对于常量来说，系统没有划定专门的区域来保护其中的数据不能被更改。也就是说，<code>使用常量的方式对数据进行保护是通过编译器作语法限制来实现的</code>。我们仍然可以绕过编译器的限制去修改被定义为“常量”的内存区域。 </p>
+<hr>
+<h2 id="C++_中的const_">C++ 中的const  </h2>
+<ol>
+<li><p>const常量<br><code>const 常量有数据类型，而宏常量没有数据类型。编译器可以对前者进行类型安全检查，而对后者只进行字符替换，没有类型安全检查</code>    </p>
+</li>
+<li><p>const 修饰类的数据成员。<br>const 可以提供封装特性，可以修饰类的数据成员。  </p>
+<ol>
+<li>不同的对象其const 数据成员的值可以不同。所以<strong>不能在类声明中初始化const 数据成员</strong>，因为类的对象未被创建时，编译器不知道const 数据成员的值是什么。  </li>
+</ol>
+</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span></div><div class="line">{</div><div class="line">    <span class="keyword">const</span> <span class="keyword">int</span> size = <span class="number">100</span>;  <span class="comment">//错误</span></div><div class="line">    <span class="keyword">int</span> array[size];       <span class="comment">//错误，未知的size</span></div><div class="line">}</div></pre></td></tr></table></figure>
+
+<ol>
+<li>const 数据成员的初始化只能在<code>类的构造函数的初始化表</code>中进行。要想建立在整个类中都恒定的常量，可以采用所谓的“<strong> the enum hack</strong>”的补偿的做法。其理论的基础是：“一个属于枚举类型(enumerated type)的数值可权当 ints 使用”<br>上述代码可以修改为：   </li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span></div><div class="line">{</div><div class="line">    <span class="class"><span class="keyword">enum</span> </span>{size = <span class="number">100</span>};     <span class="comment">//"the enum hack"--令size成为100的一个记号名称  </span></div><div class="line">    int array[size];       <span class="comment">//it's ok</span></div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p> 枚举常量不会占用对象的存储空间，他们在编译时被全部求值。但是枚举常量的隐含数据类型是整数，其最大值有限，且不能表示浮点数。   </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dby.github.io/2013/10/03/const_learning2/" data-id="glma76ncq1d6tmvu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/const/">const</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-const_learning" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/10/02/const_learning/" class="article-date">
+  <time datetime="2013-10-02T15:01:53.000Z" itemprop="datePublished">10月 2 2013</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/c/">c++</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/10/02/const_learning/">const_learning</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>看到 const 关键字，C++程序员首先想到的可能是 cosnt 常量。这可不是良好的条件反射。如果只知道const定义常量，那么相当于把火药仅用于制作鞭炮。const 更大的魅力是它可以修饰函数的参数，返回值，设置函数的定义体。<br>const 是 constant 的所写，”恒定不变”的意思。被 const 修饰的东西都受到强制保护，可以预防意外的变动，提高程序的健壮性。所以很多 c++ 程序设计书建议:”Use const whenever you need”。  </p>
+<h2 id="用_const_修饰函数的参数">用 const 修饰函数的参数</h2>
+<p>如果函数做输出用，不论它是什么数据类型，也不论它采用”指针传递”还是”引用传递”, 都不能加 const 修饰，否则该参数将失去输出功能。const 只能修饰输入参数。  </p>
+<p>如果输入的参数采用指针传递，那么加 const 修饰可以防止<strong>意外的改动指针</strong>，起到保护的作用。<br>例如StringCopy函数：<br><code>void StringCopy(char *strDestination, const char *strSource);</code><br>其中strSource是输入参数，strDestination 是输出参数。给strSource 加上 const 修饰后，如果函数体内的语句<strong>试图改动 strSource 的内容</strong>，编译器将之处错误。  </p>
+<p><strong>如果输入参数采用”值传递”，由于函数将自动产生临时产量用于复制该参数，该输入参数本来就无需保护，不需要加 const 修饰</strong><br>例如不要将函数void func(int x)写成void func(const int x)，对于非内部数据类型的参数而言，像void func(A a)这样的声明的函数注定效率比较低。因为函数体内将产生A类型的临时对象用于复制参数a，而临时对象的构造，复制，析构的过程都要消耗时间。   </p>
+<p><strong>为了提高效率，可以将函数声明改为 void func(A &amp;a)，因为采用”引用传递”仅借用一下参数的别名而已，不需要产生临时对象。</strong>但是函数void func(A &amp;a)<strong>存在一个缺点：</strong>   </p>
+<p><strong>“引用传递”</strong>有可能改变参数a,这是我们不期望的。解决的这个问题很容易，加const修饰即可，因此函数最终成为void func(<strong>const</strong> A&amp;a)。    </p>
+<p>以此类推，是否应该将 void func(int x)改写成 void func(const int &amp;x), 以便提高效率？完全没有必要，因为内部数据类型的参数不存在构造，析构的过程，而复制也非常快，”值传递”和”引用传递”的效率几乎相当。<br>问题有点纠结。总结如下：  </p>
+<ul>
+<li><p>对于非内部数据类型的输入参数，应该将”值传递”的方式改为”const 引用传递’, 目的是提高效率。例如将void func(A a) 改为 void func(const A &amp;a);   </p>
+</li>
+<li><p>对于内部数据类型，不要将”值传递”的方式改为”const 引用传递”。即降低了函数的可理解性。  </p>
+</li>
+</ul>
+<h2 id="用_const_修饰函数的返回值">用 const 修饰函数的返回值</h2>
+<p>如果给以”指针传递”方式的函数的返回值加 const 修饰，那么函数返回值(即指针)的内容不能被修改，<strong>该返回值只能赋给加 const 修饰的同类型指针。</strong>例如函数<code>const char *GetString(void);</code><br>如下的语句将出现编译错误：<br>char <em>str = GetString();<br>正确的用法是<br>const char </em>str = GetString();<br>如果函数的返回值采用“值传递”的方式，由于函数会把返回值复制到外部的临时的存储单元中，加上const修饰没有任何价值。<br>同理不要把函数A GetA(void) 写成 const A GetA(void)，其中A为用户自定义的数据类型。<br>如果返回值不是内部数据类型，将函数A GetA(void)写成const A &amp; GetA(void)的确能提高效率。但是此时千万要小心，一定要搞清楚函数究竟是想返回一个对象的拷贝还是仅返回别名就可以了，否则程序就会出错。<br>函数返回值采用“引用传递”的场合不是很多，这种方式一般只会出现在类的赋值函数中，目的是为了实现链式表达。   </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span></div><div class="line">{</div><div class="line">    A & operate=(<span class="keyword">const</span> A & other);</div><div class="line">};</div></pre></td></tr></table></figure>
+
+<p>A a,b,c; //a,b,c为A的对象<br>a = b = c; //正常的链式表达<br>(a = b) = c; //不正常的链式表达，但是是合法的<br>但是如果复制函数的返回值加const修饰，那么返回值不允许被改动。那么上面第二句就是非法的。   </p>
+<h2 id="const_成员函数">const 成员函数</h2>
+<p>任何不会修改<strong>数据成员(即函数中的变量)</strong>的函数都应该声明为const类型，可以提高程序的健壮性。   </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">class Stack</div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="keyword">void</span> <span class="title">Push</span>(<span class="keyword">int</span> elem);</div><div class="line">    <span class="keyword">int</span> Pop(<span class="keyword">void</span>);</div><div class="line">    <span class="keyword">int</span> GetCount(<span class="keyword">void</span>) <span class="keyword">const</span>;   <span class="comment">//const 成员函数</span></div><div class="line"><span class="keyword">private</span>:</div><div class="line">    <span class="keyword">int</span> m_num;</div><div class="line">    <span class="keyword">int</span> m_data[<span class="number">100</span>];</div><div class="line">};</div><div class="line"><span class="keyword">int</span> Stack::GetCount(<span class="keyword">void</span>) <span class="keyword">const</span></div><div class="line">{</div><div class="line">    ++m_num; <span class="comment">//编译错误，企图修改数据成员m_num</span></div><div class="line">    Pop();  <span class="comment">//编译错误，企图修改非const函数</span></div><div class="line">    <span class="keyword">return</span> m_num;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>const 成员函数的声明看起来怪怪的:const关键字只能放在函数声明的尾部，大概是因为它的的地方都已经被占用了。<br>关于Const函数的几点规则：   </p>
+<ul>
+<li>const对象只能访问const成员函数，而非const对象可以访问任意的成员函数，包括const成员函数。  </li>
+<li>const对象的成员是不可以的修改的，而const对象通过指针维护的对象确实是可以修改的。   </li>
+<li>const成员函数不能修改对象的数据，不管是否具有const性质。  </li>
+<li>然而加上mutable修饰符的数据成员，对于任何情况下通过任何手段都可以修改，自然此时的const成员函数是可以修改它的。   </li>
+</ul>
+<p>资料推荐：  </p>
+<ol>
+<li><a href="http://www.360doc.com/content/11/0831/16/255982_144779883.shtml" target="_blank" rel="external">http://www.360doc.com/content/11/0831/16/255982_144779883.shtml</a>   </li>
+<li>effective c++</li>
+</ol>
+<hr>
+<p>100days—-第22天—-022</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dby.github.io/2013/10/02/const_learning/" data-id="at8b8tn9bkgpyl5f" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/const/">const</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-static学习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/09/24/static学习/" class="article-date">
+  <time datetime="2013-09-24T12:07:07.000Z" itemprop="datePublished">9月 24 2013</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/c/">c++</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/09/24/static学习/">static学习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>由于前段时间比较忙，今天就补一补，聊一聊static。  </p>
+<ul>
+<li><p>什么是static  </p>
+<ul>
+<li>static 是 C++ 常用的修饰符，它被用来控制变量的存储方式和可见性。  </li>
+</ul>
+</li>
+<li><p>引入 static 的原因  </p>
+<ul>
+<li>函数内部定义的变量，在程序执行到它的定义处时，编译器为它在栈上分配空间，大家知道，函数在栈上分配的空<br>间在此函数执行结束时就会释放掉，这样就产生了一个问题：如果想将函数中此变量的值保存至下一次调用时，如何<br>实现？最容易想到的方法是定义一个全局的变量，但是定义一个全局变量有许多的缺点，最明显的缺点是破坏了此变<br>量的访问范围(使在函数中定义的变量，不仅仅受制于此函数的控制)。  </li>
+</ul>
+</li>
+<li><p>什么时候使用static  </p>
+<ul>
+<li>需要一个数据对象为整个类而非某个对象服务，同时又力求不破坏类的封装性，即要求此成员隐藏在类的内部，对<br>外不可见。  </li>
+</ul>
+</li>
+<li><p>static 的内部的机制  </p>
+<ul>
+<li><p>静态成员要在程序一开始运行时就必须存在。因为函数在程序运行中被调用，所以静态数据成员不能在任何函数内分配空间和初始化。  </p>
+</li>
+<li><p>它的空间分配有三个可能的地方：  </p>
+</li>
+<li>作为类的外部接口的头文件，那里有类的声明。  </li>
+<li>类定义的内部实现，那里有类的成员函数定义。  </li>
+<li>应用程序的main()函数前的全局数据声明和定义处。  </li>
+</ul>
+</li>
+<li><p>静态数据成员要实际地分配空间，故不能在类的声明中定义（只能声明数据成员）。类声明只声明一个类的“尺寸和<br>规格”，并不进行实际的内存分配，所以在类声明中写成定义是错误的。它也不能在头文件中类声明的外部定义，因为<br>那会造成在多个使用该类的源文件中，对其重复定义。  </p>
+</li>
+<li><p>static 的优势  </p>
+<ul>
+<li>可以节省内存，因为它是所有对象所公有的，因此，对多个对象来说，静态数据成员只存储一处，供所有对象共用。静态数据成员的值对每个对象都是一样，但它的值是可以更新的。只要对静态数据成员的值更新一次，保证所有对象存取更新后的相同的值，这样可以提高时间效率。  </li>
+</ul>
+</li>
+<li><p>引用数据成员时，采用如下的格式：  </p>
+<ul>
+<li>&lt;类名&gt;::&lt;静态成员名&gt;  </li>
+<li>如果静态成员数据的访问权限允许的话(即public),可用上述方法。  </li>
+</ul>
+</li>
+<li><p>注意事项  </p>
+<ul>
+<li>类的静态成员函数属于整个类而非类的对象，所以他没有this指针，这就到导致了它仅能访问类的静态数据和静态成员函数。  </li>
+<li>不能将静态成员函数定义为虚函数。  </li>
+<li>由于静态成员函数没有this指针，所以就差不多等同于nonmember函数，结果就产生了一个意想不到的好处：成为一个callback函数，使得我们得以将C++和C-based X Window系统结合，同时也成功的应用于线程函数身上。  </li>
+<li>static并没有增加程序的时空开销，相反她还缩短了子类对父类静态成员的访问时间，节省了子类的内存空间。  </li>
+<li>静态数据成员在&lt;定义或说明&gt;时前面加关键字static。  </li>
+<li>静态数据成员是静态存储的，所以必须对它进行初始化。  </li>
+<li>静态成员初始化与一般数据成员初始化不同:  </li>
+<li>初始化在类体外进行，而前面不加static，以免与一般静态变量或对象相混淆；  </li>
+<li>初始化时不加该成员的访问权限控制符private，public等；  </li>
+<li>初始化时使用作用域运算符来标明它所属类；  </li>
+<li><p>格式为：&lt;数据类型&gt;&lt;类名&gt;::&lt;静态数据成员名&gt;=&lt;值&gt;   </p>
+</li>
+<li><p>为了防止父类的影响，可以在子类定义一个与父类相同的静态变量，以屏蔽父类的影响。  </p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="静态数据成员">静态数据成员</h1>
+<ol>
+<li><p>静态成员的使用方法和注意事项如下：  </p>
+<ol>
+<li>静态数据成员在定义或说明时前面加关键字static。  </li>
+<li>静态成员初始化与一般数据成员初始化不同。静态数据成员初始化的格式如下：<br>&lt;数据类型&gt;&lt;类名&gt;::&lt;静态数据成员名&gt;=&lt;值&gt;  </li>
+</ol>
+</li>
+<li><p>静态数据成员是静态存储的，它是静态生存期，必须对它进行初始化。  </p>
+</li>
+<li>引用静态数据成员时，采用如下格式：<br>&lt;类名&gt;::&lt;静态成员名&gt;  </li>
+</ol>
+<h1 id="静态成员函数">静态成员函数</h1>
+<ol>
+<li><p>静态成员函数和静态数据成员一样，它们都属于类的静态成员，它们都不是对象成员。因此，对静态成员的引用不需要用对象名。  </p>
+</li>
+<li><p>在静态成员函数的实现中不能直接引用类中说明的非静态成员，可以引用类中说明的静态成员。如果静态成员函数中要引用非静态成员时，可通过对象来引用。  </p>
+</li>
+<li><p>例子说明</p>
+</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream.h&gt;</span></div><div class="line"> <span class="keyword">class</span>  Point</div><div class="line"> {</div><div class="line"> <span class="keyword">public</span>:</div><div class="line">    <span class="keyword">void</span> output(){ }</div><div class="line">    <span class="keyword">static</span> <span class="keyword">void</span> init()</div><div class="line">    { </div><div class="line">        x = <span class="number">0</span>;</div><div class="line">        y = <span class="number">0</span>;</div><div class="line">    }</div><div class="line"> <span class="keyword">private</span>:</div><div class="line">    <span class="keyword">static</span> <span class="keyword">int</span> x;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">int</span> y;</div><div class="line"> };</div><div class="line"> <span class="keyword">void</span> main( <span class="keyword">void</span> )</div><div class="line"> {</div><div class="line">      Point::init();</div><div class="line"> }</div></pre></td></tr></table></figure>
+
+<p> 编译：<br> Linking…<br> test.obj : error LNK2001: unresolved external symbol “private: static int Point::y”<br> test.obj : error LNK2001: unresolved external symbol “private: static int Point::x”<br> Debug/Test.exe : fatal error LNK1120: 2 unresolved externals<br> 执行link.exe出错。<br> 可以看到编译没有错误，链接错误。原因就是因为静态成员变量没有进行初始化。 </p>
+<ol>
+<li><p>C++会区分两种类型的成员函数：静态成员函数和非静态成员函数。这两者之间的一个重大区别是，静态成员函数不接受隐含的this自变量。所以，它就无法访问自己类的非静态成员。  </p>
+</li>
+<li><p>静态的成员函数访问非静态成员数据的方法：  </p>
+<ul>
+<li>声明类的所有数据成员都是静态的，但是这种解决方法不适用于需要使用非静态数据成员的类。  </li>
+<li>将参照传递给需要考量的对象能够让静态的成员函数访问到对象的非静态数据：  </li>
+</ul>
+</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">class A</div><div class="line">{</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">func</span>(A & obj);</div><div class="line">  intgetval() <span class="keyword">const</span>; <span class="comment">//non-static member function</span></div><div class="line"><span class="keyword">private</span>:</div><div class="line">  intval;</div><div class="line">};</div></pre></td></tr></table></figure>
+
+<p>  静态成员函数func()会使用参照obj来访问非静态成员val。  </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">voidA::<span class="func"><span class="keyword">func</span><span class="params">(A & obj)</span></span></div><div class="line">{</div><div class="line">    int n = obj.getval();</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>  将一个参照或者指针作为静态成员函数的自变量传递，就是在模仿自动传递非静态成员函数里this自变量这一行为  </p>
+<p>资料推荐：  </p>
+<ol>
+<li><a href="http://blog.csdn.net/danforn/article/details/2312766" target="_blank" rel="external">http://blog.csdn.net/danforn/article/details/2312766</a>  </li>
+</ol>
+<hr>
+<p>100days—-第十三天—-013  </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dby.github.io/2013/09/24/static学习/" data-id="y1q3phobfjc8uq39" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/static/">static</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-copy构造函数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/09/24/copy构造函数/" class="article-date">
+  <time datetime="2013-09-24T05:52:03.000Z" itemprop="datePublished">9月 24 2013</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/c/">c++</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/09/24/copy构造函数/">copy构造函数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是copy构造函数">什么是copy构造函数</h2>
+<p>首先对于普通的对象来说，他们之间的复制是很简单的，例如：  </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a = <span class="number">100</span>;</div><div class="line"><span class="keyword">int</span> b = a;</div></pre></td></tr></table></figure>
+
+<p>但是类对象与普通的对象不同，类对象内部结构一般较为复杂，存在各种成员变量。<br>一个empty class经过<strong>c++</strong>处理之后，就不再是简单的一个empty class。编译器会默默的帮你声明四个函数，都是public和inline类型。因此当你写下：<br><code>class empty(){};</code><br>就像写下了这样的代码：  </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">class empty{</div><div class="line">public:</div><div class="line"></div><div class="line">    **empty(){ <span class="keyword">...</span> }**                              //default 构造函数</div><div class="line">    **empty(const empty& rhs){ <span class="keyword">...</span> }**              //copy构造函数</div><div class="line">    **~empty(){ <span class="keyword">...</span> }**                             //析构函数</div><div class="line"></div><div class="line">    **empty& operator=(const empty& rhs){ <span class="keyword">...</span> }**   //copy assignment操作符</div><div class="line"></div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>唯有这些函数被需要(被调用)，他们才会被编译器创建出来。在程序中需要他们是很正常的事情。  </p>
+<blockquote>
+<p>empty e1;             //default构造函数<br> empty e2(e1);          //copy构造函数<br> e2 = e1;               //copy assignment操作符</p>
+</blockquote>
+<h2 id="copy构造函数的调用时机">copy构造函数的调用时机</h2>
+<ul>
+<li>对象以值传递的方式传入参数  </li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> CExample </div><div class="line">{</div><div class="line"><span class="keyword">private</span>:</div><div class="line"> <span class="keyword">int</span> a;</div><div class="line"></div><div class="line"><span class="keyword">public</span>:</div><div class="line"> <span class="comment">//构造函数</span></div><div class="line"> CExample(<span class="keyword">int</span> b)</div><div class="line"> { </div><div class="line">  a = b;</div><div class="line">  <span class="built_in">cout</span>&lt;&lt;<span class="string">"creat: "</span>&lt;&lt;a&lt;&lt;endl;</div><div class="line"> }</div><div class="line"></div><div class="line"> <span class="comment">//拷贝构造</span></div><div class="line"> CExample(<span class="keyword">const</span> CExample& C)</div><div class="line"> {</div><div class="line">  a = C.a;</div><div class="line">  <span class="built_in">cout</span>&lt;&lt;<span class="string">"copy"</span>&lt;&lt;endl;</div><div class="line"> }</div><div class="line"> </div><div class="line"> <span class="comment">//析构函数</span></div><div class="line"> ~CExample()</div><div class="line"> {</div><div class="line">  <span class="built_in">cout</span>&lt;&lt; <span class="string">"delete: "</span>&lt;&lt;a&lt;&lt;endl;</div><div class="line"> }</div><div class="line"></div><div class="line">     <span class="keyword">void</span> Show ()</div><div class="line"> {</div><div class="line">         <span class="built_in">cout</span>&lt;&lt;a&lt;&lt;endl;</div><div class="line">     }</div><div class="line">};</div><div class="line"></div><div class="line"><span class="comment">//全局函数，传入的是对象</span></div><div class="line"><span class="keyword">void</span> g_Fun(CExample C)</div><div class="line">{</div><div class="line"> <span class="built_in">cout</span>&lt;&lt;<span class="string">"test"</span>&lt;&lt;endl;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line"> CExample test(<span class="number">1</span>);</div><div class="line"> <span class="comment">//传入对象</span></div><div class="line"> g_Fun(test);</div><div class="line"></div><div class="line"> <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<ul>
+<li>test 对象传入形参时，先会产生一个临时变量，就暂时叫C吧。  </li>
+<li>然后调佣构造函数把test的值给C。整个这两个步骤有点像：CExample C(test)  </li>
+<li>等g_Fun()执行完后，析构C对象。  </li>
+</ul>
+<ul>
+<li>对象以值传递的方式从函数返回  </li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">class</span> CExample </div><div class="line">{</div><div class="line"><span class="keyword">private</span>:</div><div class="line"> <span class="keyword">int</span> a;</div><div class="line"></div><div class="line"><span class="keyword">public</span>:</div><div class="line"> <span class="comment">//构造函数</span></div><div class="line"> CExample(<span class="keyword">int</span> b)</div><div class="line"> { </div><div class="line">  a = b;</div><div class="line"> }</div><div class="line"></div><div class="line"> <span class="comment">//拷贝构造</span></div><div class="line"> CExample(<span class="keyword">const</span> CExample& C)</div><div class="line"> {</div><div class="line">  a = C.a;</div><div class="line">  <span class="built_in">cout</span>&lt;&lt;<span class="string">"copy"</span>&lt;&lt;endl;</div><div class="line"> }</div><div class="line"></div><div class="line">     <span class="keyword">void</span> Show ()</div><div class="line">     {</div><div class="line">         <span class="built_in">cout</span>&lt;&lt;a&lt;&lt;endl;</div><div class="line">     }</div><div class="line">};</div><div class="line"></div><div class="line"><span class="comment">//全局函数</span></div><div class="line">CExample g_Fun()</div><div class="line">{</div><div class="line"> CExample temp(<span class="number">0</span>);</div><div class="line"> <span class="keyword">return</span> temp;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line"> g_Fun();</div><div class="line"> <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<ul>
+<li>先会产生一个临时变量，就叫XXXX吧。  </li>
+<li>然后调用拷贝构造函数把temp的值给XXXX。整个这两个步骤有点像：CExample XXXX(temp);  </li>
+<li>在函数执行到最后先析构temp局部变量.  </li>
+<li>等g_Fun()执行完后再析构掉XXXX对象。  </li>
+</ul>
+<ul>
+<li>对象需要通过另外一个对象进行初始化；  </li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">CExample <span class="literal">A</span>(<span class="number">100</span>)<span class="comment">;</span></div><div class="line">CExample B = <span class="literal">A</span><span class="comment">;</span></div><div class="line">//CExample B(<span class="literal">A</span>)<span class="comment">;</span></div></pre></td></tr></table></figure>
+
+<ul>
+<li><p>浅拷贝和深拷贝  </p>
+<ul>
+<li>浅拷贝<br>所谓浅拷贝，指的是在对象复制时，只对对象中的数据成员进行简单的赋值，默认拷贝构造函数执行的也是浅拷贝。  </li>
+<li>如果你打算在一个”内含 reference 成员”的class内支持赋值操作，必须自己定义。</li>
+<li>面对”内含 const 成员”的classes， 编译器的反应是一样的。  </li>
+<li><p>如果某个base class 将copy assignment操作符声明为 private，编译器拒绝为derived classes 生成一个copy assignment 操作符。  </p>
+</li>
+<li><p>深拷贝<br>在“深拷贝”的情况下，对于对象中动态成员，就不能仅仅简单地赋值了，而应该重新动态分配空。  </p>
+</li>
+<li><p>防止默认拷贝发生<br>为驳回编译器自动（暗自）提供的功能，可将相应的成员函数声明为 private 并且不予实现。  </p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>拷贝构造函数的几个细节  </p>
+<ul>
+<li>拷贝构造函数里能调用private成员变量吗?  </li>
+<li><p>这个问题是在网上见的，当时一下子有点晕。其时从名子我们就知道拷贝构造函数其时就是一个特殊的构造函数，操作的还是自己类的成员变量，所以不受private的限制。  </p>
+</li>
+<li><p>以下函数哪个是拷贝构造函数,为什么?  </p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">X::X(<span class="keyword">const</span> X&);</div><div class="line">X::X(X);</div><div class="line">X::X(<span class="keyword">const</span> X&, <span class="keyword">int</span> a = <span class="number">5</span>);</div><div class="line">X::X(<span class="keyword">const</span> X&, <span class="keyword">int</span> a = <span class="number">5</span>, <span class="keyword">int</span> b = <span class="number">2</span>);</div></pre></td></tr></table></figure>
+
+<ul>
+<li><p>对于一个类X, 如果一个构造函数的第一个参数是下列之一:<br>a) X&amp;<br>b) const X&amp;<br>c) volatile X&amp;<br>d) const volatile X&amp;<br>且没有其他参数或其他参数都有默认值,那么这个函数是拷贝构造函数.  所以第1,3,4都是拷贝构造函数。  </p>
+<ul>
+<li>类中可以存在超过一个拷贝构造函数。  </li>
+</ul>
+</li>
+</ul>
+<p>资料推荐：    </p>
+<p>[2]: effective c++</p>
+<hr>
+<p>100days—第13天—013</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dby.github.io/2013/09/24/copy构造函数/" data-id="0w2sqi475fcbudms" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/copy构造函数/">copy构造函数</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-learn_cin_scanf_gets" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/09/17/learn_cin_scanf_gets/" class="article-date">
+  <time datetime="2013-09-17T00:51:12.000Z" itemprop="datePublished">9月 17 2013</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/acm/">acm</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/09/17/learn_cin_scanf_gets/">learn_cin/scanf/gets...</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="scanf()/gets()"><strong>scanf()/gets()</strong></h2>
+<ul>
+<li><p>scanf(“%d,%d”,&amp;a,&amp;b);</p>
+<ul>
+<li>如果a和b被成功的读入，则scanf的返回值就是2  </li>
+<li>如果只有a被成功的读入，则返回值为1  </li>
+<li>如果均未成功的读入，返回值为0  </li>
+<li>如果遇到错误或者EOF，返回值为EOF</li>
+<li>注：scanf(“%d,%d,%d”,&amp;a,&amp;b,&amp;c);中%d,%d,%d之间有逗号，在输入数据时也要加逗号，如果去掉逗号，输入时就不用逗号，而用空格，tab键或回车键将各个数据隔开。  </li>
+<li>scanf()以Space,Enter,Tab结束一次的输入，不会舍弃最后的回车符(留在最后的缓冲区中)。  </li>
+</ul>
+</li>
+<li><p>gets()  </p>
+<ul>
+<li>用scanf来读取一个字符串时，字符串中是不可以出现空格的，一旦出现空格，后面的数据就会舍弃残留在缓冲区中。其实有另外一个函数是可以接受空格的，那就是gets().  </li>
+<li></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;stdio.h&gt;</span></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line">    <span class="keyword">char</span> str1[<span class="number">20</span>], str2[<span class="number">20</span>];</div><div class="line">    gets(str1); </div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%s\n"</span>,str1);    </div><div class="line">    gets(str2); </div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%s\n"</span>,str2); </div><div class="line">    getchar();</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<ul>
+<li><p>测试：Hello World! [输入]<br>Hello World! [输出]<br>12345 [输入]<br>12345 [输出]  </p>
+</li>
+<li><p>scanf()以Space、Enter、Tab结束一次输入，不会舍弃最后的回车符(即回车符会残留在缓冲区中)<br>getchar()读取字符时，以Enter结束输入，也不会舍弃最后的回车符。<br>gets()以Enter结束输入（空格不结束），接受空格，会舍弃最后的回车符！</p>
+</li>
+</ul>
+<h2 id="cin"><strong>cin</strong></h2>
+<ul>
+<li><p>cin()</p>
+<ul>
+<li>与前一节中提到的scanf函数一样，程序的输入都建有一个缓冲区，即输入缓冲区。一次输入过程是这样的，当一次 键盘输入结束时会将输入的数据存入输入缓冲区，而cin函数直接从输入缓冲区中取数据。正因为cin函数是直接从 缓冲区取数据的，所以有时候当缓冲区中有残留数据时，cin函数会直接取得这些残留数据而不会请求键盘输入，这 就是例子中为什么会出现输入语句失效的原因！  </li>
+<li>cin 输入结束条件:遇到Enter，Space，Tab键对结束符的处理:丢弃缓冲区中使得输入结束的结束符(Enter、Space、Tab)  </li>
+</ul>
+</li>
+<li><p>cin.get()</p>
+<ul>
+<li>输入结束条件是：Enter键，不会丢弃缓冲区的Enter，space键  </li>
+<li>cin.get() 与 cin.get(char ch)用于读取字符，他们的使用是相似的。即：ch=cin.get() 与 cin.get(ch)是等价的.   </li>
+</ul>
+</li>
+<li><p>cin.getline()</p>
+<ul>
+<li>输入结束的条件：Enter键，丢弃缓冲区的enter  </li>
+<li>cin.get(array_name, Arsize)当输入的字符串超长时，不会引起cin函数的错误，后面的cin操作会继续执行 ，只是直接从缓冲区中取数据。但是cin.getline()当输入超长时，会引起cin函数的错误，后面的cin操作 将不再执行.  </li>
+</ul>
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">int</span> main ()</div><div class="line">{</div><div class="line">    <span class="keyword">char</span> ch, a[<span class="number">20</span>];</div><div class="line">    <span class="built_in">cin</span>.getline(a, <span class="number">5</span>);</div><div class="line">    <span class="built_in">cin</span>&gt;&gt;ch;</div><div class="line">    <span class="built_in">cout</span>&lt;&lt;a&lt;&lt;endl;</div><div class="line">    <span class="built_in">cout</span>&lt;&lt;(<span class="keyword">int</span>)ch&lt;&lt;endl;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<ul>
+<li><p>测试输入：12345  [输入]<br>输出：<br>1234<br>-52</p>
+</li>
+<li><p>cin.get(array_name, Arsize)的例程比较会发现,这里的ch并没有读取缓冲区中的5,而是返回了-52 ，这里其实cin&gt;&gt;ch语句没有执行，是因为cin出错了  </p>
+</li>
+<li>引申：cin.getline()实际上有三个参数，cin.getline(接受字符串的看哦那间m,接受个数5,结束字符)当第三个参数 省略时，系统默认为’\0’如果将例子中cin.getline()改为cin.getline(m,5,’a’);当输入jlkjkljkl时输出jklj ，输入jkaljkljkl时，输出jk  </li>
+</ul>
+<ul>
+<li><p>getline()  </p>
+<ul>
+<li><p>getline (istream&amp; is, string &amp; str, char delim)<br>getline (istream&amp; is,string&amp; str)<br>其中delim为终结符，地中形式delim默认为’\n’(换行符)  </p>
+</li>
+<li><p>可以接受一个字符串，可以接收空格并输出  </p>
+</li>
+</ul>
+<hr>
+<p>100days—第六天—006</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dby.github.io/2013/09/17/learn_cin_scanf_gets/" data-id="dm0kor2w8620mzvm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cin-scanf/">cin/scanf</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-libpcap_初探" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/09/15/libpcap_初探/" class="article-date">
+  <time datetime="2013-09-15T14:39:20.000Z" itemprop="datePublished">9月 15 2013</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/libpcap/">libpcap</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/09/15/libpcap_初探/">libpcap_初探</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近一直忙于保研，找工作的事情，总结写blog的事情有点耽搁了。今天，初步了解了解libpcap—初探<br>libpcap。  </p>
+<ul>
+<li><p>安装libpcap </p>
+<ul>
+<li><a href="http://aofengblog.blog.163.com/blog/static/6317021201111294533801/" target="_blank" rel="external">安装的方法</a>  </li>
+</ul>
+</li>
+<li><p>问题集锦</p>
+<ul>
+<li>problem1:error while loading shared libraries: libpcap.so.1  </li>
+</ul>
+<ol>
+<li>执行 locate libpcap.so.1,查看libpcap.so.1在系统中的路径,显示为：/usr/lib/libpcap.so.1.1.1    </li>
+<li>以管理员权限打开编辑 /etc/ld.so.conf 文件,末尾新一行追尾/usr/lib,/usr/lib为libpcap.so.1.1.1 所在目录, 保存退出  </li>
+<li>以管理员权限执行ldconfig命令  </li>
+<li>成功  </li>
+</ol>
+</li>
+</ul>
+<hr>
+<p>100days—第四天—004</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dby.github.io/2013/09/15/libpcap_初探/" data-id="a0hv0d00n5g1trj8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/libpcap/">libpcap</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-locale_change" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/09/11/locale_change/" class="article-date">
+  <time datetime="2013-09-11T12:21:58.000Z" itemprop="datePublished">9月 11 2013</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/09/11/locale_change/">locale_change</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>每次重装ubuntu之后，有意见非常头痛的事情便是输入法的配置。这次备份一下，方便未来。  </p>
+<h2 id="将语言环境变量改成中文">将语言环境变量改成中文</h2>
+<ul>
+<li><p>查看当前语言环境：<br><code>locale</code></p>
+</li>
+<li><p>编辑配置文件，将<em>en-US.UTF_8</em>改成<strong>zh_CN.UTF-8</strong>。  </p>
+<ul>
+<li><code>sudo vim /etc/default/locale</code>  </li>
+<li><blockquote>
+<p>LANG=”zh_CN.UTF-8”<br>LANGUAGE=”zh_CN:zh”</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>继续查看locale</p>
+<ul>
+<li><p>如果出现一下的错误：  </p>
+<blockquote>
+<p>dby@sys:~$ locale<br> locale: Cannot set LC_CTYPE to default locale: No such file or directory<br> locale: Cannot set LC_MESSAGES to default locale: No such file or directory<br> locale: Cannot set LC_ALL to default locale: No such file or directory</p>
+</blockquote>
+</li>
+<li><p>应该是没有安装zh_CN.UTF-8</p>
+</li>
+<li>安装方法：<br><code>cd /usr/share/locales</code><br><code>sudo ./install-language-pack zh_CN.UTF-8</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="安装输入法"><a href="http://blog.csdn.net/ydonghao2/article/details/9343171" target="_blank" rel="external">安装输入法</a></h2>
+<p>资料推荐：  </p>
+<ol>
+<li><a href="http://wiki.ubuntu.org.cn/%E4%BF%AE%E6%94%B9locale" target="_blank" rel="external">http://wiki.ubuntu.org.cn/%E4%BF%AE%E6%94%B9locale</a>  </li>
+<li><a href="http://blog.csdn.net/ydonghao2/article/details/9343171" target="_blank" rel="external">http://blog.csdn.net/ydonghao2/article/details/9343171</a>  </li>
+</ol>
+<hr>
+<p>100days—第1天—001</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dby.github.io/2013/09/11/locale_change/" data-id="t8o4d7y0rbmg9amd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/locale/">locale</a></li></ul>
+
     </footer>
   </div>
   
@@ -122,21 +983,46 @@
 
   
   
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
+  
 </section>
         
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/acm/">acm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/c/">c++</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/flask/">flask</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/libpcap/">libpcap</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/qt/">qt</a><span class="category-list-count">4</span></li></ul>
+    </div>
+  </div>
+
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aria2a/">aria2a</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cin-scanf/">cin/scanf</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/coding/">coding</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/const/">const</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/copy构造函数/">copy构造函数</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flask-mysql/">flask mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gcc-g/">gcc/g++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-blog/">hexo, blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/libpcap/">libpcap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/locale/">locale</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/problems/">problems</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python爬虫/">python爬虫</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/qt/">qt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/static/">static</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/surround-vim/">surround.vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vimrc/">vimrc</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/线程/">线程</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Markdown/" style="font-size: 10.00px;">Markdown</a><a href="/tags/aria2a/" style="font-size: 10.00px;">aria2a</a><a href="/tags/cin-scanf/" style="font-size: 10.00px;">cin/scanf</a><a href="/tags/coding/" style="font-size: 10.00px;">coding</a><a href="/tags/const/" style="font-size: 20.00px;">const</a><a href="/tags/copy构造函数/" style="font-size: 10.00px;">copy构造函数</a><a href="/tags/flask-mysql/" style="font-size: 10.00px;">flask mysql</a><a href="/tags/gcc-g/" style="font-size: 10.00px;">gcc/g++</a><a href="/tags/hexo-blog/" style="font-size: 10.00px;">hexo, blog</a><a href="/tags/libpcap/" style="font-size: 10.00px;">libpcap</a><a href="/tags/locale/" style="font-size: 10.00px;">locale</a><a href="/tags/problems/" style="font-size: 10.00px;">problems</a><a href="/tags/python爬虫/" style="font-size: 20.00px;">python爬虫</a><a href="/tags/qt/" style="font-size: 10.00px;">qt</a><a href="/tags/shell/" style="font-size: 10.00px;">shell</a><a href="/tags/static/" style="font-size: 10.00px;">static</a><a href="/tags/surround-vim/" style="font-size: 10.00px;">surround.vim</a><a href="/tags/vimrc/" style="font-size: 10.00px;">vimrc</a><a href="/tags/线程/" style="font-size: 20.00px;">线程</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">18</span></li></ul>
     </div>
   </div>
 
@@ -148,7 +1034,23 @@
       <ul>
         
           <li>
-            <a href="/2014/10/16/hello-world/">Hello World</a>
+            <a href="/2014/03/17/shell_care/">shell_care</a>
+          </li>
+        
+          <li>
+            <a href="/2014/03/15/gccg++/">gcc/g++</a>
+          </li>
+        
+          <li>
+            <a href="/2013/12/10/vim--surroundvim/">vim--surround.vim</a>
+          </li>
+        
+          <li>
+            <a href="/2013/10/03/const_learning2/">const_learning2</a>
+          </li>
+        
+          <li>
+            <a href="/2013/10/02/const_learning/">const_learning</a>
           </li>
         
       </ul>

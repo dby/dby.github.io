@@ -3,17 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2014 | sys.linux.d::blog</title>
+  <title>vimrc | sys.linux.d::blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Walk steps step by step">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sys.linux.d::blog">
-<meta property="og:url" content="http://dby.github.io/archives/2014/">
+  <meta name="description" content="一直以来，管理vim插件对我来说都是一个很大的困扰，更新和卸载，一个一个都是很麻烦，尝试了很多的插件的管理软件，知道遇到了Vundle。Vundle利用git, 插件的git repo以及vim-scripts维护的GitHub repo, 自动安装, 更新和卸载插件. 它把这些繁杂的工作变得简单, 甚至, 成为一种享受。  
+Vundle的安装很简单，只需执行
+1git clone http:/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vimrc">
+<meta property="og:url" content="http://dby.github.io/2013/09/07/vimrc/">
 <meta property="og:site_name" content="sys.linux.d::blog">
-<meta property="og:description" content="Walk steps step by step">
+<meta property="og:description" content="一直以来，管理vim插件对我来说都是一个很大的困扰，更新和卸载，一个一个都是很麻烦，尝试了很多的插件的管理软件，知道遇到了Vundle。Vundle利用git, 插件的git repo以及vim-scripts维护的GitHub repo, 自动安装, 更新和卸载插件. 它把这些繁杂的工作变得简单, 甚至, 成为一种享受。  
+Vundle的安装很简单，只需执行
+1git clone http:/">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sys.linux.d::blog">
-<meta name="twitter:description" content="Walk steps step by step">
+<meta name="twitter:title" content="vimrc">
+<meta name="twitter:description" content="一直以来，管理vim插件对我来说都是一个很大的困扰，更新和卸载，一个一个都是很麻烦，尝试了很多的插件的管理软件，知道遇到了Vundle。Vundle利用git, 插件的git repo以及vim-scripts维护的GitHub repo, 自动安装, 更新和卸载插件. 它把这些繁杂的工作变得简单, 甚至, 成为一种享受。  
+Vundle的安装很简单，只需执行
+1git clone http:/">
 
   
     <link rel="alternative" href="/atom.xml" title="sys.linux.d::blog" type="application/atom+xml">
@@ -65,58 +71,89 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/03/17/shell_care/" class="archive-article-date">
-  <time datetime="2014-03-17T07:31:23.000Z" itemprop="datePublished">3月 17</time>
+        <section id="main"><article id="post-vimrc" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/09/07/vimrc/" class="article-date">
+  <time datetime="2013-09-07T06:09:53.000Z" itemprop="datePublished">9月 7 2013</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/03/17/shell_care/">shell_care</a>
+    <h1 class="article-title" itemprop="name">
+      vimrc
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/03/15/gccg++/" class="archive-article-date">
-  <time datetime="2014-03-15T08:17:57.000Z" itemprop="datePublished">3月 15</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/03/15/gccg++/">gcc/g++</a>
-    </h1>
-  
+        <p>一直以来，管理vim插件对我来说都是一个很大的困扰，更新和卸载，一个一个都是很麻烦，尝试了很多的插件<br>的管理软件，知道遇到了Vundle。<br>Vundle利用git, 插件的git repo以及vim-scripts维护的GitHub repo, 自动安装, 更新和卸载插件. 它把这些<br>繁杂的工作变得简单, 甚至, 成为一种享受。  </p>
+<p>Vundle的安装很简单，只需执行</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone <span class="symbol">http:</span>/<span class="regexp">/github.com/gmarik</span><span class="regexp">/vundle.git ~/</span>.vim/bundle/vundle</div></pre></td></tr></table></figure>
 
-    </header>
+<p>然后再将下列的代码加入vimrc即可。  </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">set</span> nocompatible    <span class="string">" be iMproved</span></div><div class="line"><span class="keyword">filetype</span> off        <span class="string">" required!</span></div><div class="line"></div><div class="line"><span class="keyword">set</span> rtp+=~/.<span class="keyword">vim</span>/bundle/vundle/</div><div class="line"><span class="built_in">call</span> vundle#rc()</div><div class="line"><span class="string">"让 Vundle 管理 Vundle 此条必须有"</span></div><div class="line">Bundle <span class="string">'gmarik/vundle'</span></div><div class="line"><span class="string">" 比如我的 vim 插件"</span></div><div class="line"></div><div class="line"><span class="string">" 代码源在 github 上的"</span></div><div class="line">Bundle <span class="string">'mattn/zencoding-vim'</span></div><div class="line">Bundle <span class="string">'Lokaltog/vim-powerline'</span></div><div class="line">Bundle <span class="string">'kien/ctrlp.vim'</span></div><div class="line"></div><div class="line"><span class="string">" 代码存放在 vim script 上"</span></div><div class="line">Bundle <span class="string">'FuzzyFinder'</span></div><div class="line"></div><div class="line"><span class="string">" 代码存放在其他地方"</span></div><div class="line">Bundle <span class="string">'git://git.wincent.com/command-t.git'</span></div><div class="line">" ...</div></pre></td></tr></table></figure>
+
+<p>然后，安装插件：  </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">:BundleInstall</span></div></pre></td></tr></table></figure>
+
+<p>更新插件：  </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">:BundleInstall!</span></div></pre></td></tr></table></figure>
+
+<p>卸载不再列表中的插件：  </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">:BundleClean</span></div></pre></td></tr></table></figure>
+
+<p>it’s easy, Enjoy it.  </p>
+<h2 id="插件问题">插件问题</h2>
+<ul>
+<li><a href="http://blog.573114.com/Blog/Html/B7DD/632238.html" target="_blank" rel="external">powerline</a>箭头乱码问题  </li>
+</ul>
+<p>我的<a href="https://github.com/dby/vimrc_dby" target="_blank" rel="external">vimer</a>的配置.  </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dby.github.io/2013/09/07/vimrc/" data-id="l1xnkonf5x5a1ggx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vimrc/">vimrc</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2013/09/07/hexo挣扎记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          hexo挣扎记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/09/07/python爬虫_点点美女照片/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">python爬虫_点点美女照片</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
         
           <aside id="sidebar">

@@ -3,17 +3,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2014 | sys.linux.d::blog</title>
+  <title>qt_初探 | sys.linux.d::blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Walk steps step by step">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sys.linux.d::blog">
-<meta property="og:url" content="http://dby.github.io/archives/2014/">
+  <meta name="description" content="QT 简介
+Qt 是一个跨平台的 C++ 图形用户界面库，由挪威 TrollTech 公司出品，目前包括Qt， 基于 Framebuffer 的 Qt Embedded，快速开发工具 Qt Designer，国际化工具 Qt Linguist 等部分 Qt 支持所有 Unix 系统，当然也包括 Linux，还支持 WinNT/Win2k，Win95/98 平台。  
+这里有着更详细的资料  
+Ub">
+<meta property="og:type" content="article">
+<meta property="og:title" content="qt_初探">
+<meta property="og:url" content="http://dby.github.io/2013/09/10/qt_初探/">
 <meta property="og:site_name" content="sys.linux.d::blog">
-<meta property="og:description" content="Walk steps step by step">
+<meta property="og:description" content="QT 简介
+Qt 是一个跨平台的 C++ 图形用户界面库，由挪威 TrollTech 公司出品，目前包括Qt， 基于 Framebuffer 的 Qt Embedded，快速开发工具 Qt Designer，国际化工具 Qt Linguist 等部分 Qt 支持所有 Unix 系统，当然也包括 Linux，还支持 WinNT/Win2k，Win95/98 平台。  
+这里有着更详细的资料  
+Ub">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sys.linux.d::blog">
-<meta name="twitter:description" content="Walk steps step by step">
+<meta name="twitter:title" content="qt_初探">
+<meta name="twitter:description" content="QT 简介
+Qt 是一个跨平台的 C++ 图形用户界面库，由挪威 TrollTech 公司出品，目前包括Qt， 基于 Framebuffer 的 Qt Embedded，快速开发工具 Qt Designer，国际化工具 Qt Linguist 等部分 Qt 支持所有 Unix 系统，当然也包括 Linux，还支持 WinNT/Win2k，Win95/98 平台。  
+这里有着更详细的资料  
+Ub">
 
   
     <link rel="alternative" href="/atom.xml" title="sys.linux.d::blog" type="application/atom+xml">
@@ -65,58 +74,88 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/03/17/shell_care/" class="archive-article-date">
-  <time datetime="2014-03-17T07:31:23.000Z" itemprop="datePublished">3月 17</time>
+        <section id="main"><article id="post-qt_初探" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/09/10/qt_初探/" class="article-date">
+  <time datetime="2013-09-10T07:23:18.000Z" itemprop="datePublished">9月 10 2013</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/qt/">qt</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/03/17/shell_care/">shell_care</a>
+    <h1 class="article-title" itemprop="name">
+      qt_初探
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2014/03/15/gccg++/" class="archive-article-date">
-  <time datetime="2014-03-15T08:17:57.000Z" itemprop="datePublished">3月 15</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/03/15/gccg++/">gcc/g++</a>
-    </h1>
-  
+        <h2 id="QT_简介"><strong>QT 简介</strong></h2>
+<p>Qt 是一个跨平台的 C++ 图形用户界面库，由挪威 TrollTech 公司出品，目前包括Qt， 基于 Framebuffer 的 Qt Embedded，快速开发工具 Qt Designer，国际化工具 Qt Linguist 等部分 Qt 支持所有 Unix 系统，当然也包括 Linux，还支持 WinNT/Win2k，Win95/98 平台。  </p>
+<p>这里有着更详细的<a href="http://blog.csdn.net/apple1985507/article/details/5340235" target="_blank" rel="external">资料</a>  </p>
+<h2 id="Ubuntu下安装"><strong>Ubuntu下安装</strong></h2>
+<ol>
+<li><p>ubuntu 下安装QT<br>$ sudo apt-get install qt4-dev-tools qt4-doc qt4-qtconfig qt4-demos qt4-designer</p>
+<ol>
+<li>qt4-dev-tools 包含了Qt Assistant及Qt Linguist等工具，因此不需要单独安装这两个工具。  </li>
+<li>qt4-doc 是帮助文档，包含了Qt中各个类库的详细说明以及丰富的例子程序。  </li>
+<li>Qt Assistant 工具来打开阅读。  </li>
+<li>qt4-qtconfig 是配置Qt环境的一个对话框，一般默认就行了，很少有必要去更改。  </li>
+<li>qt4-demos 包含很多可以运行起来的可执行文件以及源代码。qt4-designer是用来设计GUI界面的设计器。  </li>
+</ol>
+</li>
+<li><p>安装连接MySQL的驱动程序<br>$ sudo apt-get install libqt4-sql-mysql  </p>
+</li>
+<li><p>安装第三方QWT库<br>$ sudo apt-get install libqwt5-qt4 libqwt5-qt4-dev<br>注：安装完这些后，打开Qt Designer，就会发现左边的Widget列表里面多了”Qwt Widget”这一组；  </p>
+</li>
+<li>安装集成开发环境Qcreator<br>sudo apt-get install qcreator<br><a href="http://my.oschina.net/jamesju/blog/106561" target="_blank" rel="external">QTcreator 简单教程</a>  </li>
+<li>finish</li>
+</ol>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://dby.github.io/2013/09/10/qt_初探/" data-id="fynsh59siyw401qb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/qt/">qt</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2013/09/10/qt_线程一/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          qt_线程一
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2013/09/07/markdown_tips/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Markdown_tips</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
         
           <aside id="sidebar">
