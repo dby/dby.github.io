@@ -173,14 +173,6 @@ Updated:<time datetime="2014-10-16T07:32:39.000Z" itemprop="dateModified">10月 
     
     <div class="article-entry" itemprop="articleBody">
       
-		
-		<div id="toc" class="toc-article">
-			<h2 class="toc-title"><span>Contents</span></h2>
-		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#linux_shell(容易出错的几个地方)"><span class="toc-number">1.</span> <span class="toc-text">linux shell(容易出错的几个地方)</span></a></li></ol>
-		
-		</div>
-		
         <h2 id="linux_shell(容易出错的几个地方)">linux shell(容易出错的几个地方)</h2>
 <ul>
 <li><p>赋值语句”=”左右没有空格。<br><code>num=5</code> =&gt;将num赋值为5  </p>
@@ -199,29 +191,12 @@ Updated:<time datetime="2014-10-16T07:32:39.000Z" itemprop="dateModified">10月 
 <li><code>for i in 1 2 3 4 5</code>  </li>
 <li><code>for i in &quot;1 2 3 4 5&quot;</code>  </li>
 </ul>
-</li>
-<li><p>expr计算整数变量值</p>
-<ul>
-<li>格式：expr arg</li>
-</ul>
-</li>
-<li><p>let命令  </p>
-<ul>
-<li>格式：let arg1[arg2…]</li>
-</ul>
-</li>
-<li><p>shell中实现整型变量自加1的方法  </p>
-<ul>
-<li>a=$(($a+1))  </li>
-<li>a=$[$a+1]</li>
-<li>a=<code>expr $a + 1</code></li>
-<li>let a++</li>
-<li>let a+=1</li>
-<li>((a+1))</li>
-</ul>
-</li>
-</ul>
 
+        
+          <p class="article-more-link">
+            <a href="/2014/03/17/shell_care/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -240,7 +215,7 @@ Updated:<time datetime="2014-10-16T07:32:39.000Z" itemprop="dateModified">10月 
 
 	  
 <span>
-Updated:<time datetime="2014-03-17T07:51:39.000Z" itemprop="dateModified">3月 17 2014</time>
+Updated:<time datetime="2014-10-16T12:57:31.000Z" itemprop="dateModified">10月 16 2014</time>
 </span>
 
 
@@ -285,14 +260,6 @@ Updated:<time datetime="2014-03-17T07:51:39.000Z" itemprop="dateModified">3月 1
     
     <div class="article-entry" itemprop="articleBody">
       
-		
-		<div id="toc" class="toc-article">
-			<h2 class="toc-title"><span>Contents</span></h2>
-		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux_GCC_常用命令"><span class="toc-number">1.</span> <span class="toc-text">Linux GCC 常用命令</span></a></li></ol>
-		
-		</div>
-		
         <h2 id="Linux_GCC_常用命令">Linux GCC 常用命令</h2>
 <p>GCC的意思是GNU Compiler Collection，是GNU编译器家族的意思。  </p>
 <ul>
@@ -311,25 +278,13 @@ Updated:<time datetime="2014-03-17T07:51:39.000Z" itemprop="dateModified">3月 1
 <li>链接(Linking)<br><code>gcc test.o -o test</code><br>gcc连接器是gas提供的，负责将程序的目标文件与所需的所有附加的目标文件连接起来，最终生成可执行文件。附加的目标文件包括静态连接库和动态连接库。  </li>
 </ul>
 </li>
-<li><p>库文件连接<br>例如我们的程序test.c是在linux上使用c连接mysql，这个时候我们需要去mysql官网下载MySQL Connectors的C库，下载下来解压之后，有一个include文件夹，里面包含mysql connectors的头文件，还有一个lib文件夹，里面包含二进制so文件libmysqlclient.so</p>
-<p>其中inclulde文件夹的路径是/usr/dev/mysql/include,lib文件夹是/usr/dev/mysql/lib  </p>
-<ul>
-<li><p>编译可执行文件<br>首先我们要进行test.c为目标文件，这个时候需要<br>`gcc -I /usr/dev/mysql/include test.c -o test.o</p>
-</li>
-<li><p>链接<br><code>gcc -L /usr/dev/mysql/lib -lmysqlclient test.o -o test</code></p>
-</li>
-<li><p><strong>-static</strong>强制链接的时候使用静态库</p>
-</li>
-</ul>
-</li>
-<li><p>检错</p>
-<ul>
-<li><strong>-Wall</strong> 可以是gcc产生尽可能多的警告信息<br><code>gcc -Wall illcode.c -o illcode</code>  </li>
-<li><strong>-Werror</strong> 在编译程序时带上-Werror选项，那么GCC会在所有产生警告的地方停止编译，迫使程序员对自己的代码进行修改.<br><code>gcc -Werror test.c -o test</code>  </li>
-</ul>
-</li>
 </ul>
 
+        
+          <p class="article-more-link">
+            <a href="/2014/03/15/gccg++/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -347,7 +302,7 @@ GCC的意思是GNU C..." class="article-share-link">Share</a>
 
 	  
 <span>
-Updated:<time datetime="2014-03-15T09:06:40.000Z" itemprop="dateModified">3月 15 2014</time>
+Updated:<time datetime="2014-10-16T12:58:32.000Z" itemprop="dateModified">10月 16 2014</time>
 </span>
 
 
@@ -406,7 +361,7 @@ Updated:<time datetime="2014-03-15T09:06:40.000Z" itemprop="dateModified">3月 1
 
 
 
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">文本                命令          结果  </div><div class="line">------------------  ------------- ---------------  </div><div class="line"><span class="string">"Hello |world!"</span>     cs<span class="string">"'          'Hello world'  </span></div><div class="line"><span class="string">"Hello |world!"</span>     cs<span class="string">"&lt;q&gt;        &lt;q&gt;Hello world&lt;q&gt;</span></div><div class="line">(<span class="number">123</span>+<span class="number">4</span><span class="string">|56)/2        cs)]          [123+456]/2</span></div><div class="line">(<span class="number">123</span>+<span class="number">4</span><span class="string">|56)/2        cs)]          [ 123+456 ]/2</span></div><div class="line">&lt;div&gt;foo<span class="string">|&lt;/div&gt;     cst&lt;p&gt;        &lt;p&gt;foo&lt;/p&gt;</span></div><div class="line">fo<span class="string">|o!               csw'          'foo'!</span></div><div class="line">fo<span class="string">|o!               csW'          'foo!'</span></div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--more--&gt;</span></div><div class="line"></div><div class="line">文本                命令          结果  </div><div class="line">------------------  ------------- ---------------  </div><div class="line">"Hello |world!"     cs"'          'Hello world'  </div><div class="line">"Hello |world!"     cs"<span class="tag">&lt;<span class="title">q</span>&gt;</span>        <span class="tag">&lt;<span class="title">q</span>&gt;</span>Hello world<span class="tag">&lt;<span class="title">q</span>&gt;</span></div><div class="line">(123+4|56)/2        cs)]          [123+456]/2</div><div class="line">(123+4|56)/2        cs)]          [ 123+456 ]/2</div><div class="line"><span class="tag">&lt;<span class="title">div</span>&gt;</span>foo|<span class="tag">&lt;/<span class="title">div</span>&gt;</span>     cst<span class="tag">&lt;<span class="title">p</span>&gt;</span>        <span class="tag">&lt;<span class="title">p</span>&gt;</span>foo<span class="tag">&lt;/<span class="title">p</span>&gt;</span></div><div class="line">fo|o!               csw'          'foo'!</div><div class="line">fo|o!               csW'          'foo!'</div></pre></td></tr></table></figure>
 
 <p><strong>0x02.adding</strong><br>比如，我要把这个小标题用strong包括起来，再也不用想以前那么敲了,只需要：<br><code>yss&lt;strong&gt;</code>   </p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Text                Command       New Text</div><div class="line">------------------  ------------- ----------------</div><div class="line">Hello w<span class="string">|orld!       ysiw)         Hello (world)!</span></div><div class="line">Hello w<span class="string">|orld!       csw)          Hello (world)! </span></div><div class="line">fo<span class="string">|o                ysiwt&lt;html&gt;   &lt;html&gt;foo&lt;/html&gt;</span></div><div class="line">foo quu<span class="string">|x baz       yss"</span>          <span class="string">"foo quux baz"</span></div><div class="line">foo quu<span class="string">|x baz       ySS"</span>          <span class="string">"</span></div><div class="line">                                        foo quux baz</div><div class="line">                                  <span class="string">"</span></div><div class="line">(<span class="string">| is the position of cursor in these examples)</span></div></pre></td></tr></table></figure>
@@ -434,7 +389,7 @@ Updated:<time datetime="2014-03-15T09:06:40.000Z" itemprop="dateModified">3月 1
 
 	  
 <span>
-Updated:<time datetime="2013-12-10T15:01:46.000Z" itemprop="dateModified">12月 10 2013</time>
+Updated:<time datetime="2014-10-16T12:59:25.000Z" itemprop="dateModified">10月 16 2014</time>
 </span>
 
 
