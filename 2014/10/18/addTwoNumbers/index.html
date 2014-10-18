@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>python爬虫_点点美女照片 | sys.linux.d::blog</title>
+  <title>addTwoNumbers | sys.linux.d::blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Walk steps step by step">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python爬虫_点点美女照片">
-<meta property="og:url" content="http://dby.github.io/2013/09/07/python爬虫_点点美女照片/">
+<meta property="og:title" content="addTwoNumbers">
+<meta property="og:url" content="http://dby.github.io/2014/10/18/addTwoNumbers/">
 <meta property="og:site_name" content="sys.linux.d::blog">
 <meta property="og:description" content="Walk steps step by step">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python爬虫_点点美女照片">
+<meta name="twitter:title" content="addTwoNumbers">
 <meta name="twitter:description" content="Walk steps step by step">
 
   
@@ -74,17 +74,17 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-python爬虫_点点美女照片" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-addTwoNumbers" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     
-<a href="/2013/09/07/python爬虫_点点美女照片/" class="article-date">
-  <time datetime="2013-09-07T04:52:19.000Z" itemprop="datePublished">9月 7 2013</time>
+<a href="/2014/10/18/addTwoNumbers/" class="article-date">
+  <time datetime="2014-10-18T03:45:39.000Z" itemprop="datePublished">10月 18 2014</time>
 </a>
 
 
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/python/">python</a>
+    <a class="article-category-link" href="/categories/leetcode/">leetcode</a>
   </div>
 
   </div>
@@ -95,7 +95,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      python爬虫_点点美女照片
+      addTwoNumbers
     </h1>
   
 
@@ -111,10 +111,13 @@
 		
 		</div>
 		
-        <p>继续鼓捣爬虫，今天贴出一个代码，爬取点点网「美女」标签下的照片。  </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># -*- coding: utf-8 -*- </span></div><div class="line"> </div><div class="line"> </div><div class="line"><span class="comment">#---------------------------------------  </span></div><div class="line"><span class="comment">#   程序：点点美女图片爬虫  </span></div><div class="line"><span class="comment">#   版本：0.2  </span></div><div class="line"><span class="comment">#   作者：sys.linux.d  </span></div><div class="line"><span class="comment">#   日期：2013-09-07 </span></div><div class="line"><span class="comment">#   语言：Python 2.7  </span></div><div class="line"><span class="comment">#   说明：能设置下载的页数 </span></div><div class="line"><span class="comment">#--------------------------------------- </span></div><div class="line"> </div><div class="line"><span class="keyword">import</span> urllib2</div><div class="line"><span class="keyword">import</span> urllib</div><div class="line"><span class="keyword">import</span> re</div><div class="line"> </div><div class="line">pat = re.compile(<span class="string">'&lt;div class="feed-big-img"&gt;\n.*?imgsrc="(ht.*?)\".*?'</span>)</div><div class="line">nexturl1 = <span class="string">"http://www.diandian.com/tag/%E7%BE%8E%E5%A5%B3?page="</span></div><div class="line"> </div><div class="line">count = <span class="number">1</span></div><div class="line"> </div><div class="line"><span class="keyword">while</span> count &lt; <span class="number">2</span>:</div><div class="line"> </div><div class="line">    <span class="keyword">print</span> <span class="string">"Page "</span> + str(count) + <span class="string">"\n"</span></div><div class="line">    myurl = nexturl1 + str(count)</div><div class="line">    myres = urllib2.urlopen(myurl)</div><div class="line">    mypage = myres.read()</div><div class="line">    ucpage = mypage.decode(<span class="string">"utf-8"</span>) <span class="comment">#转码</span></div><div class="line"> </div><div class="line">    mat = pat.findall(ucpage)</div><div class="line">    </div><div class="line">    </div><div class="line">    <span class="keyword">if</span> len(mat):</div><div class="line">        cnt = <span class="number">1</span></div><div class="line">        <span class="keyword">for</span> item <span class="keyword">in</span> mat:</div><div class="line">            <span class="keyword">print</span> <span class="string">"Page"</span> + str(count) + <span class="string">" No."</span> + str(cnt) + <span class="string">" url: "</span> + item + <span class="string">"\n"</span></div><div class="line">            cnt += <span class="number">1</span></div><div class="line">            fnp = re.compile(<span class="string">'(\w{10}\.\w+)$'</span>)</div><div class="line">            fnr = fnp.findall(item)</div><div class="line">            <span class="keyword">if</span> fnr:</div><div class="line">                fname = fnr[<span class="number">0</span>]</div><div class="line">                urllib.urlretrieve(item, fname)</div><div class="line">      	</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">print</span> <span class="string">"no data"</span></div><div class="line">        </div><div class="line">    count += <span class="number">1</span></div></pre></td></tr></table></figure>
+        <p>最近从知乎上知道了<code>leetcode</code>，十分高兴的一点是竟然可以使用python语言进行提交，于是果断在<strong>leetcode</strong>上开始刷题，熟悉了python，又提高了自己编程的能力。<br>今天要做的是<a href="https://oj.leetcode.com/problems/add-two-numbers/" target="_blank" rel="external">Add Two Numbers</a>,这道题是很简单的链表操作，直接上代码。   </p>
+<a id="more"></a>
 
-<p>使用方法是类似的。  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Definition for singly-linked list.</span></div><div class="line"><span class="comment"># class ListNode:</span></div><div class="line"><span class="comment">#     def __init__(self, x):</span></div><div class="line"><span class="comment">#         self.val = x</span></div><div class="line"><span class="comment">#         self.next = None</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="comment"># @return a ListNode</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addTwoNumbers</span><span class="params">(self, l1, l2)</span>:</span></div><div class="line">        head = tail = ListNode(<span class="number">0</span>)</div><div class="line">        flag = <span class="number">0</span></div><div class="line">        <span class="keyword">while</span> l1 <span class="keyword">or</span> l2 <span class="keyword">or</span> flag:</div><div class="line">            node = ListNode(flag)</div><div class="line">            <span class="keyword">if</span> l1:</div><div class="line">                node.val = node.val + l1.val</div><div class="line">                l1 = l1.next</div><div class="line">            <span class="keyword">if</span> l2:</div><div class="line">                node.val = node.val + l2.val</div><div class="line">                l2 = l2.next</div><div class="line">            flag = node.val / <span class="number">10</span></div><div class="line">            node.val = node.val % <span class="number">10</span></div><div class="line">            tail.next = node</div><div class="line">            tail = tail.next</div><div class="line">        tail.next = <span class="keyword">None</span></div><div class="line">        <span class="keyword">return</span> head.next</div></pre></td></tr></table></figure>
+
+<hr>
+<p>坚持就是胜利  </p>
 
       
     </div>
@@ -125,11 +128,11 @@
 	  <!-- 百度分享 End -->
 	  
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python爬虫/">python爬虫</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/">leetcode</a></li></ul>
 
 	  
 <span>
-Updated:<time datetime="2013-09-07T04:58:28.000Z" itemprop="dateModified">9月 7 2013</time>
+Updated:<time datetime="2014-10-18T05:18:50.000Z" itemprop="dateModified">10月 18 2014</time>
 </span>
 
 
@@ -139,19 +142,10 @@ Updated:<time datetime="2013-09-07T04:58:28.000Z" itemprop="dateModified">9月 7
     
 <nav id="article-nav">
   
-    <a href="/2013/09/07/vimrc/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          vimrc
-        
-      </div>
-    </a>
   
-  
-    <a href="/2013/09/07/python爬虫_糗百照片/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2014/10/16/hi-mac/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">python爬虫_糗百照片</div>
+      <div class="article-nav-title">hi_mac</div>
     </a>
   
 </nav>
@@ -164,7 +158,7 @@ Updated:<time datetime="2013-09-07T04:58:28.000Z" itemprop="dateModified">9月 7
 <!-- 多说评论框 start -->
 
 <section id="comments">
-  <div class="ds-thread"  data-thread-key="/2013/09/07/python爬虫_点点美女照片/" data-title="python爬虫_点点美女照片" data-url="http://dby.github.io/2013/09/07/python爬虫_点点美女照片/" id="ds_thread">
+  <div class="ds-thread"  data-thread-key="/2014/10/18/addTwoNumbers/" data-title="addTwoNumbers" data-url="http://dby.github.io/2014/10/18/addTwoNumbers/" id="ds_thread">
     <noscript>Please enable JavaScript to view the <a href="//duoshuo.com/?ref_noscript">comments powered by duoshuo.</a></noscript>
   </div>
 </section>
