@@ -31,11 +31,13 @@
 		
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="sys.linux.d::blog">sys.linux.d::blog</a></h1>
+				<br/>
 				<h2 class="blog-motto">Walk steps step by step</h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
-			<nav class="animated">
+			<br><br>
+			<nav class="animated" style="font-size:130%;">
 				<ul>
                     <ul>
 					 
@@ -53,7 +55,7 @@
                 <li><div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div></li>
 
 				</ul>
-			</nav>	
+			</nav>
 </div>
 
       </header>
@@ -496,8 +498,11 @@
 </div>
 
       </div>
-      <footer><div id="footer" >
-
+      <footer><div id="footer">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8c3836548aaeaad64b8408c75dabe901' type='text/javascript'%3E%3C/script%3E"));
+</script>
 </div>
 </footer>
       <script src="/js/jquery-2.1.0.min.js"></script>
@@ -505,7 +510,7 @@
 $(document).ready(function(){ 
   //back to top
   function backToTop(){
-    var buttonHTML = $("<a href=\"#top\" id=\"back-top\">" + "<span>Back to Top</span></a>");
+    var buttonHTML = $("<a href=\"#top\" id=\"back-top\">" + "<img style=\"width:35px;height:35px;\" src=\"/img/up2.png\"></a>");
     buttonHTML.appendTo($("body"));
     var buttonToTop = $("#back-top");
     // hide #back-top first
@@ -579,7 +584,36 @@ $(document).ready(function(){
 
 
 
+<!-- mathjax config similar to math.stackexchange -->
 
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://www.zybuluo.com/static/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
     </body>
    </html>

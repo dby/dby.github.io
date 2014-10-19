@@ -31,11 +31,13 @@
 		
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="sys.linux.d::blog">sys.linux.d::blog</a></h1>
+				<br/>
 				<h2 class="blog-motto">Walk steps step by step</h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
-			<nav class="animated">
+			<br><br>
+			<nav class="animated" style="font-size:130%;">
 				<ul>
                     <ul>
 					 
@@ -53,7 +55,7 @@
                 <li><div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div></li>
 
 				</ul>
-			</nav>	
+			</nav>
 </div>
 
     </header>
@@ -122,28 +124,7 @@
 <p>100days—-第22天—-022</p>
   
 	</div>
-		<footer class="article-footer clearfix">
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/const/">const</a>
-  </div>
-
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/c/">c++</a>
-</div>
-
-
-
-<div class="article-share" id="share">
-
-  <div data-url="http://dby.github.io/2013/10/02/const_learning/" data-title="const_learning | sys.linux.d::blog" data-tsina="null" class="share clearfix">
-  </div>
-
-</div>
-</footer>   	       
+		   	       
 	</article>
 	
 <nav class="article-nav clearfix">
@@ -168,23 +149,9 @@
 </nav>
 
 	
-
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"<your short name>"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end -->
+<section class="comment">
+	<div class="ds-thread"></div>
+</section>
 
 </div>  
       
@@ -199,13 +166,6 @@ var duoshuoQuery = {short_name:"<your short name>"};
 		<div class="author-logo"></div>		
 	
 	
-	<section class="author-info">
-		
-			<p> walk steps step by step</p>
-		
-		
-	</section>
-	 
 	<div class="social-font" class="clearfix">
 		
 		<a href="http://weibo.com/2498629490" target="_blank" title="weibo"></a>
@@ -253,7 +213,7 @@ var duoshuoQuery = {short_name:"<your short name>"};
 
   
   <div class="archiveslist">
-    <p class="asidetitle"><a href="/archives">Archives</a></p>
+    <p class="asidetitle">Archives</p>
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">18</span></li></ul>
   </div>
 
@@ -319,8 +279,11 @@ var duoshuoQuery = {short_name:"<your short name>"};
 </aside>
 </div>
     </div>
-    <footer><div id="footer" >
-
+    <footer><div id="footer">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8c3836548aaeaad64b8408c75dabe901' type='text/javascript'%3E%3C/script%3E"));
+</script>
 </div>
 </footer>
     <script src="/js/jquery-2.1.0.min.js"></script>
@@ -328,7 +291,7 @@ var duoshuoQuery = {short_name:"<your short name>"};
 $(document).ready(function(){ 
   //back to top
   function backToTop(){
-    var buttonHTML = $("<a href=\"#top\" id=\"back-top\">" + "<span>Back to Top</span></a>");
+    var buttonHTML = $("<a href=\"#top\" id=\"back-top\">" + "<img style=\"width:35px;height:35px;\" src=\"/img/up2.png\"></a>");
     buttonHTML.appendTo($("body"));
     var buttonToTop = $("#back-top");
     // hide #back-top first
@@ -471,7 +434,36 @@ $(document).ready(function(){
 
 
 
+<!-- mathjax config similar to math.stackexchange -->
 
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://www.zybuluo.com/static/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
   </body>
 </html>
