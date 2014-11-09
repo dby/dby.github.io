@@ -4,12 +4,16 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>sys.linux.d::blog</title>
+    <title>StringToInteger | sys.linux.d::blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="sys.linux.d">
     
-    <meta name="description" content="Walk steps step by step">
+    <meta name="description" content="String to Integer
+这道题目第一眼看到，还是感觉很简单的一道题，但是提交了15次才成功，真是考虑的太不全面了。这道题需要注意一下各种情况。   
+
+
+数字前面有空格，则忽略空格。比如“   123  ”2.当数字前面出现多余的非数字的字符时，返回为0。比如“b123”,“—123”3">
     
     
     
@@ -64,283 +68,70 @@
 
     </header>
     <div id="container" class="clearfix">
-      <div id="main">
-
-  <section class="post" itemscope itemprop="blogPost">
-  <article>
-    <h1 itemprop="name">
-      
-        <a href="/2013/09/10/qt_thread与gui线程连通/" title="qt_thread与GUI线程连通" itemprop="url">
-      
-        qt_thread与GUI线程连通
-      </a>
-    </h1>
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
     
-     
-           <p itemprop="description" >qt中thread与GUI线程互通的一种方法，采用信号槽的机制。通常的情况下，信号和槽机制是可以同步操作的，这就意味着在发射信号的时候，可以使用直接函数，立即调用链接在同一信号的多个槽。然而，当连接位于不同线程中的对象时，这一机制就会变得不同步起来，可以通过修改QObject::</p>
-        
+      <a href="/2014/11/09/StringToInteger/" title="StringToInteger" itemprop="url">StringToInteger</a>
+  </h1>
+  <p class="article-author">By
     
-    <p class="article-more-link">
-      <time datetime="2013-09-10T08:42:52.000Z" itemprop="datePublished">9月 10 2013</time>
-      
-          <a href="/2013/09/10/qt_thread与gui线程连通/">more&raquo;</a>
-      
+      <a href="http://dby.github.io" title="sys.linux.d">sys.linux.d</a>
     </p>
-
-  </article>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  <article>
-    <h1 itemprop="name">
-      
-        <a href="/2013/09/10/qt_线程一/" title="qt_线程一" itemprop="url">
-      
-        qt_线程一
-      </a>
-    </h1>
+  <p class="article-time">
+    <time datetime="2014-11-09T14:19:38.000Z" itemprop="datePublished">11月 9 2014</time>
+    Updated:<time datetime="2014-11-09T14:27:13.000Z" itemprop="dateModified">11月 9 2014</time>
     
-     
-           <p itemprop="description" >QT 线程的基础知识
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#String_to_Integer"><span class="toc-number">1.</span> <span class="toc-text">String to Integer</span></a></li></ol>
+		</div>
+		
+		<h2 id="String_to_Integer">String to Integer</h2>
+<p>这道题目第一眼看到，还是感觉很简单的一道题，但是提交了15次才成功，真是考虑的太不全面了。这道题需要注意一下各种情况。   </p>
+<blockquote>
+<ol>
+<li>数字前面有空格，则忽略空格。比如“   123  ”<br>2.当数字前面出现多余的非数字的字符时，返回为0。比如“b123”,“—123”<br>3.第一个字符可以是<em>+</em>, “-“<br>4.当中间出现非字母时，只返回前一部分。比如<em>123ab1</em>，则返回<em>123</em>  </li>
+</ol>
+</blockquote>
+<hr>
+<p>愈挫愈勇 再接再厉  </p>
+  
+	</div>
+		   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
 
-线程类  
-
-QThtrad 提供了开始一个新线程的方法  
-QThreadStorage 提供逐线程数据的存储  
-QMutex 提供互斥的锁  
-QMutexLocker 是一个便利类，它可以自动对QMutex加锁与解锁  
-QReadWriterLo</p>
-        
-    
-    <p class="article-more-link">
-      <time datetime="2013-09-10T08:19:03.000Z" itemprop="datePublished">9月 10 2013</time>
-      
-          <a href="/2013/09/10/qt_线程一/">more&raquo;</a>
-      
-    </p>
-
-  </article>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  <article>
-    <h1 itemprop="name">
-      
-        <a href="/2013/09/10/qt_初探/" title="qt_初探" itemprop="url">
-      
-        qt_初探
-      </a>
-    </h1>
-    
-     
-           <p itemprop="description" >QT 简介
-Qt 是一个跨平台的 C++ 图形用户界面库，由挪威 TrollTech 公司出品，目前包括Qt， 基于 Framebuffer 的 Qt Embedded，快速开发工具 Qt Designer，国际化工具 Qt Linguist 等部分 Qt 支持所有 Unix 系</p>
-        
-    
-    <p class="article-more-link">
-      <time datetime="2013-09-10T07:23:18.000Z" itemprop="datePublished">9月 10 2013</time>
-      
-          <a href="/2013/09/10/qt_初探/">more&raquo;</a>
-      
-    </p>
-
-  </article>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  <article>
-    <h1 itemprop="name">
-      
-        <a href="/2013/09/07/markdown_tips/" title="Markdown_tips" itemprop="url">
-      
-        Markdown_tips
-      </a>
-    </h1>
-    
-     
-           <p itemprop="description" >前前后后使用hexo创建blog也是有一段的时间了，对blog也有了一定的了解，确实是蛮好用的。该怎么开始呢  打开这个网址，你可以实时的看到写完代码之后的结果，nice…
-从实践中来，到实践中去就好了..  
-以下是比较常用的一些Markdown代码:  
-1234567891</p>
-        
-    
-    <p class="article-more-link">
-      <time datetime="2013-09-07T12:47:04.000Z" itemprop="datePublished">9月 7 2013</time>
-      
-          <a href="/2013/09/07/markdown_tips/">more&raquo;</a>
-      
-    </p>
-
-  </article>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  <article>
-    <h1 itemprop="name">
-      
-        <a href="/2013/09/07/hexo挣扎记/" title="hexo挣扎记" itemprop="url">
-      
-        hexo挣扎记
-      </a>
-    </h1>
-    
-     
-           <p itemprop="description" >hexo介绍
-
-快速、简单且功能强大的 Node.js 博客框架。A fast, simple &amp;amp; powerful blog framework, powered by Node.js.  
-
-hexo教程
-有许多高手在自己的博客中都有了很详细的配置的介绍，比如:
-
-z</p>
-        
-    
-    <p class="article-more-link">
-      <time datetime="2013-09-07T11:55:42.000Z" itemprop="datePublished">9月 7 2013</time>
-      
-          <a href="/2013/09/07/hexo挣扎记/">more&raquo;</a>
-      
-    </p>
-
-  </article>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  <article>
-    <h1 itemprop="name">
-      
-        <a href="/2013/09/07/vimrc/" title="vimrc" itemprop="url">
-      
-        vimrc
-      </a>
-    </h1>
-    
-     
-           <p itemprop="description" >一直以来，管理vim插件对我来说都是一个很大的困扰，更新和卸载，一个一个都是很麻烦，尝试了很多的插件的管理软件，知道遇到了Vundle。Vundle利用git, 插件的git repo以及vim-scripts维护的GitHub repo, 自动安装, 更新和卸载插件. 它把这些</p>
-        
-    
-    <p class="article-more-link">
-      <time datetime="2013-09-07T06:09:53.000Z" itemprop="datePublished">9月 7 2013</time>
-      
-          <a href="/2013/09/07/vimrc/">more&raquo;</a>
-      
-    </p>
-
-  </article>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  <article>
-    <h1 itemprop="name">
-      
-        <a href="/2013/09/07/python爬虫_点点美女照片/" title="python爬虫_点点美女照片" itemprop="url">
-      
-        python爬虫_点点美女照片
-      </a>
-    </h1>
-    
-     
-           <p itemprop="description" >继续鼓捣爬虫，今天贴出一个代码，爬取点点网「美女」标签下的照片。  
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647# -*- coding: utf-8 </p>
-        
-    
-    <p class="article-more-link">
-      <time datetime="2013-09-07T04:52:19.000Z" itemprop="datePublished">9月 7 2013</time>
-      
-          <a href="/2013/09/07/python爬虫_点点美女照片/">more&raquo;</a>
-      
-    </p>
-
-  </article>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  <article>
-    <h1 itemprop="name">
-      
-        <a href="/2013/09/07/python爬虫_糗百照片/" title="python爬虫_糗百照片" itemprop="url">
-      
-        python爬虫_糗百照片
-      </a>
-    </h1>
-    
-     
-           <p itemprop="description" >学习python少不了写爬虫，不仅能以点带面地学习、练习使用python，爬虫本身也是有用且有趣的，大量重复性的下载、统计工作完全可以写一个爬虫程序完成。用python写爬虫需要python的基础知识、涉及网络的几个模块、正则表达式、文件操作等知识。昨天在网上学习了一下，写了一个</p>
-        
-    
-    <p class="article-more-link">
-      <time datetime="2013-09-07T04:44:24.000Z" itemprop="datePublished">9月 7 2013</time>
-      
-          <a href="/2013/09/07/python爬虫_糗百照片/">more&raquo;</a>
-      
-    </p>
-
-  </article>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  <article>
-    <h1 itemprop="name">
-      
-        <a href="/2013/09/07/flask_mysql/" title="flask_mysql" itemprop="url">
-      
-        flask_mysql
-      </a>
-    </h1>
-    
-     
-           <p itemprop="description" >Firstly install python-setuptools
-| sudo apt-get install python-setuptools  
-then install mysql-python
-| easy_install mysql-python  
-Environ</p>
-        
-    
-    <p class="article-more-link">
-      <time datetime="2013-09-07T02:11:40.000Z" itemprop="datePublished">9月 7 2013</time>
-      
-          <a href="/2013/09/07/flask_mysql/">more&raquo;</a>
-      
-    </p>
-
-  </article>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  <article>
-    <h1 itemprop="name">
-      
-        <a href="/2013/09/07/aria2a/" title="aria2a" itemprop="url">
-      
-        aria2a
-      </a>
-    </h1>
-    
-     
-           <p itemprop="description" >安装aria2a
-aria2 目前已被包含到许多 Linux 发行版中，因此你可以通过所用的系统直接加以安装。例如，在 Debian/Ubuntu 中, 你可以在终端执行如下指令来安装 aria2:   
-1sudo apt-get install aria2
-
-aria2 使用</p>
-        
-    
-    <p class="article-more-link">
-      <time datetime="2013-09-07T00:40:46.000Z" itemprop="datePublished">9月 7 2013</time>
-      
-          <a href="/2013/09/07/aria2a/">more&raquo;</a>
-      
-    </p>
-
-  </article>
-</section>
-
-
-  <nav id="page-nav" class="clearfix">
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
-  </nav>
-
+<div class="next">
+<a href="/2014/10/23/django-notice/"  title="django_notice">
+ <strong>NEXT:</strong><br/> 
+ <span>django_notice
+</span>
+</a>
 </div>
+
+</nav>
+
+	
+<section class="comment">
+	<div class="ds-thread"></div>
+</section>
+
+</div>  
       
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#String_to_Integer"><span class="toc-number">1.</span> <span class="toc-text">String to Integer</span></a></li></ol>
+  </div>
+
 <div id="asidepart">
 <div id="authorInfo">
 	
@@ -525,6 +316,8 @@ $(document).ready(function(){
     {
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
@@ -546,9 +339,97 @@ $(document).ready(function(){
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,240-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"console"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
 
 
 
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
 
 <!-- mathjax config similar to math.stackexchange -->
 
@@ -582,4 +463,4 @@ $(document).ready(function(){
 </script>
 
   </body>
- </html>
+</html>

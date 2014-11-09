@@ -11,7 +11,7 @@
     
     <meta name="description" content="位段
 今天做PCM编码译码的C语言实现，需要对位进行操作，在同学的提示下接触到了C语言的位段，不禁感叹，C语言真是很强大。  
-位段简洁
+位段简介
 位段是一种特殊的结构体类型，其每个成员是以位为单位来定义长度的，而不再是各种类型的变量。  
 1234567struct packed_data{    unsi">
     
@@ -81,7 +81,7 @@
     </p>
   <p class="article-time">
     <time datetime="2014-10-22T14:12:42.000Z" itemprop="datePublished">10月 22 2014</time>
-    Updated:<time datetime="2014-10-22T14:52:51.000Z" itemprop="dateModified">10月 22 2014</time>
+    Updated:<time datetime="2014-10-24T02:15:53.000Z" itemprop="dateModified">10月 24 2014</time>
     
   </p>
 </header>
@@ -90,12 +90,12 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#位段"><span class="toc-number">1.</span> <span class="toc-text">位段</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#位段简洁"><span class="toc-number">1.1.</span> <span class="toc-text">位段简洁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用共用体可以实现位段的赋值，这一点可以简化PCM译码。"><span class="toc-number">1.2.</span> <span class="toc-text">利用共用体可以实现位段的赋值，这一点可以简化PCM译码。</span></a></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#位段"><span class="toc-number">1.</span> <span class="toc-text">位段</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#位段简介"><span class="toc-number">1.1.</span> <span class="toc-text">位段简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用共用体可以实现位段的赋值，这一点可以简化PCM译码。"><span class="toc-number">1.2.</span> <span class="toc-text">利用共用体可以实现位段的赋值，这一点可以简化PCM译码。</span></a></li></ol></li></ol>
 		</div>
 		
 		<h2 id="位段">位段</h2>
 <p>今天做PCM编码译码的C语言实现，需要对位进行操作，在同学的提示下接触到了<code>C语言</code>的位段，不禁感叹，C语言真是很强大。  </p>
-<h3 id="位段简洁">位段简洁</h3>
+<h3 id="位段简介">位段简介</h3>
 <p>位段是一种特殊的结构体类型，其每个成员是以位为单位来定义长度的，而不再是各种类型的变量。  </p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">struct</span> packed_data</div><div class="line">{</div><div class="line">    <span class="keyword">unsigned</span> x:<span class="number">1</span>;  <span class="comment">//位段x，占1位</span></div><div class="line">    <span class="keyword">unsigned</span> y:<span class="number">2</span>;  <span class="comment">//位段y，占2位</span></div><div class="line">    <span class="keyword">unsigned</span> z:<span class="number">3</span>;  <span class="comment">//位段z，占3位</span></div><div class="line">    <span class="keyword">int</span> :<span class="number">6</span>;        <span class="comment">//无名位段，占6位</span></div><div class="line">}bits;</div></pre></td></tr></table></figure>
 
@@ -151,7 +151,7 @@
       
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#位段"><span class="toc-number">1.</span> <span class="toc-text">位段</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#位段简洁"><span class="toc-number">1.1.</span> <span class="toc-text">位段简洁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用共用体可以实现位段的赋值，这一点可以简化PCM译码。"><span class="toc-number">1.2.</span> <span class="toc-text">利用共用体可以实现位段的赋值，这一点可以简化PCM译码。</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#位段"><span class="toc-number">1.</span> <span class="toc-text">位段</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#位段简介"><span class="toc-number">1.1.</span> <span class="toc-text">位段简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用共用体可以实现位段的赋值，这一点可以简化PCM译码。"><span class="toc-number">1.2.</span> <span class="toc-text">利用共用体可以实现位段的赋值，这一点可以简化PCM译码。</span></a></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
@@ -193,7 +193,7 @@
 		
 			<li><a href="/categories/ios/" title="ios">ios<sup>1</sup></a></li>
 		
-			<li><a href="/categories/leetcode/" title="leetcode">leetcode<sup>2</sup></a></li>
+			<li><a href="/categories/leetcode/" title="leetcode">leetcode<sup>3</sup></a></li>
 		
 			<li><a href="/categories/libpcap/" title="libpcap">libpcap<sup>1</sup></a></li>
 		
@@ -212,7 +212,7 @@
   
   <div class="archiveslist">
     <p class="asidetitle">Archives</p>
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">18</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">18</span></li></ul>
   </div>
 
 
@@ -220,7 +220,7 @@
   <div class="tagcloudlist">
     <p class="asidetitle">Tag Cloud</p>
     <div class="tagcloudlist clearfix">
-       <a href="/tags/Markdown/" style="font-size: 10.00px;">Markdown</a><a href="/tags/aria2a/" style="font-size: 10.00px;">aria2a</a><a href="/tags/cin-scanf/" style="font-size: 10.00px;">cin/scanf</a><a href="/tags/coding/" style="font-size: 10.00px;">coding</a><a href="/tags/const/" style="font-size: 20.00px;">const</a><a href="/tags/copy构造函数/" style="font-size: 10.00px;">copy构造函数</a><a href="/tags/django/" style="font-size: 10.00px;">django</a><a href="/tags/django-notice/" style="font-size: 10.00px;">django_notice</a><a href="/tags/flask-mysql/" style="font-size: 10.00px;">flask mysql</a><a href="/tags/gcc-g/" style="font-size: 10.00px;">gcc/g++</a><a href="/tags/hexo-blog/" style="font-size: 10.00px;">hexo, blog</a><a href="/tags/ios/" style="font-size: 10.00px;">ios</a><a href="/tags/leetcode/" style="font-size: 20.00px;">leetcode</a><a href="/tags/libpcap/" style="font-size: 10.00px;">libpcap</a><a href="/tags/locale/" style="font-size: 10.00px;">locale</a><a href="/tags/mac/" style="font-size: 10.00px;">mac</a><a href="/tags/problems/" style="font-size: 10.00px;">problems</a><a href="/tags/python爬虫/" style="font-size: 20.00px;">python爬虫</a><a href="/tags/qt/" style="font-size: 10.00px;">qt</a><a href="/tags/shell/" style="font-size: 10.00px;">shell</a><a href="/tags/static/" style="font-size: 10.00px;">static</a><a href="/tags/surround-vim/" style="font-size: 10.00px;">surround.vim</a><a href="/tags/vimrc/" style="font-size: 10.00px;">vimrc</a><a href="/tags/位段/" style="font-size: 10.00px;">位段</a><a href="/tags/线程/" style="font-size: 20.00px;">线程</a>
+       <a href="/tags/Markdown/" style="font-size: 10.00px;">Markdown</a><a href="/tags/aria2a/" style="font-size: 10.00px;">aria2a</a><a href="/tags/atoi/" style="font-size: 10.00px;">atoi</a><a href="/tags/cin-scanf/" style="font-size: 10.00px;">cin/scanf</a><a href="/tags/coding/" style="font-size: 10.00px;">coding</a><a href="/tags/const/" style="font-size: 20.00px;">const</a><a href="/tags/copy构造函数/" style="font-size: 10.00px;">copy构造函数</a><a href="/tags/django/" style="font-size: 10.00px;">django</a><a href="/tags/django-notice/" style="font-size: 10.00px;">django_notice</a><a href="/tags/flask-mysql/" style="font-size: 10.00px;">flask mysql</a><a href="/tags/gcc-g/" style="font-size: 10.00px;">gcc/g++</a><a href="/tags/hexo-blog/" style="font-size: 10.00px;">hexo, blog</a><a href="/tags/ios/" style="font-size: 10.00px;">ios</a><a href="/tags/leetcode/" style="font-size: 20.00px;">leetcode</a><a href="/tags/libpcap/" style="font-size: 10.00px;">libpcap</a><a href="/tags/locale/" style="font-size: 10.00px;">locale</a><a href="/tags/mac/" style="font-size: 10.00px;">mac</a><a href="/tags/problems/" style="font-size: 10.00px;">problems</a><a href="/tags/python爬虫/" style="font-size: 20.00px;">python爬虫</a><a href="/tags/qt/" style="font-size: 10.00px;">qt</a><a href="/tags/shell/" style="font-size: 10.00px;">shell</a><a href="/tags/static/" style="font-size: 10.00px;">static</a><a href="/tags/surround-vim/" style="font-size: 10.00px;">surround.vim</a><a href="/tags/vimrc/" style="font-size: 10.00px;">vimrc</a><a href="/tags/位段/" style="font-size: 10.00px;">位段</a><a href="/tags/线程/" style="font-size: 20.00px;">线程</a>
     </div>
   </div>
 
@@ -233,6 +233,8 @@
 			<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>1</sup></a></li>
 		
 			<li><a href="/tags/aria2a/" title="aria2a">aria2a<sup>1</sup></a></li>
+		
+			<li><a href="/tags/atoi/" title="atoi">atoi<sup>1</sup></a></li>
 		
 			<li><a href="/tags/cin-scanf/" title="cin/scanf">cin/scanf<sup>1</sup></a></li>
 		
@@ -267,8 +269,6 @@
 			<li><a href="/tags/python爬虫/" title="python爬虫">python爬虫<sup>2</sup></a></li>
 		
 			<li><a href="/tags/qt/" title="qt">qt<sup>1</sup></a></li>
-		
-			<li><a href="/tags/shell/" title="shell">shell<sup>1</sup></a></li>
 		
 		</ul>
 </div>
