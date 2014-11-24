@@ -4,28 +4,15 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>shell_care | sys.linux.d::blog</title>
+    <title>sae | sys.linux.d::blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="sys.linux.d">
     
-    <meta name="description" content="linux shell(容易出错的几个地方)
-
-赋值语句”=”左右没有空格。num=5 =&amp;gt;将num赋值为5  
-
-比较操作”[]”  
-
-在”[“和”]”符号的左右都有空格  
-为了区分与赋值语句中”=”,比较操作的”=”符号的左右都要空格  
-if [ $a = $b ] =&amp;gt;如果a，b的值相等。  
-if条件中，”=”用于比较字符串，”-eq”用于比较整型数  
-
-
-for循环
-
-如果列表中的元素包含在一对双引号中，则被认为是一个元素。  
-for i in 1 2 3 4 5  
-for i in &amp;quot;1 2 3 4 5&amp;quot;">
+    <meta name="description" content="sae
+django中数据库同步到sae中
+我们在做开发的时候，一般现在本地开发，现在的一个问题就是怎么把本地的数据库同步到sae中。一个最为简单的方法如下：  
+1234567MYSQL_HOST = &#39;w.rdc.sae.sina.com.cn&#39;MYSQL_PORT = &#39;3307&#39;MYSQL_">
     
     
     
@@ -85,15 +72,15 @@ for i in &amp;quot;1 2 3 4 5&amp;quot;">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/03/17/shell_care/" title="shell_care" itemprop="url">shell_care</a>
+      <a href="/2014/11/24/sae/" title="sae" itemprop="url">sae</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://dby.github.io" title="sys.linux.d">sys.linux.d</a>
     </p>
   <p class="article-time">
-    <time datetime="2014-03-17T07:31:23.000Z" itemprop="datePublished">3月 17 2014</time>
-    Updated:<time datetime="2014-10-16T12:57:31.000Z" itemprop="dateModified">10月 16 2014</time>
+    <time datetime="2014-11-24T12:28:36.000Z" itemprop="datePublished">11月 24 2014</time>
+    Updated:<time datetime="2014-11-24T13:04:55.000Z" itemprop="dateModified">11月 24 2014</time>
     
   </p>
 </header>
@@ -102,50 +89,18 @@ for i in &amp;quot;1 2 3 4 5&amp;quot;">
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#linux_shell(容易出错的几个地方)"><span class="toc-number">1.</span> <span class="toc-text">linux shell(容易出错的几个地方)</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#sae"><span class="toc-number">1.</span> <span class="toc-text">sae</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#django中数据库同步到sae中"><span class="toc-number">1.0.1.</span> <span class="toc-text">django中数据库同步到sae中</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#最后两句执行时候可能出错，原因在于没有安装一个sae-python-dev，_直接pip_install_sae-python-dev即可。在本地使用python_manager-py_synsdb就可以创建远端数据库表了。"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">最后两句执行时候可能出错，原因在于没有安装一个sae-python-dev， 直接pip install sae-python-dev即可。在本地使用python manager.py synsdb就可以创建远端数据库表了。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sae中数据库的访问的问题"><span class="toc-number">1.0.2.</span> <span class="toc-text">sae中数据库的访问的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sae_Storage_中保存文件"><span class="toc-number">1.0.3.</span> <span class="toc-text">sae Storage 中保存文件</span></a></li></ol></li></ol></li></ol>
 		</div>
 		
-		<h2 id="linux_shell(容易出错的几个地方)">linux shell(容易出错的几个地方)</h2>
-<ul>
-<li><p>赋值语句”=”左右没有空格。<br><code>num=5</code> =&gt;将num赋值为5  </p>
-</li>
-<li><p>比较操作”[]”  </p>
-<ul>
-<li>在”[“和”]”符号的左右都有空格  </li>
-<li>为了区分与赋值语句中”=”,比较操作的”=”符号的左右都要空格  </li>
-<li><code>if [ $a = $b ]</code> =&gt;如果a，b的值相等。  </li>
-<li>if条件中，”=”用于比较<strong>字符串</strong>，”-eq”用于比较<strong>整型数</strong>  </li>
-</ul>
-</li>
-<li><p>for循环</p>
-<ul>
-<li>如果列表中的元素包含在一对双引号中，则被认为是一个元素。  </li>
-<li><code>for i in 1 2 3 4 5</code>  </li>
-<li><code>for i in &quot;1 2 3 4 5&quot;</code>  </li>
-</ul>
-<a id="more"></a>
-</li>
-<li><p>expr计算整数变量值</p>
-<ul>
-<li>格式：expr arg</li>
-</ul>
-</li>
-<li><p>let命令  </p>
-<ul>
-<li>格式：let arg1[arg2…]</li>
-</ul>
-</li>
-<li><p>shell中实现整型变量自加1的方法  </p>
-<ul>
-<li>a=$(($a+1))  </li>
-<li>a=$[$a+1]</li>
-<li>a=<code>expr $a + 1</code></li>
-<li>let a++</li>
-<li>let a+=1</li>
-<li>((a+1))</li>
-</ul>
-</li>
-</ul>
+		<h1 id="sae">sae</h1>
+<h3 id="django中数据库同步到sae中">django中数据库同步到sae中</h3>
+<p>我们在做开发的时候，一般现在本地开发，现在的一个问题就是怎么把本地的数据库同步到sae中。一个最为简单的方法如下：  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">MYSQL_HOST = <span class="string">'w.rdc.sae.sina.com.cn'</span></div><div class="line">MYSQL_PORT = <span class="string">'3307'</span></div><div class="line">MYSQL_USER = <span class="string">'your username'</span></div><div class="line">MYSQL_PASS = <span class="string">'your db password'</span></div><div class="line">MYSQL_DB   = <span class="string">'your db name'</span></div><div class="line"><span class="keyword">from</span> sae._restful_mysql <span class="keyword">import</span> monkey</div><div class="line">monkey.patch()</div></pre></td></tr></table></figure>
+
+<h4 id="最后两句执行时候可能出错，原因在于没有安装一个sae-python-dev，_直接pip_install_sae-python-dev即可。在本地使用python_manager-py_synsdb就可以创建远端数据库表了。">最后两句执行时候可能出错，原因在于没有安装一个<strong>sae-python-dev</strong>， 直接<code>pip install sae-python-dev</code>即可。在本地使用<code>python manager.py synsdb</code>就可以创建远端数据库表了。</h4>
+<h3 id="sae中数据库的访问的问题">sae中数据库的访问的问题</h3>
+<p><a href="">下面</a>是基于MySQLdb的SAE_PYTHON环境MYSQL小工具。  </p>
+<h3 id="sae_Storage_中保存文件">sae Storage 中保存文件</h3>
   
 	</div>
 		   	       
@@ -153,19 +108,11 @@ for i in &amp;quot;1 2 3 4 5&amp;quot;">
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2014/10/16/hi-mac/" title="hi_mac">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  hi_mac</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2014/03/15/gccg++/"  title="gcc/g++">
+<a href="/2014/11/09/StringToInteger/"  title="StringToInteger">
  <strong>NEXT:</strong><br/> 
- <span>gcc/g++
+ <span>StringToInteger
 </span>
 </a>
 </div>
@@ -181,7 +128,7 @@ for i in &amp;quot;1 2 3 4 5&amp;quot;">
       
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#linux_shell(容易出错的几个地方)"><span class="toc-number">1.</span> <span class="toc-text">linux shell(容易出错的几个地方)</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#sae"><span class="toc-number">1.</span> <span class="toc-text">sae</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#django中数据库同步到sae中"><span class="toc-number">1.0.1.</span> <span class="toc-text">django中数据库同步到sae中</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#最后两句执行时候可能出错，原因在于没有安装一个sae-python-dev，_直接pip_install_sae-python-dev即可。在本地使用python_manager-py_synsdb就可以创建远端数据库表了。"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">最后两句执行时候可能出错，原因在于没有安装一个sae-python-dev， 直接pip install sae-python-dev即可。在本地使用python manager.py synsdb就可以创建远端数据库表了。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sae中数据库的访问的问题"><span class="toc-number">1.0.2.</span> <span class="toc-text">sae中数据库的访问的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sae_Storage_中保存文件"><span class="toc-number">1.0.3.</span> <span class="toc-text">sae Storage 中保存文件</span></a></li></ol></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
