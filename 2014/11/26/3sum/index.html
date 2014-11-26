@@ -4,21 +4,20 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>locale_change | sys.linux.d::blog</title>
+    <title>3sum | sys.linux.d::blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="sys.linux.d">
     
-    <meta name="description" content="每次重装ubuntu之后，有意见非常头痛的事情便是输入法的配置。这次备份一下，方便未来。  
-将语言环境变量改成中文
+    <meta name="description" content="3sum
+这道题看似很简单，但是容易超时。  
 
-查看当前语言环境：locale
+首先排序  
+然后一个首指针，一个尾指针，前后搜索。 
+时间复杂度O(N*N)  
 
-编辑配置文件，将en-US.UTF_8改成zh_CN.UTF-8。  
 
-sudo vim /etc/default/locale  
-
-LANG">
+有志者事竟成">
     
     
     
@@ -78,15 +77,15 @@ LANG">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2013/09/11/locale_change/" title="locale_change" itemprop="url">locale_change</a>
+      <a href="/2014/11/26/3sum/" title="3sum" itemprop="url">3sum</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://dby.github.io" title="sys.linux.d">sys.linux.d</a>
     </p>
   <p class="article-time">
-    <time datetime="2013-09-11T12:21:58.000Z" itemprop="datePublished">9月 11 2013</time>
-    Updated:<time datetime="2013-09-15T14:55:54.000Z" itemprop="dateModified">9月 15 2013</time>
+    <time datetime="2014-11-26T05:08:11.000Z" itemprop="datePublished">11月 26 2014</time>
+    Updated:<time datetime="2014-11-26T05:20:43.000Z" itemprop="dateModified">11月 26 2014</time>
     
   </p>
 </header>
@@ -95,46 +94,18 @@ LANG">
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#将语言环境变量改成中文"><span class="toc-number">1.</span> <span class="toc-text">将语言环境变量改成中文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装输入法"><span class="toc-number">2.</span> <span class="toc-text">安装输入法</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#3sum"><span class="toc-number">1.</span> <span class="toc-text">3sum</span></a></li></ol>
 		</div>
 		
-		<p>每次重装ubuntu之后，有意见非常头痛的事情便是输入法的配置。这次备份一下，方便未来。  </p>
-<h2 id="将语言环境变量改成中文">将语言环境变量改成中文</h2>
+		<h1 id="3sum">3sum</h1>
+<p>这道题看似很简单，但是容易超时。  </p>
 <ul>
-<li><p>查看当前语言环境：<br><code>locale</code></p>
-</li>
-<li><p>编辑配置文件，将<em>en-US.UTF_8</em>改成<strong>zh_CN.UTF-8</strong>。  </p>
-<ul>
-<li><code>sudo vim /etc/default/locale</code>  </li>
-<li><blockquote>
-<p>LANG=”zh_CN.UTF-8”<br>LANGUAGE=”zh_CN:zh”</p>
-</blockquote>
-</li>
+<li>首先排序  </li>
+<li>然后一个首指针，一个尾指针，前后搜索。 </li>
+<li>时间复杂度O(N*N)  </li>
 </ul>
-</li>
-</ul>
-<ul>
-<li><p>继续查看locale</p>
-<ul>
-<li><p>如果出现一下的错误：  </p>
-<blockquote>
-<p>dby@sys:~$ locale<br> locale: Cannot set LC_CTYPE to default locale: No such file or directory<br> locale: Cannot set LC_MESSAGES to default locale: No such file or directory<br> locale: Cannot set LC_ALL to default locale: No such file or directory</p>
-</blockquote>
-</li>
-<li><p>应该是没有安装zh_CN.UTF-8</p>
-</li>
-<li>安装方法：<br><code>cd /usr/share/locales</code><br><code>sudo ./install-language-pack zh_CN.UTF-8</code></li>
-</ul>
-</li>
-</ul>
-<h2 id="安装输入法"><a href="http://blog.csdn.net/ydonghao2/article/details/9343171" target="_blank" rel="external">安装输入法</a></h2>
-<p>资料推荐：  </p>
-<ol>
-<li><a href="http://wiki.ubuntu.org.cn/%E4%BF%AE%E6%94%B9locale" target="_blank" rel="external">http://wiki.ubuntu.org.cn/%E4%BF%AE%E6%94%B9locale</a>  </li>
-<li><a href="http://blog.csdn.net/ydonghao2/article/details/9343171" target="_blank" rel="external">http://blog.csdn.net/ydonghao2/article/details/9343171</a>  </li>
-</ol>
 <hr>
-<p>100days—第1天—001</p>
+<p>有志者事竟成 </p>
   
 	</div>
 		   	       
@@ -142,19 +113,11 @@ LANG">
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2013/09/15/libpcap_初探/" title="libpcap_初探">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  libpcap_初探</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2013/09/10/vim_coding/"  title="vim_coding">
+<a href="/2014/11/24/sae/"  title="sae">
  <strong>NEXT:</strong><br/> 
- <span>vim_coding
+ <span>sae
 </span>
 </a>
 </div>
@@ -170,7 +133,7 @@ LANG">
       
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#将语言环境变量改成中文"><span class="toc-number">1.</span> <span class="toc-text">将语言环境变量改成中文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装输入法"><span class="toc-number">2.</span> <span class="toc-text">安装输入法</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#3sum"><span class="toc-number">1.</span> <span class="toc-text">3sum</span></a></li></ol>
   </div>
 
 <div id="asidepart">
