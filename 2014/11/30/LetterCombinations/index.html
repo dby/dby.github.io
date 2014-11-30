@@ -4,16 +4,21 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>copy构造函数 | sys.linux.d::blog</title>
+    <title>LetterCombinations | sys.linux.d::blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="sys.linux.d">
     
-    <meta name="description" content="什么是copy构造函数
-首先对于普通的对象来说，他们之间的复制是很简单的，例如：  
-12int a = 100;int b = a;
+    <meta name="description" content="LetterCombinations
+原题网址  
 
-但是类对象与普通的对象不同，类对象内部结构一般较为复杂，存在各种成员变量。一个empty class经过c++处理之后，就不再是简单的一个empty class。">
+此题较为简单，但是自己还是做了很久，，自己还是太水了…  
+双重循环，时间复杂度O(N*N)  
+代码  
+但是运行的结果与网站的运行结果不大一样，希望高手指教一二。  
+
+
+有志者事竟成">
     
     
     
@@ -73,15 +78,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2013/09/24/copy构造函数/" title="copy构造函数" itemprop="url">copy构造函数</a>
+      <a href="/2014/11/30/LetterCombinations/" title="LetterCombinations" itemprop="url">LetterCombinations</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://dby.github.io" title="sys.linux.d">sys.linux.d</a>
     </p>
   <p class="article-time">
-    <time datetime="2013-09-24T05:52:03.000Z" itemprop="datePublished">9月 24 2013</time>
-    Updated:<time datetime="2014-10-22T14:16:28.000Z" itemprop="dateModified">10月 22 2014</time>
+    <time datetime="2014-11-30T04:52:50.000Z" itemprop="datePublished">11月 30 2014</time>
+    Updated:<time datetime="2014-11-30T04:59:38.000Z" itemprop="dateModified">11月 30 2014</time>
     
   </p>
 </header>
@@ -90,86 +95,19 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是copy构造函数"><span class="toc-number">1.</span> <span class="toc-text">什么是copy构造函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#copy构造函数的调用时机"><span class="toc-number">2.</span> <span class="toc-text">copy构造函数的调用时机</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#LetterCombinations"><span class="toc-number">1.</span> <span class="toc-text">LetterCombinations</span></a></li></ol>
 		</div>
 		
-		<h2 id="什么是copy构造函数">什么是copy构造函数</h2>
-<p>首先对于普通的对象来说，他们之间的复制是很简单的，例如：  </p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a = <span class="number">100</span>;</div><div class="line"><span class="keyword">int</span> b = a;</div></pre></td></tr></table></figure>
-
-<p>但是类对象与普通的对象不同，类对象内部结构一般较为复杂，存在各种成员变量。<br>一个empty class经过<strong>c++</strong>处理之后，就不再是简单的一个empty class。编译器会默默的帮你声明四个函数，都是public和inline类型。因此当你写下：<br><code>class empty(){};</code><br>就像写下了这样的代码：  </p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">class empty{</div><div class="line">public:</div><div class="line"></div><div class="line">    **empty(){ <span class="keyword">...</span> }**                              //default 构造函数</div><div class="line">    **empty(const empty& rhs){ <span class="keyword">...</span> }**              //copy构造函数</div><div class="line">    **~empty(){ <span class="keyword">...</span> }**                             //析构函数</div><div class="line"></div><div class="line">    **empty& operator=(const empty& rhs){ <span class="keyword">...</span> }**   //copy assignment操作符</div><div class="line"></div><div class="line">}</div></pre></td></tr></table></figure>
-
-<p>唯有这些函数被需要(被调用)，他们才会被编译器创建出来。在程序中需要他们是很正常的事情。  </p>
-<blockquote>
-<p>empty e1;             //default构造函数<br> empty e2(e1);          //copy构造函数<br> e2 = e1;               //copy assignment操作符</p>
-</blockquote>
-<h2 id="copy构造函数的调用时机">copy构造函数的调用时机</h2>
+		<h2 id="LetterCombinations">LetterCombinations</h2>
+<p><a href="https://oj.leetcode.com/problems/letter-combinations-of-a-phone-number/" target="_blank" rel="external">原题网址</a>  </p>
 <ul>
-<li>对象以值传递的方式传入参数  </li>
+<li>此题较为简单，但是自己还是做了很久，，自己还是太水了…  </li>
+<li>双重循环，时间复杂度O(N*N)  </li>
+<li><a href="https://github.com/dby/code_leetcode/blob/master/LetterCombinationsOfAPhoneNumber.py" target="_blank" rel="external">代码</a>  </li>
+<li>但是运行的结果与网站的运行结果不大一样，希望高手指教一二。  </li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> CExample </div><div class="line">{</div><div class="line"><span class="keyword">private</span>:</div><div class="line"> <span class="keyword">int</span> a;</div><div class="line"></div><div class="line"><span class="keyword">public</span>:</div><div class="line"> <span class="comment">//构造函数</span></div><div class="line"> CExample(<span class="keyword">int</span> b)</div><div class="line"> { </div><div class="line">  a = b;</div><div class="line">  <span class="built_in">cout</span>&lt;&lt;<span class="string">"creat: "</span>&lt;&lt;a&lt;&lt;endl;</div><div class="line"> }</div><div class="line"></div><div class="line"> <span class="comment">//拷贝构造</span></div><div class="line"> CExample(<span class="keyword">const</span> CExample& C)</div><div class="line"> {</div><div class="line">  a = C.a;</div><div class="line">  <span class="built_in">cout</span>&lt;&lt;<span class="string">"copy"</span>&lt;&lt;endl;</div><div class="line"> }</div><div class="line"> </div><div class="line"> <span class="comment">//析构函数</span></div><div class="line"> ~CExample()</div><div class="line"> {</div><div class="line">  <span class="built_in">cout</span>&lt;&lt; <span class="string">"delete: "</span>&lt;&lt;a&lt;&lt;endl;</div><div class="line"> }</div><div class="line"></div><div class="line">     <span class="keyword">void</span> Show ()</div><div class="line"> {</div><div class="line">         <span class="built_in">cout</span>&lt;&lt;a&lt;&lt;endl;</div><div class="line">     }</div><div class="line">};</div><div class="line"></div><div class="line"><span class="comment">//全局函数，传入的是对象</span></div><div class="line"><span class="keyword">void</span> g_Fun(CExample C)</div><div class="line">{</div><div class="line"> <span class="built_in">cout</span>&lt;&lt;<span class="string">"test"</span>&lt;&lt;endl;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line"> CExample test(<span class="number">1</span>);</div><div class="line"> <span class="comment">//传入对象</span></div><div class="line"> g_Fun(test);</div><div class="line"></div><div class="line"> <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
-
-<ul>
-<li>test 对象传入形参时，先会产生一个临时变量，就暂时叫C吧。  </li>
-<li>然后调佣构造函数把test的值给C。整个这两个步骤有点像：CExample C(test)  </li>
-<li>等g_Fun()执行完后，析构C对象。  </li>
-</ul>
-<ul>
-<li>对象以值传递的方式从函数返回  </li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">class</span> CExample </div><div class="line">{</div><div class="line"><span class="keyword">private</span>:</div><div class="line"> <span class="keyword">int</span> a;</div><div class="line"></div><div class="line"><span class="keyword">public</span>:</div><div class="line"> <span class="comment">//构造函数</span></div><div class="line"> CExample(<span class="keyword">int</span> b)</div><div class="line"> { </div><div class="line">  a = b;</div><div class="line"> }</div><div class="line"></div><div class="line"> <span class="comment">//拷贝构造</span></div><div class="line"> CExample(<span class="keyword">const</span> CExample& C)</div><div class="line"> {</div><div class="line">  a = C.a;</div><div class="line">  <span class="built_in">cout</span>&lt;&lt;<span class="string">"copy"</span>&lt;&lt;endl;</div><div class="line"> }</div><div class="line"></div><div class="line">     <span class="keyword">void</span> Show ()</div><div class="line">     {</div><div class="line">         <span class="built_in">cout</span>&lt;&lt;a&lt;&lt;endl;</div><div class="line">     }</div><div class="line">};</div><div class="line"></div><div class="line"><span class="comment">//全局函数</span></div><div class="line">CExample g_Fun()</div><div class="line">{</div><div class="line"> CExample temp(<span class="number">0</span>);</div><div class="line"> <span class="keyword">return</span> temp;</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">int</span> main()</div><div class="line">{</div><div class="line"> g_Fun();</div><div class="line"> <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
-
-<ul>
-<li>先会产生一个临时变量，就叫XXXX吧。  </li>
-<li>然后调用拷贝构造函数把temp的值给XXXX。整个这两个步骤有点像：CExample XXXX(temp);  </li>
-<li>在函数执行到最后先析构temp局部变量.  </li>
-<li>等g_Fun()执行完后再析构掉XXXX对象。  </li>
-</ul>
-<ul>
-<li>对象需要通过另外一个对象进行初始化；  </li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">CExample <span class="literal">A</span>(<span class="number">100</span>)<span class="comment">;</span></div><div class="line">CExample B = <span class="literal">A</span><span class="comment">;</span></div><div class="line">//CExample B(<span class="literal">A</span>)<span class="comment">;</span></div></pre></td></tr></table></figure>
-
-<ul>
-<li><p>浅拷贝和深拷贝  </p>
-<ul>
-<li>浅拷贝<br>所谓浅拷贝，指的是在对象复制时，只对对象中的数据成员进行简单的赋值，默认拷贝构造函数执行的也是浅拷贝。  </li>
-<li>如果你打算在一个”内含 reference 成员”的class内支持赋值操作，必须自己定义。</li>
-<li>面对”内含 const 成员”的classes， 编译器的反应是一样的。  </li>
-<li><p>如果某个base class 将copy assignment操作符声明为 private，编译器拒绝为derived classes 生成一个copy assignment 操作符。  </p>
-</li>
-<li><p>深拷贝<br>在“深拷贝”的情况下，对于对象中动态成员，就不能仅仅简单地赋值了，而应该重新动态分配空。  </p>
-</li>
-<li><p>防止默认拷贝发生<br>为驳回编译器自动（暗自）提供的功能，可将相应的成员函数声明为 private 并且不予实现。  </p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>拷贝构造函数的几个细节  </p>
-<ul>
-<li>拷贝构造函数里能调用private成员变量吗?  </li>
-<li><p>这个问题是在网上见的，当时一下子有点晕。其时从名子我们就知道拷贝构造函数其时就是一个特殊的构造函数，操作的还是自己类的成员变量，所以不受private的限制。  </p>
-</li>
-<li><p>以下函数哪个是拷贝构造函数,为什么?  </p>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">X::X(<span class="keyword">const</span> X&);</div><div class="line">X::X(X);</div><div class="line">X::X(<span class="keyword">const</span> X&, <span class="keyword">int</span> a = <span class="number">5</span>);</div><div class="line">X::X(<span class="keyword">const</span> X&, <span class="keyword">int</span> a = <span class="number">5</span>, <span class="keyword">int</span> b = <span class="number">2</span>);</div></pre></td></tr></table></figure>
-
-<ul>
-<li><p>对于一个类X, 如果一个构造函数的第一个参数是下列之一:<br>a) X&amp;<br>b) const X&amp;<br>c) volatile X&amp;<br>d) const volatile X&amp;<br>且没有其他参数或其他参数都有默认值,那么这个函数是拷贝构造函数.  所以第1,3,4都是拷贝构造函数。  </p>
-<ul>
-<li>类中可以存在超过一个拷贝构造函数。  </li>
-</ul>
-</li>
-</ul>
-<p>资料推荐：    </p>
-<p>[2]: effective c++</p>
 <hr>
-<p>100days—第13天—013</p>
+<p>有志者事竟成</p>
   
 	</div>
 		   	       
@@ -177,19 +115,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2013/09/24/static学习/" title="static学习">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  static学习</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2013/09/17/learn_cin_scanf_gets/"  title="learn_cin/scanf/gets...">
+<a href="/2014/11/26/3sum/"  title="K_sum">
  <strong>NEXT:</strong><br/> 
- <span>learn_cin/scanf/gets...
+ <span>K_sum
 </span>
 </a>
 </div>
@@ -205,7 +135,7 @@
       
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是copy构造函数"><span class="toc-number">1.</span> <span class="toc-text">什么是copy构造函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#copy构造函数的调用时机"><span class="toc-number">2.</span> <span class="toc-text">copy构造函数的调用时机</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#LetterCombinations"><span class="toc-number">1.</span> <span class="toc-text">LetterCombinations</span></a></li></ol>
   </div>
 
 <div id="asidepart">
