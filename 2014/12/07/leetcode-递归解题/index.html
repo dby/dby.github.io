@@ -4,27 +4,17 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>gcc/g++ | sys.linux.d::blog</title>
+    <title>leetcode_递归解题 | sys.linux.d::blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="sys.linux.d">
     
-    <meta name="description" content="Linux GCC 常用命令
-GCC的意思是GNU Compiler Collection，是GNU编译器家族的意思。  
+    <meta name="description" content="这里主要总结一下leetcode中使用递归方法的题目
+Generate Parentheses
 
-简单编译  
-
-123456#include&amp;lt;stdio.h&amp;gt;int main(void){    printf(&quot;hello world\n&quot;);    return 0;}
-
-
-  这个程序，一步到位的编译指令为：  gcc test.c -o test
-
-实质上，上述的编译的过程是分四个阶段进行的，即预处理(也称预编译,Preprocessing)，编译(Compilation)，汇编(Assembly)，链接(Linking)。  
-
-预处理(Preprocessing)gcc -E test.c -o test.i 或 gcc -E test.c
-编译为汇编代码(Compilation)gcc -S test.i -o test.sgcc的-S选项，表示程序编译期间，生成汇编代码后停止。  
-汇编(Assembly)gcc -c test.s -o test.o对于上一节生成的汇编代码test.s,gas汇编器负责将其编译成目标文件。  
-链接(Linking)gcc test.o -o testgcc连接器是gas提供的，负责将程序的目标文件与所需的所有附加的目标文件连接起来，最终生成可执行文件。附加的目标文件包括静态连接库和动态连接库。">
+题目  
+采用递归，当(还有剩余时，可以添加一个(，当)的数目大于(时，可以添加一个(，如此递归即可。  
+代码">
     
     
     
@@ -84,15 +74,15 @@ GCC的意思是GNU Compiler Collection，是GNU编译器家族的意思。
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/03/15/gccg++/" title="gcc/g++" itemprop="url">gcc/g++</a>
+      <a href="/2014/12/07/leetcode-递归解题/" title="leetcode_递归解题" itemprop="url">leetcode_递归解题</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://dby.github.io" title="sys.linux.d">sys.linux.d</a>
     </p>
   <p class="article-time">
-    <time datetime="2014-03-15T08:17:57.000Z" itemprop="datePublished">3月 15 2014</time>
-    Updated:<time datetime="2014-10-16T12:58:32.000Z" itemprop="dateModified">10月 16 2014</time>
+    <time datetime="2014-12-07T08:04:57.000Z" itemprop="datePublished">12月 7 2014</time>
+    Updated:<time datetime="2014-12-07T08:22:51.000Z" itemprop="dateModified">12月 7 2014</time>
     
   </p>
 </header>
@@ -101,49 +91,16 @@ GCC的意思是GNU Compiler Collection，是GNU编译器家族的意思。
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux_GCC_常用命令"><span class="toc-number">1.</span> <span class="toc-text">Linux GCC 常用命令</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#这里主要总结一下leetcode中使用递归方法的题目"><span class="toc-number">1.</span> <span class="toc-text">这里主要总结一下leetcode中使用递归方法的题目</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Generate_Parentheses"><span class="toc-number"></span> <span class="toc-text">Generate Parentheses</span></a>
 		</div>
 		
-		<h2 id="Linux_GCC_常用命令">Linux GCC 常用命令</h2>
-<p>GCC的意思是GNU Compiler Collection，是GNU编译器家族的意思。  </p>
-<ul>
-<li>简单编译  </li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor">#<span class="keyword">include</span>&lt;stdio.h&gt;</span></div><div class="line"><span class="keyword">int</span> main(<span class="keyword">void</span>)</div><div class="line">{</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"hello world\n"</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
-
-
-<p>  这个程序，一步到位的编译指令为：<br>  <code>gcc test.c -o test</code></p>
-<ul>
-<li><p>实质上，上述的编译的过程是分四个阶段进行的，即预处理(也称预编译,Preprocessing)，编译(Compilation)，汇编(Assembly)，链接(Linking)。  </p>
-<ul>
-<li>预处理(Preprocessing)<br><code>gcc -E test.c -o test.i 或 gcc -E test.c</code></li>
-<li>编译为汇编代码(Compilation)<br><code>gcc -S test.i -o test.s</code><br>gcc的-S选项，表示程序编译期间，生成汇编代码后停止。  </li>
-<li>汇编(Assembly)<br><code>gcc -c test.s -o test.o</code><br>对于上一节生成的汇编代码test.s,gas汇编器负责将其编译成目标文件。  </li>
-<li>链接(Linking)<br><code>gcc test.o -o test</code><br>gcc连接器是gas提供的，负责将程序的目标文件与所需的所有附加的目标文件连接起来，最终生成可执行文件。附加的目标文件包括静态连接库和动态连接库。  </li>
-</ul>
-</li>
-</ul>
-<a id="more"></a>
-
-<ul>
-<li><p>库文件连接<br>例如我们的程序test.c是在linux上使用c连接mysql，这个时候我们需要去mysql官网下载MySQL Connectors的C库，下载下来解压之后，有一个include文件夹，里面包含mysql connectors的头文件，还有一个lib文件夹，里面包含二进制so文件libmysqlclient.so</p>
-<p>其中inclulde文件夹的路径是/usr/dev/mysql/include,lib文件夹是/usr/dev/mysql/lib  </p>
-<ul>
-<li><p>编译可执行文件<br>首先我们要进行test.c为目标文件，这个时候需要<br>`gcc -I /usr/dev/mysql/include test.c -o test.o</p>
-</li>
-<li><p>链接<br><code>gcc -L /usr/dev/mysql/lib -lmysqlclient test.o -o test</code></p>
-</li>
-<li><p><strong>-static</strong>强制链接的时候使用静态库</p>
-</li>
-</ul>
-</li>
-<li><p>检错</p>
-<ul>
-<li><strong>-Wall</strong> 可以是gcc产生尽可能多的警告信息<br><code>gcc -Wall illcode.c -o illcode</code>  </li>
-<li><strong>-Werror</strong> 在编译程序时带上-Werror选项，那么GCC会在所有产生警告的地方停止编译，迫使程序员对自己的代码进行修改.<br><code>gcc -Werror test.c -o test</code>  </li>
-</ul>
-</li>
-</ul>
+		<h2 id="这里主要总结一下leetcode中使用递归方法的题目">这里主要总结一下leetcode中使用<strong>递归</strong>方法的题目</h2>
+<h1 id="Generate_Parentheses">Generate Parentheses</h1>
+<ol>
+<li><a href="https://oj.leetcode.com/problems/generate-parentheses/" target="_blank" rel="external">题目</a>  </li>
+<li>采用递归，当<code>(</code>还有剩余时，可以添加一个<code>(</code>，当<code>)</code>的数目大于<code>(</code>时，可以添加一个<code>(</code>，如此递归即可。  </li>
+<li><a href="https://github.com/dby/code_leetcode/blob/master/GenerateParenthese.py" target="_blank" rel="external">代码</a>  </li>
+</ol>
   
 	</div>
 		   	       
@@ -151,19 +108,11 @@ GCC的意思是GNU Compiler Collection，是GNU编译器家族的意思。
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2014/03/17/shell_care/" title="shell_care">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  shell_care</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2013/12/10/vim--surroundvim/"  title="vim--surround.vim">
+<a href="/2014/11/30/LetterCombinations/"  title="LetterCombinations">
  <strong>NEXT:</strong><br/> 
- <span>vim--surround.vim
+ <span>LetterCombinations
 </span>
 </a>
 </div>
@@ -179,7 +128,7 @@ GCC的意思是GNU Compiler Collection，是GNU编译器家族的意思。
       
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux_GCC_常用命令"><span class="toc-number">1.</span> <span class="toc-text">Linux GCC 常用命令</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#这里主要总结一下leetcode中使用递归方法的题目"><span class="toc-number">1.</span> <span class="toc-text">这里主要总结一下leetcode中使用递归方法的题目</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Generate_Parentheses"><span class="toc-number"></span> <span class="toc-text">Generate Parentheses</span></a>
   </div>
 
 <div id="asidepart">
