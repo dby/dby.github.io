@@ -4,18 +4,16 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>ZigZagConversion | sys.linux.d::blog</title>
+    <title>Tesseract_mac | sys.linux.d::blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="sys.linux.d">
     
-    <meta name="description" content="刚刚拿到这道题目的时候，确实有点看不懂。参考了一下别人的思路，还是将就的做出来了。这一道题目主要是找一下规律。  
+    <meta name="description" content="tesseract
+Tesseract是一个开源的ORC引擎，开源协议Apache 2.0 license。它可以直接使用，并支持多种语言通过API调用。  
+Mac OS X上的安装方法
 
-一排的时候1 2 3 4 5 6 7 8 9 。。。。
-
-二排得时候1 3 5 7 9 。。。2 4 6 8   。。。
-
-三排得时候1   5   9  。。。2 4 6 8 。。">
+最简单的方法是使用MacPorts进行安装。一旦你安装了MacPorts,便可以使用下面的命令安装。sudo">
     
     
     
@@ -75,15 +73,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/10/20/ZigZagConversion/" title="ZigZagConversion" itemprop="url">ZigZagConversion</a>
+      <a href="/2014/12/13/Tesseract-mac/" title="Tesseract_mac" itemprop="url">Tesseract_mac</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://dby.github.io" title="sys.linux.d">sys.linux.d</a>
     </p>
   <p class="article-time">
-    <time datetime="2014-10-20T02:55:25.000Z" itemprop="datePublished">10月 20 2014</time>
-    Updated:<time datetime="2014-10-20T03:12:54.000Z" itemprop="dateModified">10月 20 2014</time>
+    <time datetime="2014-12-13T06:53:36.000Z" itemprop="datePublished">12月 13 2014</time>
+    Updated:<time datetime="2014-12-13T06:58:25.000Z" itemprop="dateModified">12月 13 2014</time>
     
   </p>
 </header>
@@ -92,26 +90,17 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#tesseract"><span class="toc-number">1.</span> <span class="toc-text">tesseract</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mac_OS_X上的安装方法"><span class="toc-number">1.0.1.</span> <span class="toc-text">Mac OS X上的安装方法</span></a></li></ol></li></ol></li></ol>
 		</div>
 		
-		<p>刚刚拿到这道题目的时候，确实有点看不懂。参考了一下别人的思路，还是将就的做出来了。这一道题目主要是找一下规律。  </p>
-<ul>
-<li><p>一排的时候<br>1 2 3 4 5 6 7 8 9 。。。。</p>
-</li>
-<li><p>二排得时候<br>1 3 5 7 9 。。。<br>2 4 6 8   。。。</p>
-</li>
-<li><p>三排得时候<br>1   5   9  。。。<br>2 4 6 8 。。。<br>3   7  。。。</p>
-</li>
-<li><p>四排的时候<br>1       7        13 。。。<br>2    6  8     12 14 。。。<br>3  5    9  11    15 。。。<br>4       10    。。。</p>
-</li>
-</ul>
-<p>总结上述较为简单地过程，我们就可以发现规律。当我们遇到较为难缠的问题的时候，首先考虑较为简单地情况，然后看看能否发现规律。这里总结一下规律(假设nRows排)：<br>1 第i排从i开始<br>2 第i排的数的间隔为 2(nRows-i)、2(i-1)交替出现。  </p>
-<p>下面为代码，测试成功。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/python</span></div><div class="line"><span class="comment">#coding: utf-8</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">convert</span><span class="params">(s,nRows)</span>:</span></div><div class="line">    <span class="keyword">if</span> len(s) == <span class="number">1</span> <span class="keyword">or</span> len(s) == <span class="number">0</span> <span class="keyword">or</span> nRows == <span class="number">1</span>:  <span class="comment">#考虑到convert(“AB”,1) convert(“”,4)</span></div><div class="line">        <span class="keyword">return</span> s</div><div class="line">    res = <span class="string">""</span></div><div class="line">    minNum = min(nRows , len(s)) + <span class="number">1</span>  <span class="comment">#考虑到 convert(“AB”,3)这种情况</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,minNum):</div><div class="line">        flag = <span class="number">0</span> <span class="comment">#标记变量，使间隔交替出现 </span></div><div class="line">        p1 = <span class="number">2</span>*(nRows - i)</div><div class="line">        p2 = <span class="number">2</span>*(i-<span class="number">1</span>)</div><div class="line">        p = i - <span class="number">1</span></div><div class="line">        res = res + s[p]</div><div class="line">        <span class="keyword">while</span> p &lt; len(s):</div><div class="line">            <span class="keyword">if</span> flag == <span class="number">0</span>:</div><div class="line">                <span class="keyword">if</span> p1 != <span class="number">0</span>:</div><div class="line">                    p = p + p1 </div><div class="line">                    <span class="keyword">if</span> p &gt;= len(s):</div><div class="line">                        <span class="keyword">break</span></div><div class="line">                    res = res + s[p]</div><div class="line">                flag = <span class="number">1</span></div><div class="line">            <span class="keyword">else</span>:</div><div class="line">                <span class="keyword">if</span> p2 != <span class="number">0</span>:</div><div class="line">                    p = p + p2 </div><div class="line">                    <span class="keyword">if</span> p &gt;= len(s):</div><div class="line">                        <span class="keyword">break</span></div><div class="line">                    res = res + s[p]</div><div class="line">                flag = <span class="number">0</span></div><div class="line">    <span class="keyword">return</span> res</div></pre></td></tr></table></figure>
-
+		<h1 id="tesseract">tesseract</h1>
+<p>Tesseract是一个开源的ORC引擎，开源协议Apache 2.0 license。它可以直接使用，并支持多种语言通过API调用。  </p>
+<h3 id="Mac_OS_X上的安装方法">Mac OS X上的安装方法</h3>
+<blockquote>
+<p>最简单的方法是使用<code>MacPorts</code>进行安装。一旦你安装了<code>MacPorts</code>,便可以使用下面的命令安装。<br><code>sudo port install tesseract</code><br><code>sudo port install tesseract-&lt;language&gt;</code><br>支持的<a href="https://www.macports.org/ports.php?by=name&amp;substr=tesseract-" target="_blank" rel="external">language</a>可以点击查看  </p>
+</blockquote>
 <hr>
-<p>坚持就是胜利  </p>
+<p>有志者事竟成  </p>
   
 	</div>
 		   	       
@@ -119,19 +108,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2014/10/20/django-mysql/" title="django_mysql">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  django_mysql</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2014/10/18/uibutton/"  title="uibutton">
+<a href="/2014/12/12/python库学习/"  title="python库学习">
  <strong>NEXT:</strong><br/> 
- <span>uibutton
+ <span>python库学习
 </span>
 </a>
 </div>
@@ -147,7 +128,7 @@
       
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#tesseract"><span class="toc-number">1.</span> <span class="toc-text">tesseract</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mac_OS_X上的安装方法"><span class="toc-number">1.0.1.</span> <span class="toc-text">Mac OS X上的安装方法</span></a></li></ol></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
