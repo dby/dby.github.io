@@ -79,7 +79,7 @@ mac终端错误显示计算机名的原因是，终端会先向DNS请求查询�
     </p>
   <p class="article-time">
     <time datetime="2015-01-18T04:07:10.000Z" itemprop="datePublished">1月 18 2015</time>
-    Updated:<time datetime="2015-01-18T04:19:01.000Z" itemprop="dateModified">1月 18 2015</time>
+    Updated:<time datetime="2015-01-18T04:22:04.000Z" itemprop="dateModified">1月 18 2015</time>
     
   </p>
 </header>
@@ -88,17 +88,14 @@ mac终端错误显示计算机名的原因是，终端会先向DNS请求查询�
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#mac_终端中神秘的bogon"><span class="toc-number">1.</span> <span class="toc-text">mac 终端中神秘的bogon</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#mac_终端中神秘的bogon"><span class="toc-number">1.</span> <span class="toc-text">mac 终端中神秘的bogon</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#‘’’"><span class="toc-number">2.</span> <span class="toc-text">‘’’</span></a></li></ol>
 		</div>
 		
 		<h2 id="mac_终端中神秘的bogon">mac 终端中神秘的bogon</h2>
 <p>今天打开终端，突然发现terminal中计算机的名字莫名其妙的编程了<code>bogon</code>，从一篇博客中得到答案，在这里记录一下。  </p>
 <p>mac终端错误显示计算机名的原因是，终端会先向DNS请求查询当前的<code>IP</code>的反向域名解析的结果，如果查询不到再显示我们设置的计算机名。而由于我们的<code>DNS</code>错误的将保留地址的反向的NS查询结果返回了<code>bogon</code>. 其中<code>bogon</code>本应该用来指虚假的<code>IP</code>地址，而非保留<code>IP</code>地址。因此就出现了会时不时地打印<code>bogon</code>这种奇怪名字作为计算机名的现象了。<br>那么如何让终端只显示我们想要的计算机名而不总是从<code>DNS</code>返回结果呢？ </p>
-<p>解决方案：</p>
-<blockquote>
-<p>sudo hostname your-desired-host-name<br> sudo scutil —set LocalHostName $(hostname)<br> sudo scutil —set HostName $(hostname)</p>
-</blockquote>
-<hr>
+<p>解决方案：<br>‘’’python<br>sudo hostname your-desired-host-name<br>sudo scutil —set LocalHostName $(hostname)<br>sudo scutil —set HostName $(hostname)</p>
+<h2 id="‘’’">‘’’</h2>
 <p>有志者事竟成</p>
   
 	</div>
@@ -127,7 +124,7 @@ mac终端错误显示计算机名的原因是，终端会先向DNS请求查询�
       
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#mac_终端中神秘的bogon"><span class="toc-number">1.</span> <span class="toc-text">mac 终端中神秘的bogon</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#mac_终端中神秘的bogon"><span class="toc-number">1.</span> <span class="toc-text">mac 终端中神秘的bogon</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#‘’’"><span class="toc-number">2.</span> <span class="toc-text">‘’’</span></a></li></ol>
   </div>
 
 <div id="asidepart">
