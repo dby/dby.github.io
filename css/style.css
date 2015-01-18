@@ -351,6 +351,11 @@ body >header {
 /*background url(/img/border.png)  */
   color: #fff;
 }
+@media only screen and (min-width: 1024px) {
+  body >header {
+    padding: 1.8em 0 1.5em;
+  }
+}
 body >header >div {
   width: 95%;
   margin: 0 auto;
