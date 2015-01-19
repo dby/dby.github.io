@@ -9,10 +9,18 @@
     
     <meta name="author" content="sys.linux.d">
     
-    <meta name="description" content="这里主要介绍一下python中的搜索models的path。
+    <meta name="description" content="这里主要介绍一下 python 中的搜索 models 的 path.
 
 python搜索models的path
-查看当前的python的搜索路径">
+
+查看当前的python的搜索路径  
+
+
+
+两个重要的环境变量
+
+PYTHONHOME 设置python安装时的后选路径前缀  
+PYTHONPATH 设置将到加到sys.path前面">
     
     
     
@@ -80,7 +88,7 @@ python搜索models的path
     </p>
   <p class="article-time">
     <time datetime="2015-01-19T04:49:23.000Z" itemprop="datePublished">1月 19 2015</time>
-    Updated:<time datetime="2015-01-19T05:13:02.000Z" itemprop="dateModified">1月 19 2015</time>
+    Updated:<time datetime="2015-01-19T05:27:57.000Z" itemprop="dateModified">1月 19 2015</time>
     
   </p>
 </header>
@@ -92,15 +100,26 @@ python搜索models的path
 		
 		</div>
 		
-		<p>这里主要介绍一下python中的搜索models的path。</p>
+		<p>这里主要介绍一下 python 中的搜索 models 的 path.</p>
 <ul>
-<li><code>python</code>搜索models的<code>path</code><ul>
+<li><p><code>python</code>搜索models的<code>path</code></p>
+<ul>
 <li>查看当前的python的搜索路径  </li>
 <li><img src="/imgs/sys.png" alt="查看当前的path"></li>
 </ul>
 </li>
-<li></li>
+<li><p>两个重要的环境变量</p>
+<ul>
+<li><strong>PYTHONHOME</strong> 设置python安装时的后选路径前缀  </li>
+<li><strong>PYTHONPATH</strong> 设置将到加到sys.path前面的那些路径列表 </li>
+<li>在linux/mac下，python(2.7)环境的启动过程是先检查并载入PYTHONHOME路径下关于系统相关配置并开始import一些基础扩展，在运行时import模块时会先检查当前目录再到PATH和PYTHONPATH查找，如果都没发现就会报错。这两个环境变量都是可以设置多个路径并且以冒号“：”隔开。知道这些后以后要安装扩展就可以把对应的py文件放到PYTHONPATH的路径下，或在PYTHONPATH里加上新路径. </li>
 </ul>
+</li>
+<li><p>安装好模块后，可以修改 <code>PATHONPATH</code><br><code>export   PYTHONPATH=$PATHONPATH:/$HOME/usr/lib/pythonX.Y/site-package</code>  </p>
+</li>
+</ul>
+<hr>
+<p>有志者事竟成</p>
   
 	</div>
 		   	       
