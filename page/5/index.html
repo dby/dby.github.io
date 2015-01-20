@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hello World | sys.linux.d::blog</title>
+    <title>sys.linux.d::blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="sys.linux.d">
     
-    <meta name="description" content="bye worldWelcome to Hexo! This is your very first post. Check documentation to learn how to use.">
+    <meta name="description" content="Walk steps step by step">
     
     
     
@@ -64,62 +64,39 @@
 
     </header>
     <div id="container" class="clearfix">
-      <div id="main" class="post" itemscope itemprop="blogPost">
-	<article itemprop="articleBody"> 
-		<header class="article-info clearfix">
-  <h1 itemprop="name">
+      <div id="main">
+
+  <section class="post" itemscope itemprop="blogPost">
+  <article>
+    <h1 itemprop="name">
+      
+        <a href="/2013/09/06/hello-world/" title="Hello World" itemprop="url">
+      
+        Hello World
+      </a>
+    </h1>
     
-      <a href="/2013/09/06/hello-world/" title="Hello World" itemprop="url">Hello World</a>
-  </h1>
-  <p class="article-author">By
+     
+           <p itemprop="description" >bye worldWelcome to Hexo! This is your very first post. Check documentation to learn how to use.</p>
+        
     
-      <a href="http://dby.github.io" title="sys.linux.d">sys.linux.d</a>
+    <p class="article-more-link">
+      <time datetime="2013-09-06T12:04:46.000Z" itemprop="datePublished">9月 6 2013</time>
+      
+          <a href="/2013/09/06/hello-world/">more&raquo;</a>
+      
     </p>
-  <p class="article-time">
-    <time datetime="2013-09-06T12:04:46.000Z" itemprop="datePublished">9月 6 2013</time>
-    Updated:<time datetime="2013-09-06T14:54:30.000Z" itemprop="dateModified">9月 6 2013</time>
-    
-  </p>
-</header>
-	<div class="article-content">
-		
-		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
-		
-		</div>
-		
-		<p>bye world<br>Welcome to <a href="http://zespia.tw/hexo" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://zespia.tw/hexo/docs" target="_blank" rel="external">documentation</a> to learn how to use.</p>
-  
-	</div>
-		   	       
-	</article>
-	
-<nav class="article-nav clearfix">
- 
- <div class="prev" >
- <a href="/2013/09/07/aria2a/" title="aria2a">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  aria2a</span>
-</a>
-</div>
 
-
-</nav>
-
-	
-<section class="comment">
-	<div class="ds-thread"></div>
+  </article>
 </section>
 
-</div>  
-      
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
-  
-  </div>
 
+  <nav id="page-nav" class="clearfix">
+    <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
+  </nav>
+
+</div>
+      
 <div id="asidepart">
 <div id="authorInfo">
 	
@@ -302,8 +279,6 @@ $(document).ready(function(){
     {
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
-      
-      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
@@ -325,97 +300,9 @@ $(document).ready(function(){
 });
 </script>
 
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var ai = $('.article-content>iframe'),
-      ae = $('.article-content>embed'),
-      t  = $('#toc'),
-      h  = $('article h2')
-      ah = $('article h2'),
-      ta = $('#toc.toc-aside'),
-      o  = $('.openaside'),
-      c  = $('.closeaside');
-  if(ai.length>0){
-    ai.wrap('<div class="video-container" />');
-  };
-  if(ae.length>0){
-   ae.wrap('<div class="video-container" />');
-  };
-  if(ah.length==0){
-    t.css('display','none');
-  }else{
-
-    $(window).scroll(function(){
-      ta.css("top",Math.max(140,240-$(this).scrollTop()));
-    });
-  };
-});
-</script>
-
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var $this = $('.share'),
-      url = $this.attr('data-url'),
-      encodedUrl = encodeURIComponent(url),
-      title = $this.attr('data-title'),
-      tsina = $this.attr('data-tsina');
-  var html = [
-  '<a href="#" class="overlay" id="qrcode"></a>',
-  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
-  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
-  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
-  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
-  '<span title="Share to"></span>'
-  ].join('');
-  $this.append(html);
-  $('.article-share-qrcode').click(function(){
-    var imgSrc = $('#qrcode-pic').attr('data-src');
-    $('#qrcode-pic').attr('src', imgSrc);
-    $('#qrcode-pic').load(function(){
-        $('.qrcode strong').text(' ');
-    });
-  });
-});     
-</script>
-
-
-<script type="text/javascript">
-  var duoshuoQuery = {short_name:"console"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-</script> 
 
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.article-content').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
-      var alt = this.alt;
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
-  });
-  if($.fancybox){
-    $('.fancybox').fancybox();
-  }
-}); 
-</script>
 
 <!-- mathjax config similar to math.stackexchange -->
 
@@ -449,4 +336,4 @@ $(document).ready(function(){
 </script>
 
   </body>
-</html>
+ </html>
