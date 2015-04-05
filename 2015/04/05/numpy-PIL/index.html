@@ -1,0 +1,466 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>numpy_PIL | sys.linux.d::blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="sys.linux.d">
+    
+    <meta name="description" content="numpy_PIL
+最近研究了一下图片剪贴，层叠等操作，深深被python折服。python的numpy，PIL功能相当的强大，所以在这里做简单地介绍。  
+Numpy
+Numpy  
+PIL
+PIL
+
+有志者事竟成">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/Tinny.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/Tinny.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="sys.linux.d::blog" title="sys.linux.d::blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="sys.linux.d::blog">sys.linux.d::blog</a></h1>
+				<br/>
+				<h2 class="blog-motto">Walk steps step by step</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<br><br>
+			<nav class="animated" style="font-size:130%;">
+				<ul>
+                    <ul>
+					 
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/todo">Todo</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+					
+					</li>
+                <li><div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div></li>
+
+				</ul>
+			</nav>
+</div>
+
+    </header>
+    <div id="container" class="clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/04/05/numpy-PIL/" title="numpy_PIL" itemprop="url">numpy_PIL</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://lyh.github.io" title="sys.linux.d">sys.linux.d</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2015-04-05T13:17:33.000Z" itemprop="datePublished">4月 5 2015</time>
+    Updated:<time datetime="2015-04-05T13:28:24.000Z" itemprop="dateModified">4月 5 2015</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#numpy_PIL"><span class="toc-number">1.</span> <span class="toc-text">numpy_PIL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Numpy"><span class="toc-number">1.1.</span> <span class="toc-text">Numpy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PIL"><span class="toc-number">1.2.</span> <span class="toc-text">PIL</span></a></li></ol></li></ol>
+		</div>
+		
+		<h2 id="numpy_PIL">numpy_PIL</h2>
+<p>最近研究了一下图片剪贴，层叠等操作，深深被<code>python</code>折服。python的<code>numpy</code>，<code>PIL</code>功能相当的强大，所以在这里做简单地介绍。  </p>
+<h3 id="Numpy">Numpy</h3>
+<p><a href="http://onlypython.group.iteye.com/group/wiki/1372-python-graphics-image-processing-library-introduced-the-image-module" target="_blank" rel="external">Numpy</a>  </p>
+<h3 id="PIL">PIL</h3>
+<p><a href="http://blog.chinaunix.net/uid-21633169-id-4408596.html" target="_blank" rel="external">PIL</a></p>
+<hr>
+<p>有志者事竟成</p>
+  
+	</div>
+		   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/01/20/leetcode-backtracking/"  title="leetcode_backtracking">
+ <strong>NEXT:</strong><br/> 
+ <span>leetcode_backtracking
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section class="comment">
+	<div class="ds-thread"></div>
+</section>
+
+</div>  
+      
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#numpy_PIL"><span class="toc-number">1.</span> <span class="toc-text">numpy_PIL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Numpy"><span class="toc-number">1.1.</span> <span class="toc-text">Numpy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PIL"><span class="toc-number">1.2.</span> <span class="toc-text">PIL</span></a></li></ol></li></ol>
+  </div>
+
+<div id="asidepart">
+<div id="authorInfo">
+	
+		<div class="author-logo"></div>		
+	
+	
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/2498629490" target="_blank" title="weibo"></a>
+		
+		
+		
+		<a href="https://github.com/dby" target="_blank" title="github"></a>
+		
+		
+	</div>
+</div>
+<aside class="clearfix">
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">Categories</p>
+		<ul>
+		
+			<li><a href="/categories/c-c/" title="c/c++">c/c++<sup>5</sup></a></li>
+		
+			<li><a href="/categories/django/" title="django">django<sup>3</sup></a></li>
+		
+			<li><a href="/categories/flask/" title="flask">flask<sup>1</sup></a></li>
+		
+			<li><a href="/categories/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+		
+			<li><a href="/categories/ios/" title="ios">ios<sup>1</sup></a></li>
+		
+			<li><a href="/categories/leetcode/" title="leetcode">leetcode<sup>7</sup></a></li>
+		
+			<li><a href="/categories/libpcap/" title="libpcap">libpcap<sup>1</sup></a></li>
+		
+			<li><a href="/categories/linux/" title="linux">linux<sup>7</sup></a></li>
+		
+			<li><a href="/categories/mac/" title="mac">mac<sup>3</sup></a></li>
+		
+			<li><a href="/categories/python/" title="python">python<sup>5</sup></a></li>
+		
+			<li><a href="/categories/qt/" title="qt">qt<sup>4</sup></a></li>
+		
+			<li><a href="/categories/生活/" title="生活">生活<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+  <div class="archiveslist">
+    <p class="asidetitle">Archives</p>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">December 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">18</span></li></ul>
+  </div>
+
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">Tag Cloud</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/LetterCombinations/" style="font-size: 10.00px;">LetterCombinations</a><a href="/tags/Markdown/" style="font-size: 10.00px;">Markdown</a><a href="/tags/PYTHONPATH/" style="font-size: 10.00px;">PYTHONPATH</a><a href="/tags/aria2a/" style="font-size: 10.00px;">aria2a</a><a href="/tags/atoi/" style="font-size: 10.00px;">atoi</a><a href="/tags/backtracking/" style="font-size: 10.00px;">backtracking</a><a href="/tags/bogon/" style="font-size: 10.00px;">bogon</a><a href="/tags/changes/" style="font-size: 10.00px;">changes</a><a href="/tags/cin-scanf/" style="font-size: 10.00px;">cin/scanf</a><a href="/tags/coding/" style="font-size: 10.00px;">coding</a><a href="/tags/const/" style="font-size: 15.00px;">const</a><a href="/tags/copy构造函数/" style="font-size: 10.00px;">copy构造函数</a><a href="/tags/django/" style="font-size: 10.00px;">django</a><a href="/tags/django-notice/" style="font-size: 10.00px;">django_notice</a><a href="/tags/flask-mysql/" style="font-size: 10.00px;">flask mysql</a><a href="/tags/gcc-g/" style="font-size: 10.00px;">gcc/g++</a><a href="/tags/hexo-blog/" style="font-size: 10.00px;">hexo, blog</a><a href="/tags/ios/" style="font-size: 10.00px;">ios</a><a href="/tags/leetcode/" style="font-size: 20.00px;">leetcode</a><a href="/tags/libpcap/" style="font-size: 10.00px;">libpcap</a><a href="/tags/locale/" style="font-size: 10.00px;">locale</a><a href="/tags/mac/" style="font-size: 10.00px;">mac</a><a href="/tags/numpy-PIL/" style="font-size: 10.00px;">numpy_PIL</a><a href="/tags/problems/" style="font-size: 10.00px;">problems</a><a href="/tags/python爬虫/" style="font-size: 15.00px;">python爬虫</a><a href="/tags/qt/" style="font-size: 10.00px;">qt</a><a href="/tags/requests/" style="font-size: 10.00px;">requests</a><a href="/tags/sae/" style="font-size: 10.00px;">sae</a><a href="/tags/shell/" style="font-size: 10.00px;">shell</a><a href="/tags/static/" style="font-size: 10.00px;">static</a><a href="/tags/surround-vim/" style="font-size: 10.00px;">surround.vim</a><a href="/tags/tesseract/" style="font-size: 10.00px;">tesseract</a><a href="/tags/vimrc/" style="font-size: 10.00px;">vimrc</a><a href="/tags/位段/" style="font-size: 10.00px;">位段</a><a href="/tags/线程/" style="font-size: 15.00px;">线程</a><a href="/tags/递归/" style="font-size: 10.00px;">递归</a>
+    </div>
+  </div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/LetterCombinations/" title="LetterCombinations">LetterCombinations<sup>1</sup></a></li>
+		
+			<li><a href="/tags/Markdown/" title="Markdown">Markdown<sup>1</sup></a></li>
+		
+			<li><a href="/tags/PYTHONPATH/" title="PYTHONPATH">PYTHONPATH<sup>1</sup></a></li>
+		
+			<li><a href="/tags/aria2a/" title="aria2a">aria2a<sup>1</sup></a></li>
+		
+			<li><a href="/tags/atoi/" title="atoi">atoi<sup>1</sup></a></li>
+		
+			<li><a href="/tags/backtracking/" title="backtracking">backtracking<sup>1</sup></a></li>
+		
+			<li><a href="/tags/bogon/" title="bogon">bogon<sup>1</sup></a></li>
+		
+			<li><a href="/tags/changes/" title="changes">changes<sup>1</sup></a></li>
+		
+			<li><a href="/tags/cin-scanf/" title="cin/scanf">cin/scanf<sup>1</sup></a></li>
+		
+			<li><a href="/tags/coding/" title="coding">coding<sup>1</sup></a></li>
+		
+			<li><a href="/tags/const/" title="const">const<sup>2</sup></a></li>
+		
+			<li><a href="/tags/copy构造函数/" title="copy构造函数">copy构造函数<sup>1</sup></a></li>
+		
+			<li><a href="/tags/django/" title="django">django<sup>1</sup></a></li>
+		
+			<li><a href="/tags/django-notice/" title="django_notice">django_notice<sup>1</sup></a></li>
+		
+			<li><a href="/tags/flask-mysql/" title="flask mysql">flask mysql<sup>1</sup></a></li>
+		
+			<li><a href="/tags/gcc-g/" title="gcc/g++">gcc/g++<sup>1</sup></a></li>
+		
+			<li><a href="/tags/hexo-blog/" title="hexo, blog">hexo, blog<sup>1</sup></a></li>
+		
+			<li><a href="/tags/ios/" title="ios">ios<sup>1</sup></a></li>
+		
+			<li><a href="/tags/leetcode/" title="leetcode">leetcode<sup>3</sup></a></li>
+		
+			<li><a href="/tags/libpcap/" title="libpcap">libpcap<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8c3836548aaeaad64b8408c75dabe901' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  //back to top
+  function backToTop(){
+    var buttonHTML = $("<a href=\"#top\" id=\"back-top\">" + "<img style=\"width:35px;height:35px;\" src=\"/img/up2.png\"></a>");
+    buttonHTML.appendTo($("body"));
+    var buttonToTop = $("#back-top");
+    // hide #back-top first
+    buttonToTop.hide();
+
+    // fade in #back-top
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 200) {
+                buttonToTop.fadeIn();
+            } else {
+                buttonToTop.fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        buttonToTop.click(function() {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
+  }
+  backToTop();
+
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      ta = $('#toc.toc-aside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+
+  var show = true;
+  c.click(function(){
+    if(show == true){
+        a.addClass('fadeOut').css('display', 'none');
+        ta.css('display', 'block').addClass('fadeIn');
+        m.addClass('moveMain');  
+    }else{
+        a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');     
+        ta.css('display', 'none'); 
+        m.removeClass('moveMain');
+        $('#toc.toc-aside').css('display', 'none');
+    }
+    show = !show;
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,240-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"console"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://www.zybuluo.com/static/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+  </body>
+</html>
