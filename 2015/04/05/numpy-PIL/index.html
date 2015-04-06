@@ -12,14 +12,9 @@
     <meta name="description" content="numpy_PIL
 最近研究了一下图片剪贴，层叠等操作，深深被python折服。python的numpy，PIL功能相当的强大，所以在这里做简单地介绍。首先简单介绍一下图片相关的信息。  
 
-模式
+模式注: .png的照片的模式是RGBA，常见的.jpg照片的模式是RGB  
 
-Numpy
-Numpy  
-PIL
-PIL
-
-有志者事竟成">
+RGBRGB即是代表红、绿">
     
     
     
@@ -87,7 +82,7 @@ PIL
     </p>
   <p class="article-time">
     <time datetime="2015-04-05T13:17:33.000Z" itemprop="datePublished">4月 5 2015</time>
-    Updated:<time datetime="2015-04-06T03:26:55.000Z" itemprop="dateModified">4月 6 2015</time>
+    Updated:<time datetime="2015-04-06T03:38:35.000Z" itemprop="dateModified">4月 6 2015</time>
     
   </p>
 </header>
@@ -102,11 +97,16 @@ PIL
 		<h2 id="numpy_PIL">numpy_PIL</h2>
 <p>最近研究了一下图片剪贴，层叠等操作，深深被<code>python</code>折服。python的<code>numpy</code>，<code>PIL</code>功能相当的强大，所以在这里做简单地介绍。<br>首先简单介绍一下图片相关的信息。  </p>
 <ul>
-<li>模式<br><img src="mode.jpg" alt="mode"></li>
+<li><p>模式<br><img src="imgs/mode.jpg" alt="mode"><br>注: <code>.png</code>的照片的模式是<code>RGBA</code>，常见的<code>.jpg</code>照片的模式是<code>RGB</code>  </p>
+</li>
+<li><p>RGB<br>RGB即是代表红、绿、蓝三个通道的颜色，这个标准几乎包括了人类视力所能感知的所有颜色，是目前运用最广的颜色系统之一<br>[0,0,0] — black<br>[255,0,0] — Red<br>[0,255,0] — green<br>[0,0,255] — blue<br>[255,255,255] — white  </p>
+</li>
 </ul>
 <h3 id="Numpy">Numpy</h3>
+<p><code>Numpy</code>是<code>Pyhon</code>很强大的开源数字扩展库，可以用来处理大型矩阵等等。下面这篇文档介绍的非常详细，我就不再赘述。  </p>
 <p><a href="http://onlypython.group.iteye.com/group/wiki/1372-python-graphics-image-processing-library-introduced-the-image-module" target="_blank" rel="external">Numpy</a>  </p>
 <h3 id="PIL">PIL</h3>
+<p><code>PIL</code>是python与图片处理相关的第三方扩展库，可以完成图片的粘贴，拷贝，添加文字，层叠，合并，图片加强，操作像素点等等，非常强大。下面这篇文档也是介绍的很详细，其他的操作可以参考PIL的官方文档。  </p>
 <p><a href="http://blog.chinaunix.net/uid-21633169-id-4408596.html" target="_blank" rel="external">PIL</a></p>
 <hr>
 <p>有志者事竟成</p>
